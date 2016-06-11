@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE stationlist [
+<!ELEMENT stationlist (station+)>
+<!ATTLIST stationlist
+  created	CDATA	#REQUIRED
+>
+
+<!ELEMENT station (comp+)>
+<!ATTLIST station
+  code		CDATA 			#REQUIRED
+  name		CDATA 			#REQUIRED
+  insttype	CDATA 			#REQUIRED
+  lat		CDATA 			#REQUIRED
+  lon		CDATA 			#REQUIRED
+  source	(SCSN|CGS|NSMP) 	'SCSN'
+  netid		CDATA			#REQUIRED
+  commtype	(DIG|ANA) 		'DIG'
+  dist          CDATA                   '10.0'
+  loc		CDATA			''
+>
+
+<!ELEMENT comp (acc,vel,psa*)>
+<!ATTLIST comp
+  name          CDATA  #REQUIRED
+  originalname  CDATA  #IMPLIED
+>
+
+<!ELEMENT acc EMPTY>
+<!ELEMENT vel EMPTY>
+<!ELEMENT psa03 EMPTY>
+<!ELEMENT psa10 EMPTY>
+<!ELEMENT psa30 EMPTY>
+<!ATTLIST acc
+  value  CDATA         #REQUIRED
+  flag   CDATA        ''
+>
+<!ATTLIST vel
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa03
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa10
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa30
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+]>
+<stationlist created="1262905832">
+<station code="90404" name="ZIP Code 90404 Santa Monica (Intensity II, 3 responses)" insttype="OBSERVED" lat="34.0267385034" lon="-118.473698853" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="91301" name="ZIP Code 91301 Agoura Hills (Intensity II, 3 responses)" insttype="OBSERVED" lat="34.1361998919" lon="-118.756948731" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.4">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="91320" name="ZIP Code 91320 Newbury Park (Intensity II, 8 responses)" insttype="OBSERVED" lat="34.1416299359" lon="-118.978888954" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.1">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="91355" name="ZIP Code 91355 Valencia (Intensity I, 3 responses)" insttype="OBSERVED" lat="34.4226337105" lon="-118.60635349" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="1.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="91360" name="ZIP Code 91360 Thousand Oaks (Intensity II, 4 responses)" insttype="OBSERVED" lat="34.2140411905" lon="-118.880791506" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="91361" name="ZIP Code 91361 Westlake Village (Intensity II, 3 responses)" insttype="OBSERVED" lat="34.1460007715" lon="-118.878229817" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="91362" name="ZIP Code 91362 Thousand Oaks (Intensity III, 3 responses)" insttype="OBSERVED" lat="34.1924686909" lon="-118.819449981" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="3.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93001" name="ZIP Code 93001 Ventura (Intensity II, 9 responses)" insttype="OBSERVED" lat="34.3480055188" lon="-119.326420083" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.3">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93003" name="ZIP Code 93003 Ventura (Intensity II, 14 responses)" insttype="OBSERVED" lat="34.2789920855" lon="-119.218580733" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93010" name="ZIP Code 93010 Camarillo (Intensity II, 3 responses)" insttype="OBSERVED" lat="34.229149675" lon="-119.075762949" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93015" name="ZIP Code 93015 Fillmore (Intensity II, 12 responses)" insttype="OBSERVED" lat="34.4166996489" lon="-118.845730509" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.2">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93021" name="ZIP Code 93021 Moorpark (Intensity III, 10 responses)" insttype="OBSERVED" lat="34.3089429465" lon="-118.864533809" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.8">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93023" name="ZIP Code 93023 Ojai (Intensity III, 17 responses)" insttype="OBSERVED" lat="34.5183973471" lon="-119.271537599" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.9">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93030" name="ZIP Code 93030 Oxnard (Intensity II, 3 responses)" insttype="OBSERVED" lat="34.2073730061" lon="-119.180036437" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.0">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93060" name="ZIP Code 93060 Santa Paula (Intensity II, 17 responses)" insttype="OBSERVED" lat="34.379815241" lon="-119.104200228" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.2">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93063" name="ZIP Code 93063 Simi Valley (Intensity II, 3 responses)" insttype="OBSERVED" lat="34.2882593211" lon="-118.688958163" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.4">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93065" name="ZIP Code 93065 Simi Valley (Intensity II, 9 responses)" insttype="OBSERVED" lat="34.2835466325" lon="-118.769317054" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.3">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93225" name="ZIP Code 93225 Frazier Park (Intensity III, 14 responses)" insttype="OBSERVED" lat="34.87935294" lon="-119.120444541" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="2.9">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+<station code="93243" name="ZIP Code 93243 Lebec (Intensity III, 4 responses)" insttype="OBSERVED" lat="34.7065869426" lon="-118.885192683" source="USGS (Did You Feel It?)" netid="DYFI" commtype="" intensity="3.1">
+<comp name="Intensity Questionnaire">
+</comp>
+</station>
+
+</stationlist>

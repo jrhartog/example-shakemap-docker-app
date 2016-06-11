@@ -1,0 +1,16 @@
+# Borcherdt, 1994, Site Corrections. Earthquake Spectra, Vol. 10, no. 4 617-653
+# Appendix equations 7a (Short-period) and 7b (Mid-Period) 
+# Velocities (max) of geological units 
+E 180 D 360 C 760 B 10000
+# PGA cutoff in gals
+150 250 350
+# PGA data (Short-period .1 to .5 sec.) row order is E to B; col. order is low to high pga
+1.65 1.43 1.15 0.93 
+1.33 1.23 1.09 0.96 
+1.15 1.10 1.04 0.98 
+1.00 1.00 1.00 1.00 
+# PGV (Mid-period .4 to 2. sec) row order is E to B; col. order is low to high pga
+2.55 2.37 2.14 1.91 
+1.71 1.64 1.55 1.45 
+1.29 1.26 1.23 1.19 
+1.00 1.00 1.00 1.00 

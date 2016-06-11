@@ -1,0 +1,58 @@
+.noncss {
+  position: absolute;
+  top:  0pt;
+  left: 0pt;
+  visibility: hidden;
+  z-index:    0;
+}
+
+.description {
+  position: absolute;
+  top:      515px;
+  left:     60px;
+  visibility: hidden;
+  z-index:    0;
+}
+
+.hilite {
+  position:   absolute;
+  visibility: hidden;
+  z-index:    0;
+}
+
+.control {
+  position:   absolute;
+  visibility: visible;
+  z-index:    0;
+}
+
+#mainmap {
+  position: absolute;
+  top: 25pt;
+  left: 140pt;
+}
+
+#instruct {
+  visibility: visible;
+  z-index:    1;
+}
+      
+#epihilite {
+  top:  245px;
+  left: 293px;
+}
+
+#stahilite {
+  top:  0px;
+  left: 0px;
+}
+
+#help {
+  top:  495px;
+  left: 510px;
+}
+
+#close {
+  top:  495px;
+  left: 530px;
+}

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<!-- $Revision: 1391 $  DO NOT REMOVE OR CHANGE THIS LINE -->
+<zoneconfig>
+<!-- The depth ranges specified for the earthquake types below are not necessarily those used by the -->
+<!-- algorithm that determines the earthquake type.  For example, ACRsh events will not generally go any deeper -->
+<!-- than 35 kilometers. -->
+<!-- SCR     - 0 to 50 kilometers -->
+<!-- SOR     - 0 to 40 kilometers -->
+<!-- OBR     - 0 to 55 kilometers -->
+<!-- HS      - 0 to 65 kilometers -->
+<!-- SZInter - 0 to 70 kilometers -->
+<!-- SZIntra - 15 to 999 kilometers -->
+<!-- ACRsh   - 0 to 35 kilometers -->
+<!-- ACRde   - 35 to 88 kilometers -->
+  <eqtypes>
+    <eqtype name="SCR">
+      <gmpe name="Campbell2003" depthrange="0,999" magrange="0,10" use_gmpe_sc="true"/>
+      <ipe name="AW07_CEUS" depthrange="0,999" magrange="0,6.2"/>
+      <gmice name="AK07" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="ACRsh">
+      <gmpe name="CY08" depthrange="0,20" magrange="0,10.0" use_gmpe_sc="true"/>
+      <gmpe name="Zhao06_crustal" depthrange="20,999" magrange="0,10" use_gmpe_sc="true"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="ACRde">
+      <gmpe name="Zhao06_crustal" depthrange="0,999" magrange="0,10" use_gmpe_sc="true"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="OBR">
+      <gmpe name="CY08" depthrange="0,999" magrange="0,10" use_gmpe_sc="true"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="HS">
+      <gmpe name="Zhao06_crustal" depthrange="0,999" magrange="0,10" use_gmpe_sc="true"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="SZInter">
+      <gmpe name="Zhao06_interface" depthrange="0,999" magrange="0,10" use_gmpe_sc="false"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="SZIntra">
+      <gmpe name="Zhao06_intraslab" depthrange="0,999" magrange="0,10" use_gmpe_sc="false"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="SZOuter">
+      <gmpe name="Zhao06_intraslab" depthrange="0,999" magrange="0,10" use_gmpe_sc="true"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+    <eqtype name="SOR">
+      <gmpe name="Campbell2003" depthrange="0,999" magrange="0,7.2" use_gmpe_sc="true"/>
+      <gmpe name="Zhao06_intraslab" depthrange="0,999" magrange="7.2,10.0" use_gmpe_sc="true"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </eqtype>
+  </eqtypes>
+
+  <regimes>
+    <regime number="10" name="SCR (generic)"/>
+    <regime number="12" name="SCR (above slab)"/>
+    <regime number="20" name="ACR (shallow)"/>
+    <regime number="21" name="ACR (deep)"/>
+    <regime number="23" name="ACR (oceanic boundary)"/>
+    <regime number="24" name="ACR (hot spot)"/>
+    <regime number="220" name="ACR shallow (above slab)"/>
+    <regime number="221" name="ACR deep (above slab)"/>
+    <regime number="223" name="ACR oceanic boundary (above slab)"/>
+    <regime number="30" name="SZ (generic)"/>
+    <regime number="31" name="SZ (outer-trench)"/>
+    <regime number="33" name="SZ (on-shore)"/>
+    <regime number="34" name="SZ (inland/back-arc)"/>
+    <regime number="40" name="SOR (generic)"/>
+    <regime number="42" name="SOR (above slab)"/>
+  </regimes>
+
+  <binaries>
+    <binary name="java" path="/usr/bin/java"/>
+  </binaries>
+
+  <constants>
+    <constant name="MINRADIAL_DISTHIST" value="0.01" units="decimal degrees" 
+              desc="starting distance to search for matching focal mechanism events"/>
+    <constant name="MAXRADIAL_DISTHIST" value="1.0" units="decimal degrees"
+              desc="maximum distance to search for matching focal mechanism events"/>
+    <constant name="STEP_DISTHIST" value="0.1" units="decimal degrees"
+              desc="distance increment to search for matching focal mechanism events"/>
+    <constant name="TIME_THRESHIST" value="120" units="seconds"
+              desc="time window when searching for event matching input"/>
+    <constant name="DEPTH_RANGEHIST" value="100" units="kilometers"
+              desc="depth range to search for matching focal mechanism events"/>
+    <constant name="MINRADIAL_DISTCOMP" value="0.5" units="decimal degrees"
+              desc="starting distance to search for composite focal mechanism events"/>
+    <constant name="MAXRADIAL_DISTCOMP" value="1.0" units="decimal degrees"
+              desc="maximum distance to search for composite focal mechanism events"/>
+    <constant name="STEP_DISTCOMP" value="0.1" units="decimal degrees"
+              desc="distance increment to search for composite focal mechanism events"/>
+    <constant name="DEPTH_RANGECOMP" value="10" units="kilometers"
+              desc="depth range to search for composite focal mechanism events"/>
+    <constant name="MINNO_COMP" value="3" units="number of events"
+              desc="minimum number of events required for composite focal mechanism"/>
+    <constant name="DEFAULT_SZDIP" value="17" units="degrees"
+              desc="default subduction zone dip angle when not available from slab model"/>
+    <constant name="TPLUNGE_RS" value="50" units="degrees"
+              desc="minimum T-Axis plunge value for determining reverse mechanism"/>
+    <constant name="BPLUNGE_DS" value="30" units="degrees"
+              desc="maximum N-Axis plunge angle for determining reverse/normal mechanism"/>
+    <constant name="BPLUNGE_SS" value="55" units="degrees"
+              desc="minimum N-Axis plunge value for determining strike-slip mechanism"/>
+    <constant name="PPLUNGE_NM" value="55" units="degrees"
+              desc="minimum P-Axis plunge value for determining normal mechanism"/>
+    <constant name="DELPLUNGE_SS" value="20" units="degrees"
+              desc="delta P-Axis plunge value used to determine strike-slip mechanism"/>
+    <constant name="DSTRIKE_INTERF" value="30" units="degrees"
+              desc="delta of strike angle used to determine orientation of rupture w/ regard to slab"/>
+    <constant name="DDIP_INTERF" value="30" units="degrees"
+              desc="delta of dip angle used to determine orientation of rupture w/ regard to slab"/>
+    <constant name="DLAMBDA" value="60" units="degrees"
+              desc="delta of slip angle used to determine orientation of rupture w/ regard to slab"/>
+    <constant name="DDEPTH_INTERF" value="20" units="degrees"
+              desc="delta of depth used to determine if focal depth is within range of slab depth"/>
+    <constant name="DDEPTH_INTRA" value="10" units="degrees"
+              desc="delta of depth used to determine if focal depth is deeper than slab depth"/>
+    <constant name="SCR_DIST" value="40" units="kilometers"
+              desc="distance threshold used to determine if epicenter is actually inside a stable polygon or should be considered outside."/>
+  </constants>
+
+  <exemptions>
+    <exemption name="SCR_REGIME1" value="10"/>
+    <exemption name="SCR_REGIME2" value="12"/>
+    <exemption name="SZ_REGIME1" value="30"/>
+    <exemption name="SZ_REGIME2" value="33"/>
+    <exemption name="SZ_REGIMEOUT" value="31"/>
+    <exemption name="SZ_REGIMEBACK" value="34"/>
+    <exemption name="ACR_REGIMESHALLOW" value="20"/>
+  </exemptions>
+  
+  <overrides>
+    <!-- The equation elements here (gmpe,ipe,gmice) should be specified just as they are for earthquake types -->
+    <!-- The region "name" attribute here should be a Flinn-Engdahl region number, or a code followed by a regionlist. -->
+    <!-- <region name="70"> -->
+    <!--   <gmpe name="Campbell2003" depthrange="0,999" magrange="0,10"/> -->
+    <!--   <ipe name="AW07_CEUS" depthrange="0,999" magrange="0,10"/> -->
+    <!--   <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/> -->
+    <!-- </region> -->
+    <region name="italy" regionlist="381,388,389,390,391,545">
+      <gmpe name="CY08" depthrange="0,999" magrange="0,10"/>
+      <gmice name="FM10" depthrange="0,999" magrange="0,10"/>
+    </region>
+    
+    <region name="emme" regionlist="339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,357,359,360,361,362,363,364,365,366,367,373,374,375,376,377,378,379,380,382,383,385,389,391,392,395,396,397,401,546,547,549,550,551,552,553,554,555">
+      <gmpe name="ASB13" depthrange="0,20" magrange="0,10"/>
+      <gmpe name="Zhao06_crustal" depthrange="20,50" magrange="0,10"/>
+      <gmpe name="Zhao06_intraslab" depthrange="50,999" magrange="0,10"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </region>
+
+    <region name="hihs" regionlist="613">
+      <gmpe name="A10Hawaii" depthrange="0,999" magrange="0,7.2"/>
+      <gmpe name="CY08" depthrange="0,999" magrange="7.2,10"/>
+      <gmice name="WGRW11" depthrange="0,999" magrange="0,10"/>
+    </region>
+
+  </overrides>
+ 
+  <email>
+    <server host="gscodens01.cr.usgs.gov" ip="136.177.7.24"/>
+    <server host="gscamnls01.wr.usgs.gov" ip="130.118.4.108"/>
+    <server host="gsvaresh01.er.usgs.gov" ip="130.11.10.4"/>
+    <recipient address="mhearne@usgs.gov"/>
+    <recipient address="cbworden@usgs.gov"/>
+  </email>
+  
+  <database file="triggered_events.db"/>
+
+</zoneconfig>

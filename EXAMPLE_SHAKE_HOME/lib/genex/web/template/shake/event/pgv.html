@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title><!-- tmpl_var name="region" --> ShakeMap: <!-- tmpl_var name="header-pagelabel" --></title>
+    <link rel="stylesheet" type="text/css" href="../lib/style.css">
+    <script language="javascript" src="../lib/eventmap.js"></script>
+  </head>
+  
+  <body bgcolor="white" onUnload="cleanup()">
+
+    <!-- tmpl_include name="shake/event/header.html" -->
+
+    <table width="100%" border="0">
+      <tr>
+	<td align="center" valign="top">
+	  <img src="download/pgv.jpg" border="0" ISMAP usemap="#stations">
+	</td>
+      </tr>
+    </table>
+    
+
+    <!-- tmpl_include name="shake/event/imagemap.html" -->
+  </body>
+</html>
+

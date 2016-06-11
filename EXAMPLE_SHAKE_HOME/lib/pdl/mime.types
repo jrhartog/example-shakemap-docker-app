@@ -1,0 +1,11 @@
+# ShakeMap mime types table
+text/plain txt xyz
+text/xml xml
+application/zip zip
+application/vnd.google-earth.kml+xml kml
+application/vnd.google-earth.kmz kmz
+text/html html
+image/jpeg jpg
+image/png png
+application/json json
+

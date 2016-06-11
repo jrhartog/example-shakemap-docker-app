@@ -1,0 +1,24 @@
+version : '2'
+services:
+   shakemap:
+       image: jrhartog/shakemap3.5:latest
+       container_name: shakemap
+       ports:
+           - "${QUEUE_PORT}:2345"
+       depends_on:
+           - mysql
+       volumes:
+           - ${SHAKE_HOME}/data:/home/shake/data
+           - ${SHAKE_HOME}/config:/home/shake/config
+           - ${SHAKE_HOME}/lib:/home/shake/lib
+           - ${SHAKE_HOME}/logs:/home/shake/logs
+           - ${SHAKE_HOME}/pw:/home/shake/pw
+           - ${SHAKE_HOME}/ProductClient:/home/shake/ProductClient
+   mysql:
+       image: mariadb:10
+       container_name: shakemap-db
+       env_file: mysql.env
+       ports: 
+           - "${MYSQL_PORT}:3306"
+       volumes:
+           - ${MYSQL_DATADIR}:/var/lib/mysql

@@ -1,0 +1,7 @@
+# From: Borcherdt, R. D., (1994). Earthquake Spectra, Vol. 10, No. 4, Table 2.
+# Column order: accereration (g), Ma, Mv (the short- and mid-period 
+# amplification factors, respectively)
+0.1 0.35 0.65
+0.2 0.25 0.60
+0.3 0.10 0.53
+0.4 -0.05 0.45

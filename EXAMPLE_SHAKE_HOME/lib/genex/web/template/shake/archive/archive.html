@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title><!-- tmpl_var name="region" --> ShakeMap: <!-- tmpl_var name="archive-tab-title" --></title>
+    <link rel="stylesheet" type="text/css" href="../lib/style.css">
+  </head>
+  
+  <body bgcolor="white">
+
+    <!-- Begin Tab Header -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="7">
+      <tr>
+	<td bgcolor="ffff99" align="center">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr> 
+	      <td width="1%" background="../icons/header/tab-begin-lav.gif">&nbsp;</td>
+	      <td width="99%"> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr> 
+		    <td width="25%" align="left">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="../index.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="home-tab-mouseover" -->';return true"><!-- tmpl_var name="home-tab-text" --></a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="../icons/header/tab-left-lav-bgray.gif">&nbsp;</td>
+			  <td bgcolor="#99cccc"> 
+			    <div align="center" class="selected"><!-- tmpl_var name="archive-tab-text" --></div>
+			  </td>
+			  <td background="../icons/header/tab-end-bgray.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		    <td width="75%" align="right">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td background="../icons/header/tab-begin-lav.gif" align="right">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="../links.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="links-tab-mouseover" -->';return true"><!-- tmpl_var name="links-tab-text" --></a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="../icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="../about.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="about-tab-mouseover" -->';return true"><!-- tmpl_var name="about-tab-text" --></a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="../icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="../disclaimer.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="disclaimer-tab-mouseover" -->';return true"><!-- tmpl_var name="disclaimer-tab-text" --></a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="../icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="../comment_form.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="comment-tab-mouseover" -->';return true"><!-- tmpl_var name="comment-tab-text" --></a></div>
+			  </td>
+			  <td background="../icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr> 
+	      <td width="1%"  bgcolor="#99cccc">&nbsp;</td>
+	      <td width="99%" bgcolor="#99cccc"> 
+		<table border="0" cellspacing="0" cellpadding="3" width="100%">
+		  <tr> 
+		    <td> 
+		      <p class="locationbar"><!-- tmpl_var name="archive-tab-title" --></p>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr> 
+	      <td width="1%"  bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	      <td width="99%" bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <!-- End Tab Header -->
+
+    <p>Archives: 
+       <!-- tmpl_loop name="ArchiveLabels" -->
+         <!-- tmpl_if name="is-link" -->
+           <a href="<!-- tmpl_var name="filename" -->.html">
+         <!-- tmpl_else -->
+           <b>
+         <!-- /tmpl_if -->
+         <!-- tmpl_var name="label" -->
+         <!-- tmpl_if name="is-link" -->
+           </a>
+         <!-- tmpl_else -->
+           </b>
+         <!-- /tmpl_if -->
+         <!-- tmpl_unless name="__LAST__" -->
+           | 
+         <!-- /tmpl_unless -->
+       <!-- /tmpl_loop -->
+    </p>
+
+<!--     <h4><tmpl_var name="archive-label"></h4> -->
+
+    <!-- tmpl_if name="is-scenario-page" -->
+      <p align="center"><font size="+2">Earthquake Planning Scenarios</font></p>
+      <blockquote> 
+        <blockquote>
+          <p>The maps in this archive display estimated intensities and 
+	    ground motions for "Earthquake Scenarios" - events on faults 
+	    that have ruptured in the past or have a likelihood of rupturing 
+	    in the future. The primary purpose is for emergency response 
+	    exercises and planning as well as for understanding the potential 
+	    consequences of future large earthquakes. Please read about 
+	    <a href="../about.html#scenario">scenario earthquakes</a>. </p>
+        </blockquote>
+      </blockquote>
+    <!-- /tmpl_if -->
+    
+    <table width="100%" border="0">
+    <!-- tmpl_if name="is-scenario-page" -->
+      <tr>
+	<td><b>Scenario ID</b></td>
+	<td><b>Scenario Name</b></td>
+	<td><b>Date of Exercise</b></td>
+	<td><b>Time of Exercise</b></td>
+        <td align="center"><b>Lat</b></td>
+        <td align="center"><b>Lon</b></td>
+	<td align="center"><b>Mag</b></td>
+      </tr>
+    <!-- tmpl_else -->
+      <tr>
+	<td><b>Event ID</b></td>
+	<td><b>Name/Epicenter</b></td>
+	<td><b>Date</b></td>
+	<td><b>Time</b></td>
+        <td align="center"><b>Lat</b></td>
+        <td align="center"><b>Lon</b></td>
+	<td align="center"><b>Mag</b></td>
+      </tr>
+    <!-- /tmpl_if -->
+      
+      <!-- tmpl_loop name="ArchiveList" -->
+      <tr>
+         <!-- tmpl_if name="has-real-cuspid" -->
+	   <td><a class="no-ul" href="../<!-- tmpl_var name="cuspid" -->/intensity.html"><!-- tmpl_var name="event" --></a></td>
+         <!-- tmpl_else -->
+           <td>&nbsp;</td>
+         <!-- /tmpl_if -->
+         <td><a class="no-ul" href="../<!-- tmpl_var name="cuspid" -->/intensity.html"><!-- tmpl_var name="epicenter" --></a></td>
+         <td><!-- tmpl_var name="date" --></td>
+         <td><!-- tmpl_var name="time" --></td>
+         <td align="center"><!-- tmpl_var name="lat"  --></td>
+         <td align="center"><!-- tmpl_var name="lon"  --></td>
+         <td align="center"><!-- tmpl_var name="mag" --></td>
+       </tr>
+     <!-- /tmpl_loop -->
+      
+    </table>
+
+    <hr>
+    <!-- tmpl_include name="shake/footer.html" -->
+  </body>
+</html>

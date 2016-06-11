@@ -1,0 +1,214 @@
+<html>
+  <head>
+    <title><!-- tmpl_var name="region" --> ShakeMaps</title>
+    <link rel="stylesheet" type="text/css" href="lib/style.css">
+  </head>
+    
+  <body bgcolor="white">
+    
+    <!-- Begin Tab Header -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="7">
+      <tr>
+	<td bgcolor="ffff99" align="center">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr> 
+	      <td width="1%" background="icons/header/tab-begin-bgray.gif">&nbsp;</td>
+	      <td width="99%"> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr> 
+		    <td width="25%" align="left">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td bgcolor="#99cccc"> 
+			    <div align="center" class="selected"><!-- tmpl_var name="home-tab-text" --></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tab-right-bgray-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="archive" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="archive-tab-mouseover" -->';return true"><!-- tmpl_var name="archive-tab-text" --></a></div>
+			  </td>
+			  <td background="icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		    <td width="75%" align="right">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td background="icons/header/tab-begin-lav.gif" align="right">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="links.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="links-tab-mouseover" -->';return true"><!-- tmpl_var name="links-tab-text" --></a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="about.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="about-tab-mouseover" -->';return true"><!-- tmpl_var name="about-tab-text" --></a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="disclaimer.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="disclaimer-tab-mouseover" -->';return true"><!-- tmpl_var name="disclaimer-tab-text" --></a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="comment_form.html" class="navbar" onMouseOver="window.status='<!-- tmpl_var name="comment-tab-mouseover" -->';return true"><!-- tmpl_var name="comment-tab-text" --></a></div>
+			  </td>
+			  <td background="icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr> 
+	      <td width="1%"  bgcolor="#99cccc">&nbsp;</td>
+	      <td width="99%" bgcolor="#99cccc"> 
+		<table border="0" cellspacing="0" cellpadding="3" width="100%">
+		  <tr> 
+		    <td> 
+		      <p class="locationbar"><!-- tmpl_var name="home-tab-title" --></p>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr> 
+	      <td width="1%"  bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	      <td width="99%" bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <!-- End Tab Header -->
+
+    <center>
+      <p> 
+	Choose "Most Recent Event" to see maps for the 
+        most recent earthquake,<br>
+        <!-- tmpl_if name="have-other-maps" -->
+        select one of the maps from the list of "Recent Significant Events"<br>
+        <!-- /tmpl_if -->
+        or click on the "Map Archive" tab at the top of the page to 
+	view past events.
+      </p>
+
+      <!-- tmpl_if name="have-homepage-comments" -->
+        <!-- tmpl_loop name="homepage-comments-loop" -->
+      <p> 
+              <!-- tmpl_var name="homepage-comments" -->
+      </p>
+        <!-- /tmpl_loop -->
+      <!-- /tmpl_if -->
+      
+      <table border="0">
+	<tr>
+	  <th align="center">
+            <!-- tmpl_if name="map-done" -->
+	      <a href="<!-- tmpl_var name="current-event-id" -->/intensity.html">Most Recent Event</a>
+            <!-- tmpl_else -->
+              A ShakeMap is being generated for the following earthquake.<br>
+              Reload this page in a few minutes to view the result.
+            <!-- /tmpl_if -->   
+	  </th>
+        </tr>
+        <tr align="center">
+          <td>
+            <table border="1">
+              <tr>
+	        <th>Location</th> <!-- 'CUSPID' or 'Location' -->
+	        <th>Date</th>
+	        <th>Time</th>
+	        <th>Magnitude</th>
+              </tr> 
+              <tr align="center">
+	        <td>
+	          <!-- tmpl_var name="current-city-text" --><br>
+	          <font size="-1">
+                  <i>(ID <b><!-- tmpl_var name="current-event-id" --></b>)</i>
+                  </font>
+	        </td>
+	        <td><!-- tmpl_var name="current-date" --></td>
+	        <td><!-- tmpl_var name="current-time" --></td>
+	        <td><!-- tmpl_var name="current-mag"  --></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <!-- tmpl_if name="have-other-maps" -->
+      <hr>
+
+      <h2>Maps of Recent Significant Events</h2>
+
+      <table border="0">
+        <tr align="center">
+          <td>
+            <table border="1">
+              <tr>
+	        <th>Location</th> <!-- 'CUSPID' or 'Location' -->
+	        <th>Date</th>
+	        <th>Time</th>
+	        <th>Magnitude</th>
+              </tr> 
+              <!-- tmpl_loop name="OtherList" -->
+              <tr align="center">
+	        <td>
+                  <a href="<!-- tmpl_var name="event-id" -->/intensity.html">
+                    <!-- tmpl_var name="description" --><br>
+	            <font size="-1">
+                      <i>(ID <b><!-- tmpl_var name="event-id" --></b>)</i>
+                    </font>
+                  </a>
+	        </td>
+	        <td><!-- tmpl_var name="date" --></td>
+	        <td><!-- tmpl_var name="time" --></td>
+	        <td><!-- tmpl_var name="mag"  --></td>
+              </tr>
+              <!-- /tmpl_loop -->
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <!-- tmpl_else -->
+      
+      <br><br><br>
+      <br><br>
+
+      <!-- /tmpl_if -->
+
+      <br>
+
+      <!-- tmpl_if name="have-icons" -->
+      <table border="0" cellpadding="0" cellspacing="0">
+	<!-- tmpl_loop name="icon-loop" -->
+          <tr>
+            <td valign="top">
+	      <!-- tmpl_var name="icon" -->
+            </td>
+	  </tr>
+	<!-- /tmpl_loop -->
+      </table>
+      <!-- /tmpl_if -->
+	    
+    </center>
+    <hr>
+    <p>
+      <font size="-1">
+	Please use the <a href="comment_form.html">comment form</a> for questions, 
+	comments, or suggestions about the ShakeMaps.<br>
+	Page maintained by the ShakeMap Working Group.<br>
+	Page last generated <!-- tmpl_var name="timestamp" -->.
+      </font>
+    </p>
+
+    <!-- tmpl_if name="have-iconmap" -->
+    <!-- tmpl_loop name="map-loop" -->
+      <map name="<!-- tmpl_var name="map-name" -->">
+      <!-- tmpl_loop name="area-loop" -->
+        <!-- tmpl_var name="area">
+      <!-- /tmpl_loop -->
+      </map>
+    <!-- /tmpl_loop -->
+    <!-- /tmpl_if -->
+  </body>
+</html>

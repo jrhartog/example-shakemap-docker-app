@@ -1,0 +1,17 @@
+    <map name="stations_key">
+      <!-- tmpl_loop name="StationListMapping" -->
+      <area shape="CIRCLE" 
+            coords="<!-- tmpl_var name="x" -->,<!-- tmpl_var name="y" -->,5"
+	    href="javascript:station('s<!-- tmpl_var name="sta" -->')"
+	    onMouseOver='window.status="<!-- tmpl_var name="status" -->"'>
+      <!-- /tmpl_loop -->
+      <area name="quake" shape="CIRCLE"
+            coords="<!-- tmpl_var name="eq-x" -->,<!-- tmpl_var name="eq-y" -->,7"
+            href="javascript:quake()"
+            onMouseOver='window.status="<!-- tmpl_var name="eq-status" -->"'>
+
+     <area name="intensity" shape="RECT" 
+           coords="<!-- tmpl_var name="int-imap-l" -->,<!-- tmpl_var name="int-imap-t" -->,<!-- tmpl_var name="int-imap-r" -->,<!-- tmpl_var name="int-imap-b" -->"
+ 	   href="http://www.abag.ca.gov/bayarea/eqmaps/doc/mmi.html"
+	   onMouseOver='window.status="About Intensities"'>
+    </map>

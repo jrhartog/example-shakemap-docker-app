@@ -1,0 +1,2560 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<!DOCTYPE stationlist [
+<!ELEMENT stationlist (station+)>
+<!ATTLIST stationlist
+  created	CDATA	#REQUIRED
+>
+
+<!ELEMENT station (comp+)>
+<!ATTLIST station
+  code		CDATA 			#REQUIRED
+  name		CDATA 			#REQUIRED
+  insttype	CDATA 			#REQUIRED
+  lat		CDATA 			#REQUIRED
+  lon		CDATA 			#REQUIRED
+  source	(SCSN|CDMG|NSMP) 	'SCSN'
+  commtype	(DIG|ANA) 		'DIG'
+>
+
+<!ELEMENT comp (acc,vel,psa*)>
+<!ATTLIST comp
+  name          CDATA  #REQUIRED
+  originalname  CDATA  #IMPLIED
+>
+
+<!ELEMENT acc EMPTY>
+<!ELEMENT vel EMPTY>
+<!ELEMENT psa03 EMPTY>
+<!ELEMENT psa10 EMPTY>
+<!ELEMENT psa30 EMPTY>
+<!ATTLIST acc
+  value  CDATA         #REQUIRED
+  flag   CDATA        ''
+>
+<!ATTLIST vel
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa03
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa10
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa30
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+]>
+<stationlist created="982348866">
+<station code="AGA" name="Agave Hill" insttype="TriNet" lat="33.63838" lon="-116.4011" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0027" flag="0" />
+<vel value="0.0005" flag="0" />
+<psa03 value="0.0010" flag="0" />
+<psa10 value="0.0008" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0021" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0012" flag="0" />
+<psa10 value="0.0007" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0031" flag="0" />
+<vel value="0.0005" flag="0" />
+<psa03 value="0.0012" flag="0" />
+<psa10 value="0.0007" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="AGO" name="AGOURA" insttype="TriNet" lat="34.14647" lon="-118.76699" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0858" flag="G" />
+<vel value="0.0244" flag="G" />
+<psa03 value="0.1226" flag="G" />
+<psa10 value="0.0225" flag="G" />
+<psa30 value="0.0010" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.1016" flag="G" />
+<vel value="0.0217" flag="G" />
+<psa03 value="0.0943" flag="G" />
+<psa10 value="0.0191" flag="G" />
+<psa30 value="0.0013" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0602" flag="G" />
+<vel value="0.0177" flag="G" />
+<psa03 value="0.0657" flag="G" />
+<psa10 value="0.0117" flag="G" />
+<psa30 value="0.0007" flag="G" />
+</comp>
+</station>
+<station code="ALP" name="ANTELOPE" insttype="TriNet" lat="34.68708" lon="-118.29946" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.1065" flag="0" />
+<vel value="0.0481" flag="0" />
+<psa03 value="0.2006" flag="0" />
+<psa10 value="0.0595" flag="0" />
+<psa30 value="0.0020" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.1494" flag="0" />
+<vel value="0.0647" flag="0" />
+<psa03 value="0.2744" flag="0" />
+<psa10 value="0.0357" flag="0" />
+<psa30 value="0.0025" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.1213" flag="0" />
+<vel value="0.0295" flag="0" />
+<psa03 value="0.1650" flag="0" />
+<psa10 value="0.0172" flag="0" />
+<psa30 value="0.0012" flag="0" />
+</comp>
+</station>
+<station code="BAK" name="CALSTATE BAKERSFIELD" insttype="TriNet" lat="35.34413" lon="-119.1043" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0400" flag="0" />
+<vel value="0.0170" flag="0" />
+<psa03 value="0.1076" flag="0" />
+<psa10 value="0.0098" flag="0" />
+<psa30 value="0.0012" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0324" flag="0" />
+<vel value="0.0116" flag="0" />
+<psa03 value="0.0803" flag="0" />
+<psa10 value="0.0080" flag="0" />
+<psa30 value="0.0017" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0227" flag="0" />
+<vel value="0.0075" flag="0" />
+<psa03 value="0.0608" flag="0" />
+<psa10 value="0.0076" flag="0" />
+<psa30 value="0.0015" flag="0" />
+</comp>
+</station>
+<station code="BAR" name="BARRETT" insttype="TriNet" lat="32.68005" lon="-116.67215" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0015" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0018" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0014" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0012" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0009" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0009" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="BBA" name="BURBANK AIRPORT" insttype="TriNet" lat="34.19551" lon="-118.3534" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0667" flag="G" />
+<vel value="0.0142" flag="G" />
+<psa03 value="0.0563" flag="G" />
+<psa10 value="0.0144" flag="G" />
+<psa30 value="0.0019" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0725" flag="G" />
+<vel value="0.0163" flag="G" />
+<psa03 value="0.0422" flag="G" />
+<psa10 value="0.0113" flag="G" />
+<psa30 value="0.0012" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.1083" flag="G" />
+<vel value="0.0148" flag="G" />
+<psa03 value="0.0372" flag="G" />
+<psa10 value="0.0071" flag="G" />
+<psa30 value="0.0008" flag="G" />
+</comp>
+</station>
+<station code="BBB" name="BOMBAY BEACH" insttype="TriNet" lat="33.35262" lon="-115.73325" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0215" flag="G" />
+<vel value="0.0058" flag="G" />
+<psa03 value="0.0366" flag="G" />
+<psa10 value="0.0019" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0290" flag="G" />
+<vel value="0.0097" flag="G" />
+<psa03 value="0.0641" flag="G" />
+<psa10 value="0.0020" flag="G" />
+<psa30 value="0.0006" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0278" flag="G" />
+<vel value="0.0067" flag="G" />
+<psa03 value="0.0528" flag="G" />
+<psa10 value="0.0022" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+</station>
+<station code="BBR" name="Big Bear Solar Observatory" insttype="TriNet" lat="34.2623" lon="-116.92075" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0052" flag="0" />
+<vel value="0.0039" flag="0" />
+<psa03 value="0.0095" flag="0" />
+<psa10 value="0.0083" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0057" flag="0" />
+<vel value="0.0040" flag="0" />
+<psa03 value="0.0121" flag="0" />
+<psa10 value="0.0093" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0040" flag="0" />
+<vel value="0.0026" flag="0" />
+<psa03 value="0.0057" flag="0" />
+<psa10 value="0.0042" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="BC3" name="BIG CHUCKAWALLA MTNS" insttype="TriNet" lat="33.6548" lon="-115.4531" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0002" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0004" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0003" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0005" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0003" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0004" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="BKR" name="BAKER" insttype="TriNet" lat="35.2693" lon="-116.0703" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0063" flag="0" />
+<vel value="0.0026" flag="0" />
+<psa03 value="0.0063" flag="0" />
+<psa10 value="0.0039" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0060" flag="0" />
+<vel value="0.0037" flag="0" />
+<psa03 value="0.0109" flag="0" />
+<psa10 value="0.0029" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0103" flag="0" />
+<vel value="0.0017" flag="0" />
+<psa03 value="0.0053" flag="0" />
+<psa10 value="0.0023" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="BLA" name="BlackRock Canyon Campground" insttype="TriNet" lat="34.0697" lon="-116.3889" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0021" flag="0" />
+<vel value="0.0009" flag="0" />
+<psa03 value="0.0020" flag="0" />
+<psa10 value="0.0014" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0020" flag="0" />
+<vel value="0.0014" flag="0" />
+<psa03 value="0.0028" flag="0" />
+<psa10 value="0.0018" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0020" flag="0" />
+<vel value="0.0008" flag="0" />
+<psa03 value="0.0015" flag="0" />
+<psa10 value="0.0014" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="BTC" name="BRUNTS CORNER" insttype="TriNet" lat="33.01255" lon="-115.21993" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0019" flag="0" />
+<vel value="0.0005" flag="0" />
+<psa03 value="0.0003" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0022" flag="0" />
+<vel value="0.0007" flag="0" />
+<psa03 value="0.0003" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0035" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0004" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="BTP" name="BURNT PEAK" insttype="TriNet" lat="34.6817" lon="-118.5738" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.1573" flag="0" />
+<vel value="0.0506" flag="0" />
+<psa03 value="0.2878" flag="0" />
+<psa10 value="0.0228" flag="0" />
+<psa30 value="0.0017" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.1660" flag="0" />
+<vel value="0.0581" flag="0" />
+<psa03 value="0.3434" flag="0" />
+<psa10 value="0.0474" flag="0" />
+<psa30 value="0.0024" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.1161" flag="0" />
+<vel value="0.0248" flag="0" />
+<psa03 value="0.0787" flag="0" />
+<psa10 value="0.0121" flag="0" />
+<psa30 value="0.0008" flag="0" />
+</comp>
+</station>
+<station code="BVH" name="BEVERLY HILLS" insttype="TriNet" lat="34.07618" lon="-118.3959" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0312" flag="G" />
+<vel value="0.0131" flag="G" />
+<psa03 value="0.0306" flag="G" />
+<psa10 value="0.0177" flag="G" />
+<psa30 value="0.0017" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0532" flag="G" />
+<vel value="0.0143" flag="G" />
+<psa03 value="0.0349" flag="G" />
+<psa10 value="0.0133" flag="G" />
+<psa30 value="0.0008" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0225" flag="G" />
+<vel value="0.0075" flag="G" />
+<psa03 value="0.0136" flag="G" />
+<psa10 value="0.0082" flag="G" />
+<psa30 value="0.0010" flag="G" />
+</comp>
+</station>
+<station code="CHF" name="CHILAO FLAT RNGR STA" insttype="TriNet" lat="34.3334" lon="-118.0259" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0300" flag="0" />
+<vel value="0.0064" flag="0" />
+<psa03 value="0.0154" flag="0" />
+<psa10 value="0.0066" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0302" flag="0" />
+<vel value="0.0061" flag="0" />
+<psa03 value="0.0182" flag="0" />
+<psa10 value="0.0039" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0122" flag="0" />
+<vel value="0.0045" flag="0" />
+<psa03 value="0.0092" flag="0" />
+<psa10 value="0.0054" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="CHN" name="Chino" insttype="TriNet" lat="33.99879" lon="-117.68044" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0131" flag="0" />
+<vel value="0.0071" flag="0" />
+<psa03 value="0.0260" flag="0" />
+<psa10 value="0.0085" flag="0" />
+<psa30 value="0.0006" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0133" flag="0" />
+<vel value="0.0075" flag="0" />
+<psa03 value="0.0232" flag="0" />
+<psa10 value="0.0076" flag="0" />
+<psa30 value="0.0006" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0219" flag="0" />
+<vel value="0.0030" flag="0" />
+<psa03 value="0.0089" flag="0" />
+<psa10 value="0.0031" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="CIA" name="CATALINA ISL AIRPORT" insttype="TriNet" lat="33.402" lon="-118.4152" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0163" flag="0" />
+<vel value="0.0051" flag="0" />
+<psa03 value="0.0150" flag="0" />
+<psa10 value="0.0044" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0162" flag="0" />
+<vel value="0.0050" flag="0" />
+<psa03 value="0.0198" flag="0" />
+<psa10 value="0.0023" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0108" flag="0" />
+<vel value="0.0029" flag="0" />
+<psa03 value="0.0112" flag="0" />
+<psa10 value="0.0021" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="CLC" name="CHINA LAKE" insttype="TriNet" lat="35.81574" lon="-117.59751" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0020" flag="0" />
+<vel value="0.0021" flag="0" />
+<psa03 value="0.0072" flag="0" />
+<psa10 value="0.0030" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0027" flag="0" />
+<vel value="0.0019" flag="0" />
+<psa03 value="0.0054" flag="0" />
+<psa10 value="0.0026" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0021" flag="0" />
+<vel value="0.0031" flag="0" />
+<psa03 value="0.0053" flag="0" />
+<psa10 value="0.0053" flag="0" />
+<psa30 value="0.0005" flag="0" />
+</comp>
+</station>
+<station code="CLT" name="CALECTRIC" insttype="TriNet" lat="34.09316" lon="-117.31671" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0201" flag="0" />
+<vel value="0.0083" flag="0" />
+<psa03 value="0.0514" flag="0" />
+<psa10 value="0.0133" flag="0" />
+<psa30 value="0.0008" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0168" flag="0" />
+<vel value="0.0078" flag="0" />
+<psa03 value="0.0553" flag="0" />
+<psa10 value="0.0101" flag="0" />
+<psa30 value="0.0007" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0216" flag="0" />
+<vel value="0.0046" flag="0" />
+<psa03 value="0.0172" flag="0" />
+<psa10 value="0.0103" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="CPP" name="CAL POLY POMONA" insttype="TriNet" lat="34.0602" lon="-117.809" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0229" flag="G" />
+<vel value="0.0148" flag="G" />
+<psa03 value="0.0543" flag="G" />
+<psa10 value="0.0221" flag="G" />
+<psa30 value="0.0009" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0336" flag="G" />
+<vel value="0.0148" flag="G" />
+<psa03 value="0.0569" flag="G" />
+<psa10 value="0.0180" flag="G" />
+<psa30 value="0.0007" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0408" flag="G" />
+<vel value="0.0053" flag="G" />
+<psa03 value="0.0241" flag="G" />
+<psa10 value="0.0060" flag="G" />
+<psa30 value="0.0003" flag="G" />
+</comp>
+</station>
+<station code="CRN" name="CORONA" insttype="TriNet" lat="33.87574" lon="-117.56106" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0341" flag="G" />
+<vel value="0.0063" flag="G" />
+<psa03 value="0.0173" flag="G" />
+<psa10 value="0.0063" flag="G" />
+<psa30 value="0.0004" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0176" flag="G" />
+<vel value="0.0089" flag="G" />
+<psa03 value="0.0256" flag="G" />
+<psa10 value="0.0062" flag="G" />
+<psa30 value="0.0006" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0579" flag="G" />
+<vel value="0.0042" flag="G" />
+<psa03 value="0.0154" flag="G" />
+<psa10 value="0.0033" flag="G" />
+<psa30 value="0.0007" flag="G" />
+</comp>
+</station>
+<station code="CWC" name="COTTONWOOD CREEK" insttype="TriNet" lat="36.43988" lon="-118.08016" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0062" flag="0" />
+<vel value="0.0029" flag="0" />
+<psa03 value="0.0211" flag="0" />
+<psa10 value="0.0011" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0051" flag="0" />
+<vel value="0.0022" flag="0" />
+<psa03 value="0.0187" flag="0" />
+<psa10 value="0.0014" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0023" flag="0" />
+<vel value="0.0012" flag="0" />
+<psa03 value="0.0079" flag="0" />
+<psa10 value="0.0010" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="DAN" name="DANBY" insttype="TriNet" lat="34.6371" lon="-115.3805" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0010" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0012" flag="0" />
+<psa10 value="0.0004" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0011" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0011" flag="0" />
+<psa10 value="0.0004" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0013" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0016" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="DEV" name="DEVERS" insttype="TriNet" lat="33.935" lon="-116.577" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0082" flag="0" />
+<vel value="0.0019" flag="0" />
+<psa03 value="0.0049" flag="0" />
+<psa10 value="0.0026" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0111" flag="0" />
+<vel value="0.0023" flag="0" />
+<psa03 value="0.0043" flag="0" />
+<psa10 value="0.0032" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0094" flag="0" />
+<vel value="0.0013" flag="0" />
+<psa03 value="0.0028" flag="0" />
+<psa10 value="0.0013" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="DGR" name="DOMENIGONI RESERVOIR" insttype="TriNet" lat="33.64996" lon="-117.00948" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0025" flag="0" />
+<vel value="0.0008" flag="0" />
+<psa03 value="0.0035" flag="0" />
+<psa10 value="0.0007" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0028" flag="0" />
+<vel value="0.0008" flag="0" />
+<psa03 value="0.0041" flag="0" />
+<psa10 value="0.0010" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0019" flag="0" />
+<vel value="0.0007" flag="0" />
+<psa03 value="0.0033" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="DJJ" name="DONNA JONES JENKINS" insttype="TriNet" lat="34.1058" lon="-118.4538" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0483" flag="0" />
+<vel value="0.0222" flag="0" />
+<psa03 value="0.0871" flag="0" />
+<psa10 value="0.0133" flag="0" />
+<psa30 value="0.0011" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0389" flag="0" />
+<vel value="0.0135" flag="0" />
+<psa03 value="0.0718" flag="0" />
+<psa10 value="0.0060" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0335" flag="0" />
+<vel value="0.0101" flag="0" />
+<psa03 value="0.0417" flag="0" />
+<psa10 value="0.0036" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="DRC" name="DESERT RESEARCH CENT" insttype="TriNet" lat="32.8054" lon="-115.44654" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0118" flag="0" />
+<vel value="0.0016" flag="0" />
+<psa03 value="0.0078" flag="0" />
+<psa10 value="0.0003" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0081" flag="0" />
+<vel value="0.0019" flag="0" />
+<psa03 value="0.0082" flag="0" />
+<psa10 value="0.0004" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0083" flag="0" />
+<vel value="0.0011" flag="0" />
+<psa03 value="0.0109" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="EDW" name="EDWARDS AFB" insttype="TriNet" lat="34.88303" lon="-117.99106" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0496" flag="0" />
+<vel value="0.0125" flag="0" />
+<psa03 value="0.0336" flag="0" />
+<psa10 value="0.0046" flag="0" />
+<psa30 value="0.0005" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0451" flag="0" />
+<vel value="0.0143" flag="0" />
+<psa03 value="0.0588" flag="0" />
+<psa10 value="0.0099" flag="0" />
+<psa30 value="0.0007" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0232" flag="0" />
+<vel value="0.0057" flag="0" />
+<psa03 value="0.0125" flag="0" />
+<psa10 value="0.0050" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="ERR" name="Elmore's Ranch" insttype="TriNet" lat="33.1168" lon="-115.8227" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0027" flag="0" />
+<vel value="0.0010" flag="0" />
+<psa03 value="0.0016" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0031" flag="0" />
+<vel value="0.0012" flag="0" />
+<psa03 value="0.0024" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0058" flag="0" />
+<vel value="0.0007" flag="0" />
+<psa03 value="0.0023" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="FLL" name="FILLMORE" insttype="TriNet" lat="34.39727" lon="-118.91807" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.3736" flag="G" />
+<vel value="0.1946" flag="G" />
+<psa03 value="0.8304" flag="G" />
+<psa10 value="0.2225" flag="G" />
+<psa30 value="0.0113" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.6557" flag="G" />
+<vel value="0.3232" flag="G" />
+<psa03 value="1.0447" flag="G" />
+<psa10 value="0.3218" flag="G" />
+<psa30 value="0.0237" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.3632" flag="G" />
+<vel value="0.1067" flag="G" />
+<psa03 value="0.3603" flag="G" />
+<psa10 value="0.1494" flag="G" />
+<psa30 value="0.0088" flag="G" />
+</comp>
+</station>
+<station code="FON" name="FONTANA" insttype="TriNet" lat="34.09957" lon="-117.43876" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0480" flag="G" />
+<vel value="0.0065" flag="G" />
+<psa03 value="0.0153" flag="G" />
+<psa10 value="0.0049" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0111" flag="G" />
+<vel value="0.0066" flag="G" />
+<psa03 value="0.0227" flag="G" />
+<psa10 value="0.0047" flag="G" />
+<psa30 value="0.0006" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0263" flag="G" />
+<vel value="0.0048" flag="G" />
+<psa03 value="0.0095" flag="G" />
+<psa10 value="0.0052" flag="G" />
+<psa30 value="0.0004" flag="G" />
+</comp>
+</station>
+<station code="FPC" name="FEDERAL PRISON CAMP" insttype="TriNet" lat="35.082" lon="-117.58267" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0101" flag="0" />
+<vel value="0.0034" flag="0" />
+<psa03 value="0.0126" flag="0" />
+<psa10 value="0.0026" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0127" flag="0" />
+<vel value="0.0059" flag="0" />
+<psa03 value="0.0144" flag="0" />
+<psa10 value="0.0060" flag="0" />
+<psa30 value="0.0005" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0061" flag="0" />
+<vel value="0.0027" flag="0" />
+<psa03 value="0.0052" flag="0" />
+<psa10 value="0.0028" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="FUL" name="FULLERTON" insttype="TriNet" lat="33.8717" lon="-117.92251" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0095" flag="G" />
+<vel value="0.0065" flag="G" />
+<psa03 value="0.0220" flag="G" />
+<psa10 value="0.0080" flag="G" />
+<psa30 value="0.0011" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0145" flag="G" />
+<vel value="0.0077" flag="G" />
+<psa03 value="0.0287" flag="G" />
+<psa10 value="0.0083" flag="G" />
+<psa30 value="0.0008" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0254" flag="G" />
+<vel value="0.0053" flag="G" />
+<psa03 value="0.0187" flag="G" />
+<psa10 value="0.0045" flag="G" />
+<psa30 value="0.0006" flag="G" />
+</comp>
+</station>
+<station code="FUR" name="FURNACE CREEK" insttype="TriNet" lat="36.4672" lon="-116.8635" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0045" flag="0" />
+<vel value="0.0028" flag="0" />
+<psa03 value="0.0038" flag="0" />
+<psa10 value="0.0094" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0079" flag="0" />
+<vel value="0.0023" flag="0" />
+<psa03 value="0.0025" flag="0" />
+<psa10 value="0.0051" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0099" flag="0" />
+<vel value="0.0009" flag="0" />
+<psa03 value="0.0033" flag="0" />
+<psa10 value="0.0013" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="GLA" name="GLAMIS" insttype="TriNet" lat="33.052" lon="-114.827" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0001" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0002" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0000" flag="0" />
+<vel value="0.0001" flag="0" />
+<psa03 value="0.0001" flag="0" />
+<psa10 value="0.0000" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0000" flag="0" />
+<vel value="0.0001" flag="0" />
+<psa03 value="0.0000" flag="0" />
+<psa10 value="0.0000" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="GOR" name="GREEN OAK RANCH" insttype="TriNet" lat="33.16" lon="-117.23" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0033" flag="0" />
+<vel value="0.0007" flag="0" />
+<psa03 value="0.0016" flag="0" />
+<psa10 value="0.0004" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0040" flag="0" />
+<vel value="0.0006" flag="0" />
+<psa03 value="0.0014" flag="0" />
+<psa10 value="0.0003" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0027" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0014" flag="0" />
+<psa10 value="0.0004" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="GR2" name="GRIFFITH OBSERVATORY" insttype="TriNet" lat="34.1183" lon="-118.2994" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0364" flag="0" />
+<vel value="0.0024" flag="0" />
+<psa03 value="0.0007" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0247" flag="0" />
+<vel value="0.0014" flag="0" />
+<psa03 value="0.0005" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0183" flag="0" />
+<vel value="0.0039" flag="0" />
+<psa03 value="0.0130" flag="0" />
+<psa10 value="0.0006" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="GRF" name="GRIFFITH PARK OBSERV" insttype="TriNet" lat="34.1192" lon="-118.3004" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0597" flag="G" />
+<vel value="0.0157" flag="G" />
+<psa03 value="0.0464" flag="G" />
+<psa10 value="0.0111" flag="G" />
+<psa30 value="0.0010" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0471" flag="G" />
+<vel value="0.0113" flag="G" />
+<psa03 value="0.0264" flag="G" />
+<psa10 value="0.0062" flag="G" />
+<psa30 value="0.0008" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0203" flag="G" />
+<vel value="0.0050" flag="G" />
+<psa03 value="0.0182" flag="G" />
+<psa10 value="0.0029" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+</station>
+<station code="GSC" name="GOLDSTONE" insttype="TriNet" lat="35.30176" lon="-116.80572" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0027" flag="0" />
+<vel value="0.0022" flag="0" />
+<psa03 value="0.0067" flag="0" />
+<psa10 value="0.0028" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0031" flag="0" />
+<vel value="0.0020" flag="0" />
+<psa03 value="0.0067" flag="0" />
+<psa10 value="0.0026" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0024" flag="0" />
+<vel value="0.0017" flag="0" />
+<psa03 value="0.0048" flag="0" />
+<psa10 value="0.0039" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="HEC" name="HECTOR" insttype="TriNet" lat="34.8294" lon="-116.335" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0027" flag="0" />
+<vel value="0.0018" flag="0" />
+<psa03 value="0.0062" flag="0" />
+<psa10 value="0.0050" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0020" flag="0" />
+<vel value="0.0019" flag="0" />
+<psa03 value="0.0063" flag="0" />
+<psa10 value="0.0023" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0016" flag="0" />
+<vel value="0.0010" flag="0" />
+<psa03 value="0.0033" flag="0" />
+<psa10 value="0.0018" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="HLN" name="HIGHLAND" insttype="TriNet" lat="34.12128" lon="-117.21897" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0104" flag="G" />
+<vel value="0.0063" flag="G" />
+<psa03 value="0.0144" flag="G" />
+<psa10 value="0.0089" flag="G" />
+<psa30 value="0.0007" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0089" flag="G" />
+<vel value="0.0103" flag="G" />
+<psa03 value="0.0132" flag="G" />
+<psa10 value="0.0153" flag="G" />
+<psa30 value="0.0019" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0115" flag="G" />
+<vel value="0.0064" flag="G" />
+<psa03 value="0.0095" flag="G" />
+<psa10 value="0.0051" flag="G" />
+<psa30 value="0.0006" flag="G" />
+</comp>
+</station>
+<station code="ISA" name="ISABELLA" insttype="TriNet" lat="35.66278" lon="-118.47403" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0067" flag="0" />
+<vel value="0.0031" flag="0" />
+<psa03 value="0.0147" flag="0" />
+<psa10 value="0.0031" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0050" flag="0" />
+<vel value="0.0028" flag="0" />
+<psa03 value="0.0219" flag="0" />
+<psa10 value="0.0021" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0069" flag="0" />
+<vel value="0.0040" flag="0" />
+<psa03 value="0.0248" flag="0" />
+<psa10 value="0.0036" flag="0" />
+<psa30 value="0.0006" flag="0" />
+</comp>
+</station>
+<station code="JCS" name="JULIAN CAMP STEVENS" insttype="TriNet" lat="33.0859" lon="-116.5959" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0011" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0014" flag="0" />
+<psa10 value="0.0003" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0012" flag="0" />
+<vel value="0.0005" flag="0" />
+<psa03 value="0.0025" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0006" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0010" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="JFP" name="JENSEN FILTRATION PL" insttype="TriNet" lat="34.3087" lon="-118.5026" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0451" flag="G" />
+<vel value="0.0196" flag="G" />
+<psa03 value="0.0842" flag="G" />
+<psa10 value="0.0229" flag="G" />
+<psa30 value="0.0018" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0542" flag="G" />
+<vel value="0.0187" flag="G" />
+<psa03 value="0.0701" flag="G" />
+<psa10 value="0.0176" flag="G" />
+<psa30 value="0.0020" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0333" flag="G" />
+<vel value="0.0098" flag="G" />
+<psa03 value="0.0411" flag="G" />
+<psa10 value="0.0118" flag="G" />
+<psa30 value="0.0012" flag="G" />
+</comp>
+</station>
+<station code="JRC" name="JOSHUA RIDGE/COSO" insttype="TriNet" lat="35.9823" lon="-117.8076" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0073" flag="0" />
+<vel value="0.0048" flag="0" />
+<psa03 value="0.0265" flag="0" />
+<psa10 value="0.0094" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0081" flag="0" />
+<vel value="0.0055" flag="0" />
+<psa03 value="0.0248" flag="0" />
+<psa10 value="0.0037" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0050" flag="0" />
+<vel value="0.0037" flag="0" />
+<psa03 value="0.0171" flag="0" />
+<psa10 value="0.0045" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="KIK" name="KINEMETRICS" insttype="TriNet" lat="34.15037" lon="-118.10156" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0230" flag="G" />
+<vel value="0.0118" flag="G" />
+<psa03 value="0.0298" flag="G" />
+<psa10 value="0.0177" flag="G" />
+<psa30 value="0.0010" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0215" flag="G" />
+<vel value="0.0083" flag="G" />
+<psa03 value="0.0284" flag="G" />
+<psa10 value="0.0114" flag="G" />
+<psa30 value="0.0010" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0240" flag="G" />
+<vel value="0.0069" flag="G" />
+<psa03 value="0.0203" flag="G" />
+<psa10 value="0.0058" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+</station>
+<station code="LAX" name="LOS ANGELES AIRPORT" insttype="TriNet" lat="33.94382" lon="-118.4139" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0744" flag="G" />
+<vel value="0.0178" flag="G" />
+<psa03 value="0.0498" flag="G" />
+<psa10 value="0.0120" flag="G" />
+<psa30 value="0.0023" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0449" flag="G" />
+<vel value="0.0107" flag="G" />
+<psa03 value="0.0396" flag="G" />
+<psa10 value="0.0103" flag="G" />
+<psa30 value="0.0010" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0409" flag="G" />
+<vel value="0.0072" flag="G" />
+<psa03 value="0.0219" flag="G" />
+<psa10 value="0.0068" flag="G" />
+<psa30 value="0.0011" flag="G" />
+</comp>
+</station>
+<station code="LCG" name="LA CIENEGA" insttype="TriNet" lat="34.00033" lon="-118.37794" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0254" flag="0" />
+<vel value="0.0090" flag="0" />
+<psa03 value="0.0467" flag="0" />
+<psa10 value="0.0118" flag="0" />
+<psa30 value="0.0016" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0271" flag="0" />
+<vel value="0.0100" flag="0" />
+<psa03 value="0.0389" flag="0" />
+<psa10 value="0.0087" flag="0" />
+<psa30 value="0.0014" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0213" flag="0" />
+<vel value="0.0056" flag="0" />
+<psa03 value="0.0281" flag="0" />
+<psa10 value="0.0063" flag="0" />
+<psa30 value="0.0006" flag="0" />
+</comp>
+</station>
+<station code="LDF" name="Landfair" insttype="TriNet" lat="35.0781" lon="-115.1096" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0048" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0008" flag="0" />
+<psa10 value="0.0005" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0060" flag="0" />
+<vel value="0.0005" flag="0" />
+<psa03 value="0.0008" flag="0" />
+<psa10 value="0.0004" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0130" flag="0" />
+<vel value="0.0013" flag="0" />
+<psa03 value="0.0012" flag="0" />
+<psa10 value="0.0004" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="LEV" name="LEONA VALLEY" insttype="TriNet" lat="34.61462" lon="-118.29104" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.1728" flag="G" />
+<vel value="0.0499" flag="G" />
+<psa03 value="0.1897" flag="G" />
+<psa10 value="0.0129" flag="G" />
+<psa30 value="0.0010" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.2299" flag="G" />
+<vel value="0.0676" flag="G" />
+<psa03 value="0.2165" flag="G" />
+<psa10 value="0.0215" flag="G" />
+<psa30 value="0.0015" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.1042" flag="G" />
+<vel value="0.0203" flag="G" />
+<psa03 value="0.0458" flag="G" />
+<psa10 value="0.0102" flag="G" />
+<psa30 value="0.0011" flag="G" />
+</comp>
+</station>
+<station code="LGU" name="LAGUNA PEAK" insttype="TriNet" lat="34.10819" lon="-119.06587" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.1022" flag="0" />
+<vel value="0.0286" flag="0" />
+<psa03 value="0.1283" flag="0" />
+<psa10 value="0.0127" flag="0" />
+<psa30 value="0.0008" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.1164" flag="0" />
+<vel value="0.0317" flag="0" />
+<psa03 value="0.1252" flag="0" />
+<psa10 value="0.0058" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0928" flag="0" />
+<vel value="0.0152" flag="0" />
+<psa03 value="0.0598" flag="0" />
+<psa10 value="0.0077" flag="0" />
+<psa30 value="0.0007" flag="0" />
+</comp>
+</station>
+<station code="LKL" name="LAKE LOS ANGELES" insttype="TriNet" lat="34.616" lon="-117.8244" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0468" flag="0" />
+<vel value="0.0188" flag="0" />
+<psa03 value="0.0622" flag="0" />
+<psa10 value="0.0120" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0688" flag="0" />
+<vel value="0.0300" flag="0" />
+<psa03 value="0.1404" flag="0" />
+<psa10 value="0.0218" flag="0" />
+<psa30 value="0.0014" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0315" flag="0" />
+<vel value="0.0101" flag="0" />
+<psa03 value="0.0865" flag="0" />
+<psa10 value="0.0075" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="LRL" name="LAUREL MTN RADIO FAC" insttype="TriNet" lat="35.4794" lon="-117.6821" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0053" flag="0" />
+<vel value="0.0024" flag="0" />
+<psa03 value="0.0106" flag="0" />
+<psa10 value="0.0019" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0062" flag="0" />
+<vel value="0.0027" flag="0" />
+<psa03 value="0.0133" flag="0" />
+<psa10 value="0.0025" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0048" flag="0" />
+<vel value="0.0017" flag="0" />
+<psa03 value="0.0075" flag="0" />
+<psa10 value="0.0017" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="LTR" name="LITTLEROCK" insttype="TriNet" lat="34.5211" lon="-117.9903" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0708" flag="G" />
+<vel value="0.0102" flag="G" />
+<psa03 value="0.0441" flag="G" />
+<psa10 value="0.0092" flag="G" />
+<psa30 value="0.0007" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0725" flag="G" />
+<vel value="0.0161" flag="G" />
+<psa03 value="0.0554" flag="G" />
+<psa10 value="0.0139" flag="G" />
+<psa30 value="0.0007" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0850" flag="G" />
+<vel value="0.0106" flag="G" />
+<psa03 value="0.0294" flag="G" />
+<psa10 value="0.0029" flag="G" />
+<psa30 value="0.0006" flag="G" />
+</comp>
+</station>
+<station code="LUG" name="LUGO" insttype="TriNet" lat="34.3661" lon="-117.3658" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0072" flag="0" />
+<vel value="0.0035" flag="0" />
+<psa03 value="0.0220" flag="0" />
+<psa10 value="0.0053" flag="0" />
+<psa30 value="0.0006" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0094" flag="0" />
+<vel value="0.0053" flag="0" />
+<psa03 value="0.0207" flag="0" />
+<psa10 value="0.0063" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0066" flag="0" />
+<vel value="0.0026" flag="0" />
+<psa03 value="0.0098" flag="0" />
+<psa10 value="0.0039" flag="0" />
+<psa30 value="0.0006" flag="0" />
+</comp>
+</station>
+<station code="MLAC" name="MAMMOTH" insttype="TriNet" lat="37.63014" lon="-118.83611" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0018" flag="0" />
+<vel value="0.0012" flag="0" />
+<psa03 value="0.0052" flag="0" />
+<psa10 value="0.0012" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0013" flag="0" />
+<vel value="0.0010" flag="0" />
+<psa03 value="0.0046" flag="0" />
+<psa10 value="0.0012" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0014" flag="0" />
+<vel value="0.0007" flag="0" />
+<psa03 value="0.0052" flag="0" />
+<psa10 value="0.0007" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="MOP" name="MOORPARK" insttype="TriNet" lat="34.28085" lon="-118.9049" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.2585" flag="0" />
+<vel value="0.0927" flag="0" />
+<psa03 value="0.4592" flag="0" />
+<psa10 value="0.1161" flag="0" />
+<psa30 value="0.0069" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.3585" flag="0" />
+<vel value="0.1383" flag="0" />
+<psa03 value="0.4537" flag="0" />
+<psa10 value="0.0993" flag="0" />
+<psa30 value="0.0083" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.2249" flag="0" />
+<vel value="0.0509" flag="0" />
+<psa03 value="0.1254" flag="0" />
+<psa10 value="0.0511" flag="0" />
+<psa30 value="0.0043" flag="0" />
+</comp>
+</station>
+<station code="MPM" name="MANUEL PROSPECT MINE" insttype="TriNet" lat="36.05799" lon="-117.48901" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0016" flag="0" />
+<vel value="0.0024" flag="0" />
+<psa03 value="0.0035" flag="0" />
+<psa10 value="0.0041" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0017" flag="0" />
+<vel value="0.0021" flag="0" />
+<psa03 value="0.0036" flag="0" />
+<psa10 value="0.0045" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0010" flag="0" />
+<vel value="0.0011" flag="0" />
+<psa03 value="0.0028" flag="0" />
+<psa10 value="0.0018" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="MSJ" name="Mt. San Jacinto Campus" insttype="TriNet" lat="33.8084" lon="-116.968" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0119" flag="0" />
+<vel value="0.0074" flag="0" />
+<psa03 value="0.0237" flag="0" />
+<psa10 value="0.0130" flag="0" />
+<psa30 value="0.0007" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0105" flag="0" />
+<vel value="0.0054" flag="0" />
+<psa03 value="0.0141" flag="0" />
+<psa10 value="0.0110" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0482" flag="0" />
+<vel value="0.0069" flag="0" />
+<psa03 value="0.0087" flag="0" />
+<psa10 value="0.0034" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="MTP" name="MOUNTAIN PASS" insttype="TriNet" lat="35.485" lon="-115.553" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0004" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0009" flag="0" />
+<psa10 value="0.0003" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0004" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0006" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0005" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0009" flag="0" />
+<psa10 value="0.0002" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="MWC" name="MOUNT WILSON" insttype="TriNet" lat="34.22368" lon="-118.05287" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0305" flag="0" />
+<vel value="0.0087" flag="0" />
+<psa03 value="0.0391" flag="0" />
+<psa10 value="0.0037" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0301" flag="0" />
+<vel value="0.0072" flag="0" />
+<psa03 value="0.0330" flag="0" />
+<psa10 value="0.0052" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0228" flag="0" />
+<vel value="0.0055" flag="0" />
+<psa03 value="0.0148" flag="0" />
+<psa10 value="0.0021" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="NOT" name="NORTHRIDGE" insttype="TriNet" lat="34.22869" lon="-118.55829" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0760" flag="G" />
+<vel value="0.0377" flag="G" />
+<psa03 value="0.1835" flag="G" />
+<psa10 value="0.0576" flag="G" />
+<psa30 value="0.0028" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0900" flag="G" />
+<vel value="0.0669" flag="G" />
+<psa03 value="0.2593" flag="G" />
+<psa10 value="0.0466" flag="G" />
+<psa30 value="0.0032" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0442" flag="G" />
+<vel value="0.0106" flag="G" />
+<psa03 value="0.0285" flag="G" />
+<psa10 value="0.0128" flag="G" />
+<psa30 value="0.0019" flag="G" />
+</comp>
+</station>
+<station code="OGC" name="ORANGE (CHAPMAN)" insttype="TriNet" lat="33.78816" lon="-117.844" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0241" flag="G" />
+<vel value="0.0049" flag="G" />
+<psa03 value="0.0129" flag="G" />
+<psa10 value="0.0101" flag="G" />
+<psa30 value="0.0012" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0105" flag="G" />
+<vel value="0.0051" flag="G" />
+<psa03 value="0.0177" flag="G" />
+<psa10 value="0.0051" flag="G" />
+<psa30 value="0.0009" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0678" flag="G" />
+<vel value="0.0057" flag="G" />
+<psa03 value="0.0114" flag="G" />
+<psa10 value="0.0036" flag="G" />
+<psa30 value="0.0008" flag="G" />
+</comp>
+</station>
+<station code="OKV" name="OAKVIEW" insttype="TriNet" lat="34.39681" lon="-119.29923" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.2568" flag="G" />
+<vel value="0.0696" flag="G" />
+<psa03 value="0.3616" flag="G" />
+<psa10 value="0.0562" flag="G" />
+<psa30 value="0.0051" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.1573" flag="G" />
+<vel value="0.0826" flag="G" />
+<psa03 value="0.3119" flag="G" />
+<psa10 value="0.0801" flag="G" />
+<psa30 value="0.0055" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.1740" flag="G" />
+<vel value="0.0611" flag="G" />
+<psa03 value="0.2879" flag="G" />
+<psa10 value="0.0541" flag="G" />
+<psa30 value="0.0064" flag="G" />
+</comp>
+</station>
+<station code="OLI" name="Olinda" insttype="TriNet" lat="33.94551" lon="-117.92368" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0128" flag="0" />
+<vel value="0.0049" flag="0" />
+<psa03 value="0.0257" flag="0" />
+<psa10 value="0.0043" flag="0" />
+<psa30 value="0.0005" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0160" flag="0" />
+<vel value="0.0065" flag="0" />
+<psa03 value="0.0397" flag="0" />
+<psa10 value="0.0050" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0100" flag="0" />
+<vel value="0.0034" flag="0" />
+<psa03 value="0.0172" flag="0" />
+<psa10 value="0.0024" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="OSI" name="OSITO AUDIT" insttype="TriNet" lat="34.6145" lon="-118.7235" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.2349" flag="0" />
+<vel value="0.0822" flag="0" />
+<psa03 value="0.1533" flag="0" />
+<psa10 value="0.0472" flag="0" />
+<psa30 value="0.0036" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.3596" flag="0" />
+<vel value="0.1296" flag="0" />
+<psa03 value="0.1985" flag="0" />
+<psa10 value="0.0705" flag="0" />
+<psa30 value="0.0062" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.1489" flag="0" />
+<vel value="0.0475" flag="0" />
+<psa03 value="0.1474" flag="0" />
+<psa10 value="0.0401" flag="0" />
+<psa30 value="0.0029" flag="0" />
+</comp>
+</station>
+<station code="PAS" name="PASADENA" insttype="TriNet" lat="34.14844" lon="-118.17113" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0062" flag="0" />
+<vel value="0.0031" flag="0" />
+<psa03 value="0.0121" flag="0" />
+<psa10 value="0.0036" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0105" flag="0" />
+<vel value="0.0027" flag="0" />
+<psa03 value="0.0129" flag="0" />
+<psa10 value="0.0033" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0052" flag="0" />
+<vel value="0.0016" flag="0" />
+<psa03 value="0.0063" flag="0" />
+<psa10 value="0.0030" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="PDE" name="PARDEE" insttype="TriNet" lat="34.44209" lon="-118.58228" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0481" flag="0" />
+<vel value="0.0206" flag="0" />
+<psa03 value="0.1427" flag="0" />
+<psa10 value="0.0223" flag="0" />
+<psa30 value="0.0017" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0428" flag="0" />
+<vel value="0.0229" flag="0" />
+<psa03 value="0.1151" flag="0" />
+<psa10 value="0.0390" flag="0" />
+<psa30 value="0.0020" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0414" flag="0" />
+<vel value="0.0102" flag="0" />
+<psa03 value="0.0330" flag="0" />
+<psa10 value="0.0125" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+</station>
+<station code="PDU" name="Padua" insttype="TriNet" lat="34.12084" lon="-117.63793" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0146" flag="0" />
+<vel value="0.0060" flag="0" />
+<psa03 value="0.0304" flag="0" />
+<psa10 value="0.0061" flag="0" />
+<psa30 value="0.0005" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0132" flag="0" />
+<vel value="0.0062" flag="0" />
+<psa03 value="0.0288" flag="0" />
+<psa10 value="0.0043" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0095" flag="0" />
+<vel value="0.0045" flag="0" />
+<psa03 value="0.0150" flag="0" />
+<psa10 value="0.0055" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="PHL" name="PARK HILL" insttype="TriNet" lat="35.4077" lon="-120.54562" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0201" flag="0" />
+<vel value="0.0081" flag="0" />
+<psa03 value="0.0468" flag="0" />
+<psa10 value="0.0026" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0133" flag="0" />
+<vel value="0.0061" flag="0" />
+<psa03 value="0.0519" flag="0" />
+<psa10 value="0.0023" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0032" flag="0" />
+<vel value="0.0014" flag="0" />
+<psa03 value="0.0070" flag="0" />
+<psa10 value="0.0011" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="PLC" name="PALM SPGS CITY HALL" insttype="TriNet" lat="33.82434" lon="-116.51209" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0176" flag="G" />
+<vel value="0.0027" flag="G" />
+<psa03 value="0.0058" flag="G" />
+<psa10 value="0.0043" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0243" flag="G" />
+<vel value="0.0032" flag="G" />
+<psa03 value="0.0058" flag="G" />
+<psa10 value="0.0062" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0203" flag="G" />
+<vel value="0.0018" flag="G" />
+<psa03 value="0.0072" flag="G" />
+<psa10 value="0.0019" flag="G" />
+<psa30 value="0.0001" flag="G" />
+</comp>
+</station>
+<station code="PLM" name="PALOMAR" insttype="TriNet" lat="33.3537" lon="-116.8627" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0012" flag="0" />
+<vel value="0.0008" flag="0" />
+<psa03 value="0.0017" flag="0" />
+<psa10 value="0.0009" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0017" flag="0" />
+<vel value="0.0010" flag="0" />
+<psa03 value="0.0021" flag="0" />
+<psa10 value="0.0014" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0010" flag="0" />
+<vel value="0.0006" flag="0" />
+<psa03 value="0.0013" flag="0" />
+<psa10 value="0.0007" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="RCT" name="RECTOR" insttype="TriNet" lat="36.30523" lon="-119.24384" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0324" flag="0" />
+<vel value="0.0159" flag="0" />
+<psa03 value="0.1194" flag="0" />
+<psa10 value="0.0062" flag="0" />
+<psa30 value="0.0010" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0213" flag="0" />
+<vel value="0.0110" flag="0" />
+<psa03 value="0.0976" flag="0" />
+<psa10 value="0.0047" flag="0" />
+<psa30 value="0.0006" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0142" flag="0" />
+<vel value="0.0059" flag="0" />
+<psa03 value="0.0439" flag="0" />
+<psa10 value="0.0040" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="RIN" name="Rinaldi" insttype="TriNet" lat="34.282" lon="-118.47924" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0903" flag="0" />
+<vel value="0.0260" flag="0" />
+<psa03 value="0.0970" flag="0" />
+<psa10 value="0.0229" flag="0" />
+<psa30 value="0.0018" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0911" flag="0" />
+<vel value="0.0217" flag="0" />
+<psa03 value="0.0778" flag="0" />
+<psa10 value="0.0175" flag="0" />
+<psa30 value="0.0014" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0624" flag="0" />
+<vel value="0.0137" flag="0" />
+<psa03 value="0.0370" flag="0" />
+<psa10 value="0.0041" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="RIO" name="Rio Hondo" insttype="TriNet" lat="34.10473" lon="-117.97956" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0148" flag="0" />
+<vel value="0.0072" flag="0" />
+<psa03 value="0.0166" flag="0" />
+<psa10 value="0.0061" flag="0" />
+<psa30 value="0.0007" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0146" flag="0" />
+<vel value="0.0050" flag="0" />
+<psa03 value="0.0149" flag="0" />
+<psa10 value="0.0053" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0204" flag="0" />
+<vel value="0.0043" flag="0" />
+<psa03 value="0.0155" flag="0" />
+<psa10 value="0.0030" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="RPV" name="RANCHO PALOS VERDES" insttype="TriNet" lat="33.74329" lon="-118.40426" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0556" flag="0" />
+<vel value="0.0181" flag="0" />
+<psa03 value="0.0722" flag="0" />
+<psa10 value="0.0117" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0385" flag="0" />
+<vel value="0.0141" flag="0" />
+<psa03 value="0.0373" flag="0" />
+<psa10 value="0.0140" flag="0" />
+<psa30 value="0.0007" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0274" flag="0" />
+<vel value="0.0061" flag="0" />
+<psa03 value="0.0189" flag="0" />
+<psa10 value="0.0043" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="RSB" name="RIVERSIDE BOREHOLE" insttype="TriNet" lat="33.9731" lon="-117.3272" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0331" flag="G" />
+<vel value="0.0066" flag="G" />
+<psa03 value="0.0178" flag="G" />
+<psa10 value="0.0022" flag="G" />
+<psa30 value="0.0003" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0375" flag="G" />
+<vel value="0.0065" flag="G" />
+<psa03 value="0.0167" flag="G" />
+<psa10 value="0.0024" flag="G" />
+<psa30 value="0.0002" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0227" flag="G" />
+<vel value="0.0047" flag="G" />
+<psa03 value="0.0138" flag="G" />
+<psa10 value="0.0017" flag="G" />
+<psa30 value="0.0002" flag="G" />
+</comp>
+</station>
+<station code="RUS" name="RUSH" insttype="TriNet" lat="34.0505" lon="-118.0799" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0365" flag="0" />
+<vel value="0.0122" flag="0" />
+<psa03 value="0.0414" flag="0" />
+<psa10 value="0.0103" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0352" flag="0" />
+<vel value="0.0148" flag="0" />
+<psa03 value="0.0410" flag="0" />
+<psa10 value="0.0135" flag="0" />
+<psa30 value="0.0008" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0146" flag="0" />
+<vel value="0.0037" flag="0" />
+<psa03 value="0.0152" flag="0" />
+<psa10 value="0.0066" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="RVR" name="RIVERSIDE" insttype="TriNet" lat="33.99351" lon="-117.37545" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0063" flag="0" />
+<vel value="0.0017" flag="0" />
+<psa03 value="0.0059" flag="0" />
+<psa10 value="0.0016" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0056" flag="0" />
+<vel value="0.0018" flag="0" />
+<psa03 value="0.0073" flag="0" />
+<psa10 value="0.0010" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0048" flag="0" />
+<vel value="0.0012" flag="0" />
+<psa03 value="0.0055" flag="0" />
+<psa10 value="0.0013" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="SAL" name="SALTON CITY" insttype="TriNet" lat="33.27989" lon="-115.98617" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0012" flag="0" />
+<vel value="0.0007" flag="0" />
+<psa03 value="0.0033" flag="0" />
+<psa10 value="0.0009" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0010" flag="0" />
+<vel value="0.0010" flag="0" />
+<psa03 value="0.0028" flag="0" />
+<psa10 value="0.0010" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0009" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0017" flag="0" />
+<psa10 value="0.0007" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="SAN" name="SANTA ANA" insttype="TriNet" lat="33.70432" lon="-117.88578" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0083" flag="G" />
+<vel value="0.0067" flag="G" />
+<psa03 value="0.0197" flag="G" />
+<psa10 value="0.0072" flag="G" />
+<psa30 value="0.0011" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0100" flag="G" />
+<vel value="0.0056" flag="G" />
+<psa03 value="0.0265" flag="G" />
+<psa10 value="0.0097" flag="G" />
+<psa30 value="0.0009" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0106" flag="G" />
+<vel value="0.0033" flag="G" />
+<psa03 value="0.0080" flag="G" />
+<psa10 value="0.0033" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+</station>
+<station code="SBC" name="SANTA BARBARA" insttype="TriNet" lat="34.44076" lon="-119.71492" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0278" flag="0" />
+<vel value="0.0148" flag="0" />
+<psa03 value="0.0929" flag="0" />
+<psa10 value="0.0147" flag="0" />
+<psa30 value="0.0011" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0374" flag="0" />
+<vel value="0.0135" flag="0" />
+<psa03 value="0.0828" flag="0" />
+<psa10 value="0.0180" flag="0" />
+<psa30 value="0.0014" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0267" flag="0" />
+<vel value="0.0128" flag="0" />
+<psa03 value="0.0550" flag="0" />
+<psa10 value="0.0099" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+</station>
+<station code="SBPX" name="STRAWBERRY PEAK" insttype="TriNet" lat="34.23217" lon="-117.23483" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0038" flag="0" />
+<vel value="0.0018" flag="0" />
+<psa03 value="0.0083" flag="0" />
+<psa10 value="0.0039" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0043" flag="0" />
+<vel value="0.0032" flag="0" />
+<psa03 value="0.0096" flag="0" />
+<psa10 value="0.0068" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0037" flag="0" />
+<vel value="0.0014" flag="0" />
+<psa03 value="0.0032" flag="0" />
+<psa10 value="0.0024" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="SCI" name="SAN CLEMENTE ISLAND" insttype="TriNet" lat="32.9799" lon="-118.54704" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0121" flag="0" />
+<vel value="0.0032" flag="0" />
+<psa03 value="0.0148" flag="0" />
+<psa10 value="0.0033" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0110" flag="0" />
+<vel value="0.0032" flag="0" />
+<psa03 value="0.0172" flag="0" />
+<psa10 value="0.0023" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0128" flag="0" />
+<vel value="0.0020" flag="0" />
+<psa03 value="0.0121" flag="0" />
+<psa10 value="0.0014" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="SHO" name="SHOSHONE" insttype="TriNet" lat="35.8995" lon="-116.2757" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0039" flag="0" />
+<vel value="0.0024" flag="0" />
+<psa03 value="0.0094" flag="0" />
+<psa10 value="0.0018" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0033" flag="0" />
+<vel value="0.0024" flag="0" />
+<psa03 value="0.0081" flag="0" />
+<psa10 value="0.0042" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0026" flag="0" />
+<vel value="0.0016" flag="0" />
+<psa03 value="0.0030" flag="0" />
+<psa10 value="0.0028" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="SIO" name="SATICO" insttype="TriNet" lat="34.293" lon="-119.1646" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.2207" flag="G" />
+<vel value="0.0862" flag="G" />
+<psa03 value="0.5688" flag="G" />
+<psa10 value="0.1008" flag="G" />
+<psa30 value="0.0074" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.2384" flag="G" />
+<vel value="0.0721" flag="G" />
+<psa03 value="0.4430" flag="G" />
+<psa10 value="0.1677" flag="G" />
+<psa30 value="0.0084" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.3786" flag="G" />
+<vel value="0.0932" flag="G" />
+<psa03 value="0.4733" flag="G" />
+<psa10 value="0.0528" flag="G" />
+<psa30 value="0.0036" flag="G" />
+</comp>
+</station>
+<station code="SJU" name="SAN JUAN CAPISTRANO" insttype="TriNet" lat="33.48725" lon="-117.68114" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0291" flag="G" />
+<vel value="0.0066" flag="G" />
+<psa03 value="0.0083" flag="G" />
+<psa10 value="0.0085" flag="G" />
+<psa30 value="0.0009" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0706" flag="G" />
+<vel value="0.0047" flag="G" />
+<psa03 value="0.0097" flag="G" />
+<psa10 value="0.0055" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0245" flag="G" />
+<vel value="0.0044" flag="G" />
+<psa03 value="0.0053" flag="G" />
+<psa10 value="0.0054" flag="G" />
+<psa30 value="0.0006" flag="G" />
+</comp>
+</station>
+<station code="SLA" name="SLATE MOUNTAIN" insttype="TriNet" lat="35.89" lon="-117.28" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0039" flag="0" />
+<vel value="0.0028" flag="0" />
+<psa03 value="0.0154" flag="0" />
+<psa10 value="0.0051" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0032" flag="0" />
+<vel value="0.0031" flag="0" />
+<psa03 value="0.0127" flag="0" />
+<psa10 value="0.0046" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0022" flag="0" />
+<vel value="0.0015" flag="0" />
+<psa03 value="0.0061" flag="0" />
+<psa10 value="0.0021" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="SMS" name="SANTA MONICA FIRE ST" insttype="TriNet" lat="34.01467" lon="-118.45617" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0982" flag="0" />
+<vel value="0.0539" flag="0" />
+<psa03 value="0.1528" flag="0" />
+<psa10 value="0.0305" flag="0" />
+<psa30 value="0.0021" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0836" flag="0" />
+<vel value="0.0295" flag="0" />
+<psa03 value="0.0877" flag="0" />
+<psa10 value="0.0192" flag="0" />
+<psa30 value="0.0016" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0394" flag="0" />
+<vel value="0.0108" flag="0" />
+<psa03 value="0.0436" flag="0" />
+<psa10 value="0.0117" flag="0" />
+<psa30 value="0.0011" flag="0" />
+</comp>
+</station>
+<station code="SMV" name="SIMI VALLEY" insttype="TriNet" lat="34.27128" lon="-118.74427" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.1274" flag="G" />
+<vel value="0.0786" flag="G" />
+<psa03 value="0.1700" flag="G" />
+<psa10 value="0.0714" flag="G" />
+<psa30 value="0.0036" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.1587" flag="G" />
+<vel value="0.0563" flag="G" />
+<psa03 value="0.1896" flag="G" />
+<psa10 value="0.0549" flag="G" />
+<psa30 value="0.0046" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0532" flag="G" />
+<vel value="0.0132" flag="G" />
+<psa03 value="0.0677" flag="G" />
+<psa10 value="0.0251" flag="G" />
+<psa30 value="0.0019" flag="G" />
+</comp>
+</station>
+<station code="SNCC" name="SAN NICOLAS ISLAND" insttype="TriNet" lat="33.248" lon="-119.524" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0074" flag="0" />
+<vel value="0.0025" flag="0" />
+<psa03 value="0.0160" flag="0" />
+<psa10 value="0.0017" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0069" flag="0" />
+<vel value="0.0028" flag="0" />
+<psa03 value="0.0196" flag="0" />
+<psa10 value="0.0024" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0059" flag="0" />
+<vel value="0.0022" flag="0" />
+<psa03 value="0.0102" flag="0" />
+<psa10 value="0.0015" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="SOT" name="SOLAMINT" insttype="TriNet" lat="34.416" lon="-118.449" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.1496" flag="0" />
+<vel value="0.0469" flag="0" />
+<psa03 value="0.1568" flag="0" />
+<psa10 value="0.0187" flag="0" />
+<psa30 value="0.0012" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.1496" flag="0" />
+<vel value="0.0577" flag="0" />
+<psa03 value="0.1770" flag="0" />
+<psa10 value="0.0194" flag="0" />
+<psa30 value="0.0012" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.1493" flag="0" />
+<vel value="0.0233" flag="0" />
+<psa03 value="0.0390" flag="0" />
+<psa10 value="0.0078" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+</station>
+<station code="SPG" name="Springville" insttype="TriNet" lat="36.1356" lon="-118.8112" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0075" flag="0" />
+<vel value="0.0040" flag="0" />
+<psa03 value="0.0252" flag="0" />
+<psa10 value="0.0021" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0097" flag="0" />
+<vel value="0.0044" flag="0" />
+<psa03 value="0.0329" flag="0" />
+<psa10 value="0.0016" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0067" flag="0" />
+<vel value="0.0032" flag="0" />
+<psa03 value="0.0251" flag="0" />
+<psa10 value="0.0029" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="SRN" name="SERRANO" insttype="TriNet" lat="33.82843" lon="-117.78938" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0054" flag="0" />
+<vel value="0.0024" flag="0" />
+<psa03 value="0.0126" flag="0" />
+<psa10 value="0.0036" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0060" flag="0" />
+<vel value="0.0025" flag="0" />
+<psa03 value="0.0099" flag="0" />
+<psa10 value="0.0039" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0073" flag="0" />
+<vel value="0.0014" flag="0" />
+<psa03 value="0.0047" flag="0" />
+<psa10 value="0.0013" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="SSW" name="SALTON SEA WILDLIFE" insttype="TriNet" lat="33.1766" lon="-115.6024" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0277" flag="0" />
+<vel value="0.0046" flag="0" />
+<psa03 value="0.0263" flag="0" />
+<psa10 value="0.0016" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0245" flag="0" />
+<vel value="0.0049" flag="0" />
+<psa03 value="0.0177" flag="0" />
+<psa10 value="0.0013" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0784" flag="0" />
+<vel value="0.0146" flag="0" />
+<psa03 value="0.0423" flag="0" />
+<psa10 value="0.0022" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="STC" name="SANTA CLARA" insttype="TriNet" lat="34.30275" lon="-119.18696" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.2234" flag="0" />
+<vel value="0.0659" flag="0" />
+<psa03 value="0.5263" flag="0" />
+<psa10 value="0.0659" flag="0" />
+<psa30 value="0.0066" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.2191" flag="0" />
+<vel value="0.0921" flag="0" />
+<psa03 value="0.3847" flag="0" />
+<psa10 value="0.0477" flag="0" />
+<psa30 value="0.0042" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.2301" flag="0" />
+<vel value="0.0602" flag="0" />
+<psa03 value="0.3883" flag="0" />
+<psa10 value="0.0579" flag="0" />
+<psa30 value="0.0045" flag="0" />
+</comp>
+</station>
+<station code="STS" name="STATE STREET" insttype="TriNet" lat="33.7902" lon="-118.1985" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0399" flag="0" />
+<vel value="0.0168" flag="0" />
+<psa03 value="0.0466" flag="0" />
+<psa10 value="0.0085" flag="0" />
+<psa30 value="0.0012" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0358" flag="0" />
+<vel value="0.0127" flag="0" />
+<psa03 value="0.0500" flag="0" />
+<psa10 value="0.0097" flag="0" />
+<psa30 value="0.0008" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0680" flag="0" />
+<vel value="0.0105" flag="0" />
+<psa03 value="0.0409" flag="0" />
+<psa10 value="0.0035" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="SVD" name="SEVEN OAKS DAM" insttype="TriNet" lat="34.10645" lon="-117.09825" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0068" flag="0" />
+<vel value="0.0022" flag="0" />
+<psa03 value="0.0105" flag="0" />
+<psa10 value="0.0017" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0068" flag="0" />
+<vel value="0.0023" flag="0" />
+<psa03 value="0.0125" flag="0" />
+<psa10 value="0.0018" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0042" flag="0" />
+<vel value="0.0012" flag="0" />
+<psa03 value="0.0039" flag="0" />
+<psa10 value="0.0011" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+</station>
+<station code="SWS" name="SAM W. STEWART" insttype="TriNet" lat="32.9408" lon="-115.7958" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0004" flag="0" />
+<vel value="0.0004" flag="0" />
+<psa03 value="0.0004" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0001" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0003" flag="0" />
+<vel value="0.0003" flag="0" />
+<psa03 value="0.0004" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0004" flag="0" />
+<vel value="0.0002" flag="0" />
+<psa03 value="0.0003" flag="0" />
+<psa10 value="0.0001" flag="0" />
+<psa30 value="0.0000" flag="0" />
+</comp>
+</station>
+<station code="TA2" name="TABLE MOUNTAIN" insttype="TriNet" lat="34.382" lon="-117.6781" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.0676" flag="G" />
+<vel value="1.2153" flag="G" />
+<psa03 value="0.1219" flag="G" />
+<psa10 value="0.1190" flag="G" />
+<psa30 value="0.1072" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.0538" flag="G" />
+<vel value="0.8874" flag="G" />
+<psa03 value="0.0902" flag="G" />
+<psa10 value="0.0869" flag="G" />
+<psa30 value="0.0785" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0269" flag="G" />
+<vel value="0.3939" flag="G" />
+<psa03 value="0.0393" flag="G" />
+<psa10 value="0.0387" flag="G" />
+<psa30 value="0.0351" flag="G" />
+</comp>
+</station>
+<station code="TCF" name="TOPANGA CANYON" insttype="TriNet" lat="34.08377" lon="-118.599" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.1486" flag="G" />
+<vel value="0.0432" flag="G" />
+<psa03 value="0.1226" flag="G" />
+<psa10 value="0.0121" flag="G" />
+<psa30 value="0.0011" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.1800" flag="G" />
+<vel value="0.0543" flag="G" />
+<psa03 value="0.1650" flag="G" />
+<psa10 value="0.0104" flag="G" />
+<psa30 value="0.0009" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0577" flag="G" />
+<vel value="0.0158" flag="G" />
+<psa03 value="0.0356" flag="G" />
+<psa10 value="0.0040" flag="G" />
+<psa30 value="0.0005" flag="G" />
+</comp>
+</station>
+<station code="THX" name="THERMAL AIRPORT" insttype="TriNet" lat="33.63481" lon="-116.16402" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0041" flag="0" />
+<vel value="0.0021" flag="0" />
+<psa03 value="0.0049" flag="0" />
+<psa10 value="0.0030" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0083" flag="0" />
+<vel value="0.0024" flag="0" />
+<psa03 value="0.0059" flag="0" />
+<psa10 value="0.0031" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0059" flag="0" />
+<vel value="0.0011" flag="0" />
+<psa03 value="0.0032" flag="0" />
+<psa10 value="0.0024" flag="0" />
+<psa30 value="0.0002" flag="0" />
+</comp>
+</station>
+<station code="TOV" name="THOUSAND OAKS VENTUR" insttype="TriNet" lat="34.156" lon="-118.82021" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0777" flag="0" />
+<vel value="0.0258" flag="0" />
+<psa03 value="0.0635" flag="0" />
+<psa10 value="0.0226" flag="0" />
+<psa30 value="0.0021" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0830" flag="0" />
+<vel value="0.0193" flag="0" />
+<psa03 value="0.0482" flag="0" />
+<psa10 value="0.0180" flag="0" />
+<psa30 value="0.0020" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0479" flag="0" />
+<vel value="0.0138" flag="0" />
+<psa03 value="0.0361" flag="0" />
+<psa10 value="0.0254" flag="0" />
+<psa30 value="0.0011" flag="0" />
+</comp>
+</station>
+<station code="USB" name="UC SANTA BARBARA" insttype="TriNet" lat="34.413" lon="-119.8427" source="SCSN and TriNet" commtype="DIG">
+<comp name="HLE">
+<acc value="0.1876" flag="G" />
+<vel value="0.0419" flag="G" />
+<psa03 value="0.3190" flag="G" />
+<psa10 value="0.0273" flag="G" />
+<psa30 value="0.0023" flag="G" />
+</comp>
+<comp name="HLN">
+<acc value="0.2373" flag="G" />
+<vel value="0.0578" flag="G" />
+<psa03 value="0.2195" flag="G" />
+<psa10 value="0.0568" flag="G" />
+<psa30 value="0.0032" flag="G" />
+</comp>
+<comp name="HLZ">
+<acc value="0.0000" flag="G" />
+<vel value="0.0000" flag="G" />
+<psa03 value="0.0000" flag="G" />
+<psa10 value="0.0000" flag="G" />
+<psa30 value="0.0000" flag="G" />
+</comp>
+</station>
+<station code="USC" name="UNIV SOUTHERN CA" insttype="TriNet" lat="34.01916" lon="-118.28597" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0171" flag="0" />
+<vel value="0.0069" flag="0" />
+<psa03 value="0.0330" flag="0" />
+<psa10 value="0.0086" flag="0" />
+<psa30 value="0.0009" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0165" flag="0" />
+<vel value="0.0076" flag="0" />
+<psa03 value="0.0220" flag="0" />
+<psa10 value="0.0082" flag="0" />
+<psa30 value="0.0007" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0149" flag="0" />
+<vel value="0.0036" flag="0" />
+<psa03 value="0.0212" flag="0" />
+<psa10 value="0.0030" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="VCS" name="VINCENT SUBSTATION" insttype="TriNet" lat="34.48399" lon="-118.11762" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0411" flag="0" />
+<vel value="0.0111" flag="0" />
+<psa03 value="0.0706" flag="0" />
+<psa10 value="0.0038" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0434" flag="0" />
+<vel value="0.0123" flag="0" />
+<psa03 value="0.0713" flag="0" />
+<psa10 value="0.0045" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0369" flag="0" />
+<vel value="0.0079" flag="0" />
+<psa03 value="0.0215" flag="0" />
+<psa10 value="0.0052" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+</station>
+<station code="VES" name="VESTAL" insttype="TriNet" lat="35.84089" lon="-119.08469" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0142" flag="0" />
+<vel value="0.0061" flag="0" />
+<psa03 value="0.0318" flag="0" />
+<psa10 value="0.0068" flag="0" />
+<psa30 value="0.0004" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0141" flag="0" />
+<vel value="0.0064" flag="0" />
+<psa03 value="0.0586" flag="0" />
+<psa10 value="0.0030" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0138" flag="0" />
+<vel value="0.0051" flag="0" />
+<psa03 value="0.0372" flag="0" />
+<psa10 value="0.0027" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="VTV" name="VICTORVILLE" insttype="TriNet" lat="34.56058" lon="-117.32961" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0270" flag="0" />
+<vel value="0.0089" flag="0" />
+<psa03 value="0.0220" flag="0" />
+<psa10 value="0.0046" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0304" flag="0" />
+<vel value="0.0167" flag="0" />
+<psa03 value="0.0390" flag="0" />
+<psa10 value="0.0077" flag="0" />
+<psa30 value="0.0008" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0230" flag="0" />
+<vel value="0.0045" flag="0" />
+<psa03 value="0.0185" flag="0" />
+<psa10 value="0.0029" flag="0" />
+<psa30 value="0.0003" flag="0" />
+</comp>
+</station>
+<station code="WLT" name="Walnut" insttype="TriNet" lat="34.0097" lon="-117.95077" source="SCSN and TriNet" commtype="DIG">
+<comp name="HHE">
+<acc value="0.0216" flag="0" />
+<vel value="0.0086" flag="0" />
+<psa03 value="0.0330" flag="0" />
+<psa10 value="0.0157" flag="0" />
+<psa30 value="0.0013" flag="0" />
+</comp>
+<comp name="HHN">
+<acc value="0.0290" flag="0" />
+<vel value="0.0096" flag="0" />
+<psa03 value="0.0409" flag="0" />
+<psa10 value="0.0143" flag="0" />
+<psa30 value="0.0012" flag="0" />
+</comp>
+<comp name="HHZ">
+<acc value="0.0166" flag="0" />
+<vel value="0.0041" flag="0" />
+<psa03 value="0.0178" flag="0" />
+<psa10 value="0.0078" flag="0" />
+<psa30 value="0.0005" flag="0" />
+</comp>
+</station>
+
+</stationlist>

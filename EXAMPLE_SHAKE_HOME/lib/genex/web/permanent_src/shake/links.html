@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title><!-- tmpl_var name="region" --> ShakeMaps: Related Links</title>
+	<link rel="stylesheet" type="text/css" href="lib/style.css">
+  </head>
+  <body bgcolor="white">
+    <!-- Begin Tab Header -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="7">
+      <tr>
+	<td bgcolor="ffff99" align="center">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr> 
+	      <td width="1%" background="icons/header/tab-begin-lav.gif">&nbsp;</td>
+	      <td width="99%"> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr> 
+		    <td width="30%" align="left">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="index.html" class="navbar" onMouseOver="window.status='ShakeMap Home Page';return true">Home</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="archive" class="navbar" onMouseOver="window.status='Archive of Maps for Recent and Historic Earthquakes';return true">Map Archive</a></div>
+			  </td>
+			  <td background="icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		    <td width="70%" align="right">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td background="icons/header/tab-begin-bgray.gif" align="right">&nbsp;</td>
+			  <td bgcolor="#99cccc"> 
+			    <div align="center" class="selected">Related Links</div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tab-right-bgray-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="about.html" class="navbar" onMouseOver="window.status='Information About ShakeMaps';return true">Scientific Background</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="disclaimer.html" class="navbar" onMouseOver="window.status='ShakeMap Disclaimers';return true">Disclaimer</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="comment_form.html" class="navbar" onMouseOver="window.status='ShakeMap Comment Form';return true">Comment</a></div>
+			  </td>
+			  <td background="icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr> 
+	      <td width="1%"  bgcolor="#99cccc">&nbsp;</td>
+	      <td width="99%" bgcolor="#99cccc"> 
+		<table border="0" cellspacing="0" cellpadding="3" width="100%">
+		  <tr> 
+		    <td> 
+		      <p class="locationbar">Links to ShakeMaps in Other Regions, and Related Links</p>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td width="1%"  bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	      <td width="99%" bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <!-- End Tab Header -->
+	
+    <!-- tmpl_loop name="related-links" -->
+    <h2><!-- tmpl_var name="category-name" --></h2>
+      <ul>
+      <!-- tmpl_loop name="list" -->
+        <li><a class="no-ul" href="<!-- tmpl_var name="link" -->">
+	    <!-- tmpl_var name="text" --></a></li>
+      <!-- /tmpl_loop -->
+      </ul>
+    <!-- /tmpl_loop -->
+
+    <hr>
+    <p>
+      <font size="-1">
+	Please use the <a href="comment_form.html">comment form</a> for questions, 
+	comments, or suggestions<br>
+	Maintained by the ShakeMap Working Group<br>
+	Page last modified 7/16/01
+      </font>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,521 @@
+<html>
+  <head>
+    <title><!-- tmpl_var name="region" --> ShakeMap: <!-- tmpl_var name="header-pagelabel" --></title>
+    <link rel="stylesheet" type="text/css" href="../lib/style.css">
+
+    <style type="text/css">
+      #about {
+        position: absolute;
+        left: 10px;
+      }
+      
+      #aboutpars {
+        position: absolute;
+        left: 20px;
+      }
+      
+      TD.product {
+        text-align: center;
+      <!-- tmpl_if name="have-spectra" -->
+        width: 85px;
+      <!-- tmpl_else -->
+        width: 170;
+      <!-- /tmpl_if -->
+        font-weight: normal;
+        font-size: medium;
+      }
+      
+      TD.product_long {
+        text-align: center;
+        width: 255px;
+        font-weight: normal;
+        font-size: medium;
+      }
+      
+      TD.columnhead {
+        font-family: sans-serif;
+        text-align: center;
+        background-color: #99cccc;
+        font-weight: normal;
+        font-size: medium;
+        font-weight: normal;
+        font-size: medium;
+      }
+      
+      TD.rowhead {
+        font-family: sans-serif;
+        width: 120px;
+        text-align: right;
+        background-color: #99cccc;
+      }
+      
+      .sectionhead {
+        font-family: arial,sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        text-align: left;
+      }
+      
+      .subsectionhead {
+        font-family: arial, sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        text-align: left;
+      }
+      
+      .subsectiontext {
+        font-family: arial, sans-serif;
+        font-size: small;
+        font-weight: normal;
+        text-align: left;
+      }
+      
+      A:link    { color: #000000; }
+      A:visited { color: #000000; }
+    </style>
+  </head>
+  
+  <body bgcolor="#FFFFFF">
+
+    <!-- tmpl_include name="shake/event/products_header.html" -->
+
+    <br>
+
+    <table cellpadding="3" width="95%" border="0">
+
+      <tr>
+      <td width="10" height="0"></td>
+      <td width="60" height="0"></td>
+      <td width="60" height="0"></td>
+      <!-- tmpl_if name="have-spectra" -->
+      <td width="85" height="0"></td>
+      <td width="85" height="0"></td>
+      <td width="85" height="0"></td>
+      <td width="85" height="0"></td>
+      <td width="85" height="0"></td>
+      <td width="85" height="0"></td>
+      <!-- tmpl_else -->
+      <td width="170" height="0"></td>
+      <td width="170" height="0"></td>
+      <td width="170" height="0"></td>
+      <!-- /tmpl_if -->
+      </tr>
+      <tr>
+	<td colspan="6"><span class="sectionhead">Maps:</span></td>
+	<!-- tmpl_if name="have-spectra" -->
+	<td colspan="3"></td>
+	<!-- /tmpl_if -->
+      </tr>
+      <tr>
+	<td colspan="3"></td>
+	<td class="columnhead" rowspan="2" align="center" bgcolor="#99cccc">Instrumental<br>Intensity</td>
+	<td class="columnhead" colspan="2" align="center" bgcolor="#99cccc">Peak Ground Motion</td>
+	<!-- tmpl_if name="have-spectra" -->
+	<td class="columnhead" colspan="3" align="center" bgcolor="#99cccc">Spectral Response</td>
+	<!-- /tmpl_if -->
+      </tr>
+      <tr>
+	<td colspan="3"></td>
+	<td class="columnhead" align="center" bgcolor="#99cccc">Acceleration</td>
+	<td class="columnhead" align="center" bgcolor="#99cccc">Velocity</td>
+	<!-- tmpl_if name="have-spectra" -->
+	<td class="columnhead" align="center" bgcolor="#99cccc">0.3 sec</td>
+	<td class="columnhead" align="center" bgcolor="#99cccc">1.0 sec</td>
+	<td class="columnhead" align="center" bgcolor="#99cccc">3.0 sec</td>
+	<!-- /tmpl_if -->
+      </tr>
+      <tr>
+	<td></td>
+	<td class="rowhead" colspan="2" align="right" cellpadding="3" bgcolor="#99cccc">JPEG</td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/intensity.jpg">intensity.jpg</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/pga.jpg">pga.jpg</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/pgv.jpg">pgv.jpg</a></td>
+	<!-- tmpl_if name="have-spectra" -->
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa03.jpg">psa03.jpg</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa10.jpg">psa10.jpg</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa30.jpg">psa30.jpg</a></td>
+	<!-- /tmpl_if -->
+      </tr>
+
+      <tr>
+	<td></td>
+	<td class="rowhead" 
+	    <!-- tmpl_if name="have-poster" --> 
+	      rowspan="2" 
+	    <!-- tmpl_else --> 
+	      colspan="2" 
+	    <!-- /tmpl_if --> 
+	  align="right" bgcolor="#99cccc">Postscript</td>
+      <!-- tmpl_if name="have-poster" -->
+	<td class="rowhead" align="right" bgcolor="#99cccc">8-1/2 x 11</td>
+      <!-- /tmpl_if -->
+      <!-- tmpl_if name="dozip" -->
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/intensity.ps.zip">intensity.ps.zip</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/pga.ps.zip">pga.ps.zip</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/pgv.ps.zip">pgv.ps.zip</a></td>
+	<!-- tmpl_if name="have-spectra" -->
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa03.ps.zip">psa03.ps.zip</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa10.ps.zip">psa10.ps.zip</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa30.ps.zip">psa30.ps.zip</a></td>
+	<!-- /tmpl_if -->
+      <!-- tmpl_else --> 
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/intensity.ps">intensity.ps</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/pga.ps">pga.ps</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/pgv.ps">pgv.ps</a></td>
+	<!-- tmpl_if name="have-spectra" -->
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa03.ps">psa03.ps</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa10.ps">psa10.ps</a></td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/psa30.ps">psa30.ps</a></td>
+	<!-- /tmpl_if -->
+      <!-- /tmpl_if -->
+      </tr>
+
+      <!-- tmpl_if name="have-poster" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Poster</td>
+      <!-- tmpl_if name="dozip" -->
+	<td align="left" bgcolor="#ccccff" class="product"><a href="download/intensity_poster.ps.zip">inten_pstr.ps.zip</a></td>
+	<td align="left" bgcolor="#ccccff" class="product"><a href="download/pga_poster.ps.zip">pga_pstr.ps.zip</a></td>
+	<td align="left" bgcolor="#ccccff" class="product"><a href="download/pgv_poster.ps.zip">pgv_pstr.ps.zip</a></td>
+      <!-- tmpl_else --> 
+	<td align="left" bgcolor="#ccccff" class="product"><a href="download/intensity_poster.ps">inten_pstr.ps</a></td>
+	<td align="left" bgcolor="#ccccff" class="product"><a href="download/pga_poster.ps">pga_pstr.ps</a></td>
+	<td align="left" bgcolor="#ccccff" class="product"><a href="download/pgv_poster.ps">pgv_pstr.ps</a></td>
+      <!-- /tmpl_if -->
+	<!-- tmpl_if name="have-spectra" -->
+	<td colspan="3"></td>
+	<!-- /tmpl_if -->
+      </tr>
+      <!-- /tmpl_if -->
+
+      <!-- tmpl_if name="have-pdf" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" colspan="2" align="right" bgcolor="#99cccc">PDF</td>
+	<td align="center" bgcolor="#ccccff" class="product"><a href="download/intensity.pdf">intensity.pdf</a></td>
+	<td colspan="2"></td>
+	<!-- tmpl_if name="have-spectra" -->
+	<td colspan="3"></td>
+	<!-- /tmpl_if -->
+      </tr>
+      <!-- /tmpl_if -->
+
+    </table>
+
+    <table cellpadding="3" width="95%" border="0">
+
+      <!-- tmpl_if name="have-tvmap" -->
+
+      <tr>
+      <td width="10" height="0"></td>
+      <td width="120" height="0"></td>
+      <td width="255" height="0"></td>
+      <td width="255" height="0"></td>
+      </tr>
+      <tr>
+	<td colspan="4"><span class="sectionhead">Media Maps:</span></td>
+      </tr>
+
+      <tr>
+      <td></td>
+      <td class="rowhead" align="right" cellpadding="3" bgcolor="#99cccc">Decorated</td>
+      <td align="center" bgcolor="#ccccff" class="product"><a href="download/tvmap.jpg">tvmap.jpg</a></td>
+      <!-- tmpl_if name="dozip" -->
+      <td align="center" bgcolor="#ccccff" class="product"><a href="download/tvmap.ps.zip">tvmap.ps.zip</a></td>
+      <!-- tmpl_else --> 
+      <td align="center" bgcolor="#ccccff" class="product"><a href="download/tvmap.ps">tvmap.ps</a></td>
+      <!-- /tmpl_if -->
+      </tr>
+
+      <tr>
+      <td></td>
+      <td class="rowhead" align="right" cellpadding="3" bgcolor="#99cccc">Bare</td>
+      <td align="center" bgcolor="#ccccff" class="product"><a href="download/tvmap_bare.jpg">tvmap_bare.jpg</a></td>
+      <!-- tmpl_if name="dozip" -->
+      <td align="center" bgcolor="#ccccff" class="product"><a href="download/tvmap_bare.ps.zip">tvmap_bare.ps.zip</a></td>
+      <!-- tmpl_else --> 
+      <td align="center" bgcolor="#ccccff" class="product"><a href="download/tvmap_bare.ps">tvmap_bare.ps</a></td>
+      <!-- /tmpl_if -->
+      </tr>
+
+      <tr>
+      <td></td>
+      <td class="rowhead" align="right" cellpadding="3" bgcolor="#99cccc">Info Sheet</td>
+      <td colspan="2" align="center" bgcolor="#ccccff" class="product"><a href="download/tvguide.txt">tvguide.txt</a></td>
+      </tr>
+
+      <!-- /tmpl_if -->
+
+    </table>
+
+    <table cellpadding="3" width="95%" border="0">
+
+      <tr>
+      <td width="10" height="0"></td>
+      <td width="120" height="0"></td>
+      <td width="255" height="0"></td>
+      <td width="255" height="0"></td>
+      </tr>
+      <tr>
+	<td colspan="4"><span class="sectionhead">Data:</span></td>
+      </tr>
+
+      <tr>
+	<td></td>
+	<td colspan="4"><span class="subsectionhead">Raw Grids</span></td>
+      </tr>
+
+      <!-- tmpl_if name="have-xml" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">XML (<a href="about_formats.html#xml">important note</a>)</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	    <a href="download/grid.xml">grid.xml</a>
+	</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	    <a href="download/grid.xml.zip">grid.xml.zip</a>
+	</td>
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Rock Grid</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product">
+	    <a href="download/rock_grid.xml.zip">rock_grid.xml.zip</a>
+	</td>
+      </tr>
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Uncertainty</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product">
+	    <a href="download/uncertainty.xml.zip">uncertainty.xml.zip</a>
+	</td>
+      </tr>
+      </tr>
+      <!-- /tmpl_if -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Text X,&nbsp;Y,&nbsp;Z&nbsp;Values</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product">
+          <!-- tmpl_if name="dozip" -->
+	    <a href="download/grid.xyz.zip">grid.xyz.zip</a>
+          <!-- tmpl_else --> 
+	    <a href="download/grid.xyz">grid.xyz</a>
+	  <!-- /tmpl_if -->
+	</td>
+      </tr>
+
+      <!-- tmpl_if name="have-gis" -->
+      <tr>
+	<td></td>
+	<td><span class="subsectionhead">GIS Files</span></td>
+      </tr>
+
+      <!-- tmpl_if name="have-hazus" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">HAZUS Zip File</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/hazus.zip">hazus.zip</a>
+	</td>
+      </tr>
+      <!-- /tmpl_if -->
+
+      <!-- tmpl_if name="have-shape" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Shape Files</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/shape.zip">shape.zip</a>
+	</td>
+      </tr>
+      <!-- /tmpl_if -->
+
+      <!-- tmpl_if name="have-kml" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">KML (<a href="about_formats.html#kml">what's this?</a>)</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/<!-- tmpl_var name="event-id" -->.kml"><!-- tmpl_var name="event-id" -->.kml</a>
+	</td>
+      </tr>
+      <!-- /tmpl_if -->
+      <!-- tmpl_if name="have-raster" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">ESRI Raster Files</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/raster.zip">raster.zip</a>
+	</td>
+      </tr>
+      <!-- /tmpl_if -->
+      <!-- /tmpl_if -->
+
+      <tr>
+	<td></td>
+	<td colspan="2"><span class="subsectionhead">Station Lists:</span></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Text</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product"><a href="download/stationlist.txt">stationlist.txt</a></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">XML</td>
+	<td colspan="2" align="center" bgcolor="#ccccff" class="product"><a href="download/stationlist.xml">stationlist.xml</a></td>
+      </tr>
+    </table>
+
+    <!-- tmpl_if name="have-metadata" -->
+    <table cellpadding="3" width="95%" border="0">
+      <tr>
+      <td width="10" height="0"></td>
+      <td width="120" height="0"></td>
+      <td width="170" height="0"></td>
+      <td width="170" height="0"></td>
+      <td width="170" height="0"></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td><span class="subsectionhead">Metadata</span></td>
+      </tr>
+
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" cellpadding="3" bgcolor="#99cccc">Format</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/metadata.html">HTML</a>
+	</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/metadata.txt">Text</a>
+	</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/metadata.xml">XML</a>
+	</td>
+      </tr>
+    </table>
+    <!-- /tmpl_if -->
+
+    <table cellpadding="3" width="95%" border="0">
+      <tr>
+      <td width="10" height="0"></td>
+      <td width="120" height="0"></td>
+      <td width="255" height="0"></td>
+      <td width="255" height="0"></td>
+      </tr>
+      <tr>
+	<td></td>
+	<td colspan="3"><span class="subsectionhead">Supplemental Data</span></td>
+      </tr>
+
+      <!-- tmpl_if name="have-fault" -->
+        <!-- tmpl_loop name="FaultFileList" -->
+          <tr>
+          <td></td>
+          <td class="rowhead" align="right" bgcolor="#99cccc">Finite Fault File</td>
+	  <td colspan="2" align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/<!-- tmpl_var name="faultfile" -->"><!-- tmpl_var name="faultfile" --></a>
+	  </td>
+          </tr>
+        <!-- /tmpl_loop -->
+      <!-- /tmpl_if -->
+
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Quality/Processing Parameters</td>
+        <!-- tmpl_if name="have-sd" -->
+	  <td align="center" bgcolor="#ccccff" class="product">
+	    <a href="download/sd.jpg">sd.jpg</a>
+	  </td>
+        <!-- /tmpl_if -->
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/info.xml">info.xml</a>
+	</td>
+      </tr>
+
+    <!-- tmpl_if name="have-regr" -->
+    <table cellpadding="3" width="95%" border="0">
+      <tr>
+      <td width="10" height="0"></td>
+      <td width="120" height="0"></td>
+      <td width="170" height="0"></td>
+      <td width="170" height="0"></td>
+      <td width="170" height="0"></td>
+      </tr>
+
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc">Regression Plots</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/mi_regr.png">mi_regr.png</a>
+	</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/pga_regr.png">pga_regr.png</a>
+	</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/pgv_regr.png">pgv_regr.png</a>
+	</td>
+      </tr>
+	<!-- tmpl_if name="have-spectra" -->
+      <tr>
+	<td></td>
+	<td class="rowhead" align="right" bgcolor="#99cccc"></td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/psa03_regr.png">psa03_regr.png</a>
+	</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/psa10_regr.png">psa10_regr.png</a>
+	</td>
+	<td align="center" bgcolor="#ccccff" class="product">
+	  <a href="download/psa30_regr.png">psa30_regr.png</a>
+	</td>
+      </tr>
+    <!-- /tmpl_if -->
+    </table>
+    <!-- /tmpl_if -->
+
+    </table>
+
+    <br>
+      
+    <div id="about">
+      <p class="sectionhead">
+	About the File Formats:
+      </p>
+      
+      <div id="aboutpars">
+	<p class="subsectionhead">
+	  Maps:
+	<span class="subsectiontext">
+	  <a href="about_formats.html#jpg">JPEG</a> | 
+	  <a href="about_formats.html#postscript">Postscript</a> | 
+	  <a href="about_formats.html#pdf">PDF</a> 
+          <!-- tmpl_if name="have-tvmap" -->
+	  | <a href="about_formats.html#media">Media Maps</a>
+          <!-- /tmpl_if -->
+	</span>
+	</p>
+	
+	<p class="subsectionhead">
+	  Data:
+	<span class="subsectiontext">
+	    <a href="about_formats.html#xyz">X,Y,Z Grids</a>, 
+	    <a href="about_formats.html#xml">XML</a> | 
+	    GIS Files: <a href="about_formats.html#hazus">Hazus Zip File</a>
+		       &nbsp
+	               <a href="about_formats.html#shape">Shape Files</a>
+		       &nbsp
+	               <a href="about_formats.html#kml">KML</a> |
+		       &nbsp
+	               <a href="about_formats.html#raster">ESRI Raster</a> |
+	    Station Lists: <a href="about_formats.html#station_txt">Text</a>, 
+	    <a href="about_formats.html#station_xml">XML</a> | 
+	    <a href="about_formats.html#metadata">Metadata</a>
+	</span>
+      </p>
+	
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

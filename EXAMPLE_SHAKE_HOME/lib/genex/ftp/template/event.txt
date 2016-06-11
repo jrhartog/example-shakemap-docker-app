@@ -1,0 +1,9 @@
+<!-- tmpl_if name="event-is-scenario" -->
+A ShakeMap is now available for Scenario Earthquake <tmpl_var name="event">, M<tmpl_var name="mag">
+Scenario Time: <tmpl_var name="time"> <tmpl_var name="date">
+Location: <tmpl_var name="epilat"> <tmpl_var name="epilon">
+<!-- tmpl_else -->
+A ShakeMap is now available for event ID <tmpl_var name="event">, M<tmpl_var name="mag">
+Event Time: <tmpl_var name="time"> <tmpl_var name="date">
+Location: <tmpl_var name="epilat"> <tmpl_var name="epilon">
+<!-- /tmpl_if -->

@@ -1,0 +1,224 @@
+<!--
+  Archive pages split the archive listing of ShakeMaps among multiple
+  pages. The archive pages config has the following tags:
+
+  <archivepages template="...">
+
+    The 'archivepages' element has a required 'template' attribute that
+    identifies the template to be used to generate the archive pages.
+  
+    'archivepages' elements contain one or more 'page' elements.
+
+  <page filename="..." title="..." label="..." 
+        [ hilitemain="true|false" template="..." ]>
+
+    'page' elements have required 'filename', 'title' and 'label' attributes. 
+    The filename specifies the of the web file for that page. A ".html" will 
+    be appended to filename if not given explicitly. The filename "index" is
+    reserved and should not be used. The title specifies the web page title 
+    and the title in the navigation bar at the top of the page. The label 
+    specifies the text of the link in the list of archive pages in the body 
+    of the page.
+
+    The optional 'hilitemain' attribute specifies whether or not events tagged
+    as mainshocks should be hilited with <b>...</b> tags in the listing. The
+    default is to hilite mainshocks. A hilitemain value of "false" will turn
+    off hiliting on that page.
+
+    The optional 'template' attribute will override the default template
+    specified in the 'archivepages' element.
+
+    The contents of each 'page' element are a combination of 'start', 'end', 
+    'magnitude' and 'filter' elements. Each of them is optional. Multiple 
+    filter elements are accepted. Note, an empty 'page' element, without any 
+    'start', 'end', or 'filter' tags will list the entire database of 
+    ShakeMaps.
+
+  <start month=".." day=".." year="...." [hour=".." minute=".." second=".."]/>
+  <end   month=".." day=".." year="...." [hour=".." minute=".." second=".."]/>
+
+    Start and end elements define a beginning and ending date for elements
+    on the page. If the start element is missing, the page will start from
+    the beginning of catalog. If the end element is missing, the page will
+    list through the end of the catalog. Start and end elements must have
+    'month' (1-12), 'day', and 'year' (4-digit format) attributes. They can
+    also have 'hour', 'minute', and 'second' attributes; if not given,
+    start elements default to the beginning of the day specified and 
+    end elements default to the end of the day specified. Multiple start 
+    or end elements will trigger a fatal error in genex.
+
+  <magnitude threshold="..." [ visible="above|below" ]/>
+
+    Magnitude elements specify a magnitude threshold for which events should
+    be listed. The default is to show event >= the threshold, but if the 
+    'visible' attribute is set to "below" then event <= the threshold be
+    be shown instead.
+
+  <filter name="..." value="..." [ visibility="show|hide" ]/>
+
+    Filter elements specify values in the web database that should be used
+    to filter the archive list for the page. 'name' and 'value' attributes
+    are required. The accepted values for 'name' are 'mainshock' and 'cluster'.
+
+    If the name is 'mainshock', then 'value' can be either 'historic' or
+    'current'. If the name is 'cluster', then the 'value' can be any event
+    id in the web database.
+
+    Normally, events in the web database that match the 'filter' settings
+    will be shown on the page, and those that don't match won't. However, 
+    if the optional 'visibility' attribute is set to "hide", then events that 
+    match the 'filter' settings will *not* be shown and all others will be
+    shown.
+
+  <sort by="date|mag" order="asc|desc"/>
+
+    Sort elements control how the earthquakes are listed on the page. The
+    'by' attribute can have a value of 'date' or 'mag'. The optional 'order'
+    attribute can be either 'asc' or 'desc'. The default sort order is
+    by date with most recent first (i.e., 'desc'). If there are multiple
+    sort elements, only the last one will apply.
+
+  Example of major event sequence:
+
+  <page filename="hector" label="Hector Mine Sequence"
+        title="The Hector Mine Mainshock and Large Aftershocks">
+    <filter name="cluster" value="9108645"/>
+    <sort by="date" order="asc"/>
+  </page>
+
+  <page filename="nonhector" label="non-Hector Mine"
+        title="Events Not Part of the Hector Mine Sequence">
+    <filter name="cluster" value="9108645" visibility="hide"/>
+  </page>
+
+-->
+
+<archivepages template="archive">
+
+  <page filename="2015" label="2015"
+        title="Archive of ShakeMaps from 2016">
+    <start month="01" day="01" year="2016"/>
+  </page>
+
+  <page filename="2015" label="2015"
+        title="Archive of ShakeMaps from 2015">
+    <start month="01" day="01" year="2015"/>
+    <end   month="12" day="31" year="2015"/>
+  </page>
+
+  <page filename="2014" label="2014"
+        title="Archive of ShakeMaps from 2014">
+    <start month="01" day="01" year="2014"/>
+    <end   month="12" day="31" year="2014"/>
+  </page>
+
+  <page filename="2013" label="2013"
+        title="Archive of ShakeMaps from 2013">
+    <start month="01" day="01" year="2013"/>
+    <end   month="12" day="31" year="2013"/>
+  </page>
+
+  <page filename="2012" label="2012"
+        title="Archive of ShakeMaps from 2012">
+    <start month="01" day="01" year="2012"/>
+    <end   month="12" day="31" year="2012"/>
+  </page>
+
+  <page filename="2011" label="2011"
+        title="Archive of ShakeMaps from 2011">
+    <start month="01" day="01" year="2011"/>
+    <end   month="12" day="31" year="2011"/>
+  </page>
+
+  <page filename="2010" label="2010"
+        title="Archive of ShakeMaps from 2010">
+    <start month="01" day="01" year="2010"/>
+    <end   month="12" day="31" year="2010"/>
+  </page>
+
+  <page filename="2009" label="2009"
+        title="Archive of ShakeMaps from 2009">
+    <start month="01" day="01" year="2009"/>
+    <end   month="12" day="31" year="2009"/>
+  </page>
+
+  <page filename="2008" label="2008"
+        title="Archive of ShakeMaps from 2008">
+    <start month="01" day="01" year="2008"/>
+    <end   month="12" day="31" year="2008"/>
+  </page>
+
+  <page filename="2007" label="2007"
+        title="Archive of ShakeMaps from 2007">
+    <start month="01" day="01" year="2007"/>
+    <end   month="12" day="31" year="2007"/>
+  </page>
+
+  <page filename="2006" label="2006"
+        title="Archive of ShakeMaps from 2006">
+    <start month="01" day="01" year="2006"/>
+    <end   month="12" day="31" year="2006"/>
+  </page>
+
+  <page filename="2005" label="2005"
+        title="Archive of ShakeMaps from 2005">
+    <start month="01" day="01" year="2005"/>
+    <end   month="12" day="31" year="2005"/>
+  </page>
+
+  <page filename="2004" label="2004" 
+        title="Archive of ShakeMaps from 2004">
+    <start month="01" day="01" year="2004"/>
+    <end   month="12" day="31" year="2004"/>
+  </page>
+
+  <page filename="2003" label="2003" 
+        title="Archive of ShakeMaps from 2003">
+    <start month="01" day="01" year="2003"/>
+    <end   month="12" day="31" year="2003"/>
+  </page>
+
+  <page filename="2002" label="2002" 
+        title="Archive of ShakeMaps from 2002">
+    <start month="01" day="01" year="2002"/>
+    <end   month="12" day="31" year="2002"/>
+  </page>
+
+  <page filename="2001" label="2001" 
+        title="Archive of ShakeMaps from 2001">
+    <start month="01" day="01" year="2001"/>
+    <end   month="12" day="31" year="2001"/>
+  </page>
+
+  <page filename="2000" label="2000" 
+        title="Archive of ShakeMaps from 2000">
+    <start month="01" day="01" year="2000"/>
+    <end   month="12" day="31" year="2000"/>
+  </page>
+
+  <page filename="1999" label="1999" 
+        title="Archive of ShakeMaps from 1999">
+    <start month="01" day="01" year="1999"/>
+    <end   month="12" day="31" year="1999"/>
+  </page>
+
+  <page filename="pre1999" label="pre-1999" 
+        title="Archive of ShakeMaps prior to 1999"
+        hilitemain="false">
+    <end   month="12" day="31" year="1998"/>
+  </page>
+
+  <page filename="major" label="Major Earthquakes" 
+        title="Archive of ShakeMaps of Major Earthquakes"
+        hilitemain="false">
+    <filter name="mainshock" value="historic"/>
+    <sort by="date" order="asc"/>
+  </page>
+
+  <page filename="scenario" label="Earthquake Scenarios" 
+        title="Archive of ShakeMaps for Earthquake Scenarios"
+        hilitemain="false">
+    <filter name="mainshock" value="scenario"/>
+    <sort by="date" order="asc"/>
+  </page>
+</archivepages>

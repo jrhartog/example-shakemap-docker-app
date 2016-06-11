@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -ne 2 ] ; then
+   echo "Usage: trigger_shakemap EVENT_ID VERSION"
+   exit
+fi
+EVID=$1
+version=$2
+source shakemap.env
+echo "sending $EVID version $version to 127.0.0.1:${QUEUE_PORT}"
+echo -n "shake_alarm $EVID $version" > /dev/tcp/127.0.0.1/${QUEUE_PORT}

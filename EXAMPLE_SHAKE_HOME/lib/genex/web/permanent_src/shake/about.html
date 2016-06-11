@@ -1,0 +1,1423 @@
+<html>
+  <head>
+    <title>
+      <!-- tmpl_var name="region" --> ShakeMap: About the Maps
+    </title>
+	<link rel="stylesheet" type="text/css" href="lib/style.css">
+  </head>
+  <!-- Begin Tab Header -->
+  <body bgcolor="white">
+    <table width="100%" border="0" cellspacing="0" cellpadding="7">
+      <tr>
+	<td bgcolor="ffff99" align="center">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr> 
+	      <td width="1%" background="icons/header/tab-begin-lav.gif">&nbsp;</td>
+	      <td width="99%"> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr> 
+		    <td width="30%" align="left">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="index.html" class="navbar" onMouseOver="window.status='ShakeMap Home Page';return true">Home</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="archive" class="navbar" onMouseOver="window.status='Archive of Maps for Recent and Historic Earthquakes';return true">Map Archive</a></div>
+			  </td>
+			  <td background="icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		    <td width="70%" align="right">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td background="icons/header/tab-begin-lav.gif" align="right">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="links.html" class="navbar" onMouseOver="window.status='Links to ShakeMaps in other regions and other related sites';return true">Related Links</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tab-left-lav-bgray.gif">&nbsp;</td>
+			  <td bgcolor="#99cccc"> 
+			    <div align="center" class="selected">Scientific Background</div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tab-right-bgray-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="disclaimer.html" class="navbar" onMouseOver="window.status='ShakeMap Disclaimers';return true">Disclaimer</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="comment_form.html" class="navbar" onMouseOver="window.status='ShakeMap Comment Form';return true">Comment</a></div>
+			  </td>
+			  <td background="icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr> 
+	      <td width="1%"  bgcolor="#99cccc">&nbsp;</td>
+	      <td width="99%" bgcolor="#99cccc"> 
+		<table border="0" cellspacing="0" cellpadding="3" width="100%">
+		  <tr> 
+		    <td> 
+		      <p class="locationbar">Background Information on the ShakeMaps</p>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td width="1%"  bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	      <td width="99%" bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <!-- End Tab Header -->
+
+  <p><b>Note</b>: For more detailed information see the online 
+	<a href="http://pubs.usgs.gov/tm/2005/12A01/">ShakeMap Manual</a> and
+        the <a href="#references">Publications on ShakeMap</a></p>
+  <p></p> 
+  <HR WIDTH="100%">
+
+    <h2>Table of Contents</h2>
+	
+    <ul type="disc">
+      <li><a href="#intro">Introduction</a></li>
+      <li>Maps
+	<ul type="square">
+	  <li><a href="#maps">General</a></li>
+	  <li><a href="#accmaps">Acceleration</a></li>
+	  <li><a href="#velmaps">Velocity</a></li>
+	  <li><a href="#spmaps">Spectral Response</a></li>
+	  <li><a href="#intmaps">Intensity</a></li>
+	</ul>
+      </li>
+      <li><a href="#scenario">Scenario Earthquakes</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+    
+    <p></p>
+
+    <HR WIDTH="100%"><BR>
+    <h2><a name="intro">Introduction</a></h2>
+    <p>
+      A ShakeMap is a representation of ground shaking produced by an 
+      earthquake. The information it presents is different from the 
+      earthquake magnitude and epicenter that are released after an 
+      earthquake because 
+      ShakeMap focuses on the ground shaking produced by the earthquake, 
+      rather than the parameters describing the earthquake source. So, while 
+      an earthquake has one magnitude and one epicenter, it produces a range 
+      of ground shaking levels at sites throughout the region depending on 
+      distance from the earthquake, the rock and soil conditions at sites, 
+      and variations in the propagation of seismic waves from the earthquake 
+      due to complexities in the structure of the Earth's crust.
+    </p>
+    <P>
+      Part of the strategy for generating rapid-response ground motion 
+      maps is to determine the best format for reliable presentation of the 
+      maps given the diverse audience, which includes scientists, businesses, 
+      emergency response agencies, media, and the general public.
+      In an effort to simplify and maximize the flow of information to the 
+      public, we have developed a means of generating not only peak 
+      ground acceleration and velocity maps, but also an 
+      instrumentally-derived, estimated Modified Mercalli Intensity map. 
+      This map makes it easier to relate the recorded ground motions to the 
+      expected felt and damage distribution. The Instrumental Intensity map 
+      is based on a combined regression of recorded peak acceleration 
+      and velocity amplitudes. <A HREF="#intmaps">(see Intensity Maps)</A>
+    </p>
+    <p>
+      With the 
+      
+      <!-- tmpl_if name="have-stationmap" -->
+	<a href="<!-- tmpl_var name="stationmap" -->" target="_top">
+      <!-- /tmpl_if -->
+      current <!-- tmpl_var name="region" --> station distribution</a>, 
+      data gaps are 
+      common, particularly for smaller events and events near or outside the 
+      edge of the network. In order to stabilize contouring and minimize
+      the misrepresentation of the ground motion pattern due to data gaps, 
+      we augment the data with predicted values in areas 
+      without data. Given the epicenter and magnitude, peak motion amplitudes 
+      in spare regions are estimated from the Joyner, Boore, and Fumal (1997),
+      and Joyner and Boore (1988) attenuation curves. As the real-time 
+      <!-- tmpl_var name="region" --> station density increases, this 
+      difficulty should be alleviated.
+      Small open circles represent "phantom" grid stations where strong 
+      motion values were estimated.
+    </p>
+    <p>
+      <b>Note</b>: ShakeMaps are generated automatically following moderate 
+      and large earthquakes. These are preliminary ground shaking maps, 
+      normally posted within several minutes of the earthquake origin time. 
+      The acceleration and velocity values are raw and are at least initially, 
+      NOT checked by humans. Further, since ground motions and intensities 
+      typically can vary significantly over small distances, these maps are 
+      only APPROXIMATE. At small scales, they should be considered unreliable. 
+      Finally, the input data is raw and unchecked, and may contain errors. 
+      (See <A HREF="disclaimer.html">Disclaimer</A>)
+    </p>
+
+    <HR WIDTH="100%"><BR>
+
+    <h2><a name="maps">Maps - General Information</a></h2>
+
+    <ul>
+      <LI>The <font color="<!-- tmpl_var name="epi-color" -->"><b><!-- tmpl_var name="epi-color-name" --> star</b></font> 
+	usually located near the center of the map is the epicenter.</LI>
+      <li><b>Small unfilled circles</b> are points where strong motion values 
+	were estimated and used to fill gaps in the station distribution.</li>
+      <LI>The <b>colored triangles</b> indicate reporting stations:</LI>
+    </ul>
+    <dl>
+    
+    <!-- tmpl_loop name="station" -->
+      <DD>
+      <font color="<!-- tmpl_var name="station-color" -->">
+      <b><!-- tmpl_var name="station-color-name" --></b>
+      </font> 
+      <!-- tmpl_var name="station-text" -->
+      </DD>
+    <!-- /tmpl_loop -->
+    </dl>
+    <p>
+      When viewing the peak ground motion maps using a Javascript-enabled 
+      browser, additional information about
+      the earthquake epicenter and recording seismic stations can be viewed.
+      A brief summary line is displayed when the mouse pointer is over the 
+      epicenter symbol or a station symbol. If the symbol is clicked, a
+      small window with a table of information will be opened. This window can
+      be moved to a preferred location, and clicking on the tab bar to see 
+      another map will close the current information window.
+    </p>
+    <p>
+      The instrumental intensity map does not show station symbols and does 
+      not have the popup information window. The legend bar at the bottom 
+      explains the colors (and see <a href="#intmaps">Intensity Maps</a> 
+      below).
+    </p>
+    <p>
+      In the popup window, the earthquake information includes the event
+      date, time, location coordinates in degrees latitude and longitude, 
+      and hypocentral depth in kilometers.
+    </p>
+    <p>
+      The station information includes the station code and name,
+      the agency that manages the station, the station location coordinates
+      in degrees latitude and longitude, and the peak acceleration and 
+      velocity values for each component of ground motion (when available).
+      When the peak ground motion maps are made, the value from the peak 
+      <b>horizontal</b> component of ground motion is used as the value for the
+      station. This value is highlighted in bold in the station information.
+    </p>
+    <p>
+      Components from many stations are defined by three letter codes. The last
+      letter indicates the orientation (Z&nbsp;=&nbsp;vertical, 
+      N&nbsp;=&nbsp;horizontal north, E&nbsp;=&nbsp;horizontal east). 
+      The first two letters indicate the instrument
+      class:
+    </p>
+    <div align="center">
+      <table cellpadding="4" border="1">
+	<tr>
+	  <th align="center">Code</th><th align="left">Description</th>
+	</tr>
+	<tr></tr>
+	<tr>
+	  <td align=center>VL</td>
+	  <td>low gain channels on the analog network</td>
+	</tr>
+	<tr>
+	  <td align=center>VH</td>
+	  <td>high gain channels on the analog network</td>
+	</tr>
+	<tr>
+	  <td align=center>AS</td>
+	  <td>FBA's on the analog network</td>
+	</tr>
+	<tr>
+	  <td align=center>HL</td>
+	  <td>FBA's on the digital network</td>
+	</tr>
+	<tr>
+	  <td align=center>HN</td>
+	  <td>FBA's on the digital network</td>
+	</tr>
+	<tr>
+	  <td align=center>BH</td>
+	  <td>broadband data streams</td>
+	</tr>
+	<tr>
+	  <td align=center>HH</td>
+	  <td>broadband data streams</td>
+	</tr>
+      </table>
+    </div>
+    
+    <p>
+      FBA's (force balance accelerometers) are designed to record extremely 
+      large ground motions and can accurately record waves from very large 
+      earthquakes. However, ground motions from small and moderate earthquakes
+      are often too small to trigger these instruments or rise above 
+      instrument noise. On the other hand, Broadband seismic sensors can
+      record extremely small ground motions and accurately record waves from
+      earthquakes that range from very small up to moderately large. A 
+      number of stations have both FBA and broadband sensors. For ShakeMap,
+      the network tends to emphasize FBA recordings for large
+      ground motions and broadband recordings for small ground motions.
+    </p>
+
+    <p>
+      Occassionally, station channels will be flagged due to problems with
+      the station or possibly anomalous peak values. In this case, the
+      popup window of station information will indicate the flagging with
+      the following codes:
+    </p>
+    <div align="center">
+      <table cellpadding="4" border="1">
+	<tr>
+	  <th align="center">Code</th><th align="left">Description</th>
+	</tr>
+	<tr></tr>
+	<tr>
+	  <td align="center">M</td><td>Manually flagged</td>
+	</tr>
+	<tr>
+	  <td align="center">T</td><td>Outlier</td>
+	</tr>
+	<tr>
+	  <td align="center">G</td><td>Glitch (clipped or below noise)</td>
+	</tr>
+	<tr>
+	  <td align="center">I</td><td>Incomplete time series</td>
+	</tr>
+	<tr>
+	  <td align="center">N</td><td>Not in list of known stations</td>
+	</tr>
+      </table>
+    </div>
+
+    <HR WIDTH="100%">
+
+    <h2><a name="accmaps">Peak Acceleration Maps</a></h2>
+
+    <P>
+      Peak horizontal acceleration at each station is contoured in units of 
+      percent-g (where g&nbsp;=&nbsp;acceleration due to the force of 
+      gravity&nbsp;=&nbsp;981&nbsp;cm/s/s).
+      The peak values of the vertical components are not 
+      used in the construction of the maps because the regression 
+      relationships used to fill in data gaps between stations are based on
+      horizontal peak amplitudes. The contour interval varies greatly and is 
+      based on the maximum recorded value over the network for each event. 
+    </P>
+    <p>
+      For moderate to large events, the pattern of peak ground acceleration
+      is typically quite complicated, with extreme variability over distances 
+      of a few km. This is attributed to the small scale geological 
+      differences near the sites that can significantly change the 
+      high-frequency acceleration amplitude and waveform character. Although 
+      distance to the causative fault clearly dominates the 
+      pattern, there are often exceptions, due to local amplification. 
+      Although, this makes interpolation of ground motions at one site to a 
+      nearby neighbor risky, the peak acceleration pattern usually reflects 
+      what is felt from low levels of shaking up to to moderate 
+      levels of damage.
+    </p>
+
+    <h2><a name="velmaps">Peak Velocity Maps</a></h2>
+
+    <P>
+      Peak velocity values are contoured for the maximum horizontal velocity 
+      (in cm/sec) at each station. As with the acceleration maps, the vertical
+      component amplitudes are disregarded for consistency with the regression
+      relationships used to estimate values in gaps in the station 
+      distribution. Typically, for moderate to large events, the pattern of 
+      peak ground velocity reflects the pattern of the earthquake faulting 
+      geometry, with largest amplitudes in the near-source region, and in the 
+      direction of rupture (directivity). Differences between rock and soil 
+      sites are apparent, but the overall pattern is normally simpler than 
+      the peak acceleration pattern. Severe damage, and damage to flexible 
+      structures is best related to ground velocity. For reference, the 
+      largest recorded ground velocity (to date) was made at the Rinaldi 
+      Receiving Station from the Northridge (Magnitude 6.7), topping out at 
+      183 cm/sec.
+    </P>
+
+    <h2><a name="spmaps">Spectral Response Maps</a></h2>
+
+    <p>
+      Following earthquakes larger than magnitude 5.5, spectral response maps
+      are made. Response spectra portray the response of a damped, 
+      single-degree-of-freedom oscillator to the recorded ground motions. This
+      data representation is useful for engineers determining how a structure
+      will react to ground motions. The response is calculated for a range of
+      periods. Within that range, the Uniform Building Code (UBC) refers to 
+      particular reference periods that help define the shape of the 
+      "design spectra" that reflects the building code.
+    </p>
+
+    <p>
+      ShakeMap spectral response maps are made for the response at three
+      UBC reference periods: 0.3, 1.0, and 3.0 seconds. For each station, the
+      value used is the peak horizontal value of 5% critically damped 
+      pseudo-acceleration.
+    </p>
+
+    <h2><a name="intmaps">Rapid Instrumental Intensity Maps</a></h2>
+
+    <p>
+      As an effort to simplify and maximize the flow of information to the 
+      public, we have developed a means of generating estimated Modified 
+      Mercalli Intensity maps based on instrumental ground motion recordings. 
+      This "Instrumental Intensity" is based on a combined regression of peak 
+      acceleration and velocity amplitudes vs. observed intensity for eight 
+      significant California earthquakes (1971 San Fernando, 1979 Imperial 
+      Valley, 1986 North Palm Springs, 1987 Whittier, 1989 Loma Preita, 1991 
+      Sierra Madre, 1992 Landers, and 1994 Northridge). 
+    </p>
+
+    <P>
+      From the comparison with observed intensity maps, we find that a 
+      regression based on peak velocity for intensity &gt; VII and on peak 
+      acceleration for intensity &lt; VII is most suitable. This is 
+      consistent with the notion that low intensities are determined by felt 
+      accounts (sensitive to acceleration). Moderate damage, at intensity 
+      VI-VII, typically occurs in rigid structures (masonry walls, chimneys, 
+      etc.) which also are sensitive to high-frequency (acceleration) ground 
+      motions. As damage levels increase, damage also occurs in flexible 
+      structures, for which damage is proportional to the ground velocity, 
+      not acceleration. By relating recorded ground motions to Modified 
+      Mercalli intensities, we can now estimate shaking intensities within a 
+      few minutes of the event based on the recorded peak motions made at 
+      seismic stations.
+    </P>
+
+    <P>
+      A very good descriptive table of  
+      <A HREF="http://www.abag.ca.gov/bayarea/eqmaps/doc/mmi.html">
+	Modified Mercalli Intensity</A> 
+      is available from ABAG (Association of Bay Area Governments). A table
+      of intensity descriptions with the corresponding peak acceleration and 
+      velocity values used in the ShakeMaps is given below.
+    </P>
+
+    <div align="center">
+      <table cellpadding="4" border="1">
+	<tr>
+	  <td align="center"> <IMG SRC="icons/scale.jpg"></td>
+	</tr>
+      </table>
+    </div>
+
+    <h2><a name="spmaps">Uncertainty Maps</a></h2>
+
+    <p>
+     ShakeMaps are computed as the uncertainty-weighted combination of ground 
+     motion amplitudes from a Ground Motion Prediction Equation (GMPE), 
+     seismic data, and (optionally) reports of macroseismic intensity. This 
+     weighted-averaging process allows us to compute an uncertainty at each 
+     grid point in a ShakeMap. Since the GMPE also provides an estimate of 
+     ground motion uncertainty at each point, we can compute the ratio of 
+     the final ShakeMap uncertainty to the GMPE uncertainty. This ratio lets 
+     us know at each grid point if the ShakeMap is more or less uncertain 
+     than a purely predictive map generated by the GMPE.
+    </p>
+
+    <p>
+     We utilize the uncertainty ratio to produce a graded map of uncertainty. 
+     Where the ratio is 1.0 (meaning the ShakeMap is purely predictive), the 
+     map is colored white. Where the ratio is greater than 1.0 (meaning that 
+     the ShakeMap uncertainty is high because of unknown fault geometry) the 
+     map shades toward dark red, and where the uncertainty is less than 1.0 
+     (because the presence of data decreases the uncertainty) the map shades 
+     toward dark blue. These maps provide a quick visual summary of quality 
+     of the ground motion estimates over the area of interest. ShakeMaps are 
+     also given a letter grade, based on the mean uncertainty ratio within 
+     the area of the MMI 6 contour (on the theory that this is the area most 
+     important to accurately represent). A ratio of 1.0 is given a grade of 
+     "C." Maps with mean ratios greater than 1.0 get grades of "D" or "F." 
+     Ratios less than 1.0 earn grades of "B" or "A." If the map does not 
+     contain areas of MMI >= 6, no grade is assigned.
+    </p>
+
+    <hr>
+    
+    <h2><a name="scenario">Scenario Earthquakes</a></h2>
+
+    <P>
+      <i>Earthquake Scenarios</i> describe the expected ground motions 
+      and effects of specific hypothetical large earthquakes. In planning 
+      and coordinating emergency response, utilities, emergency responders, 
+      and other agencies are best served by conducting training exercises 
+      based on realistic earthquake situations, ones that they are most 
+      likely to face. Scenario earthquakes can fill this role; they can 
+      be generated for any potential hypothetical future or past historic
+      earthquake by the following steps.
+    </P>      
+
+    <P>
+      First, assume a particular fault or fault segment will rupture over a
+      certain length relying on consensus-based information about the
+      potential behavior of the fault. For historic events, the actual rupture
+      dimensions may be constrained based on existing observations or models.
+      Second, estimate ground motions at all locations in a chosen region
+      surrounding the causative fault.
+    </P>      
+      
+    <P>
+      These earthquake scenarios are not earthquake predictions. That is, no
+      one knows in advance when or how large a future earthquake will
+      be. However, if we make assumptions about the size and location of a
+      hypothetical future earthquake, we <i>can</i> make a reasonable
+      prediction of the <i>effects</i> of the assumed earthquake, particularly
+      the way in which the ground will shake. This knowledge of the potential
+      shaking effects is the main benefit of the earthquake scenario for
+      planning and preparedness purposes.
+    </P>      
+
+    <P><b>Choosing An Appropriate Earthquake Scenario</b>
+
+
+<P><I>San Francisco Bay Area </I></P>
+
+<P>The scenario earthquakes given on the Northern California ShakeMap web page
+represent 34 possible future earthquakes in the greater San Francisco Bay area
+as determined by the USGS-led 
+<a href="http://quake.usgs.gov/research/seismology/wg02/" target="_top">
+Working Group on California Earthquake Probabilities.</a>
+This Working Group (WG02) concluded that the likelihood of one or more
+large (M>=6.7) earthquakes in the San Francisco Bay region in the next 30 years
+is 62% [with an associated 95% confidence bound of 37-87%].  This regional result
+combines the probabilities of earthquakes on each of seven characterized fault
+systems as well as in the background.
+As part of the Working Group process, the seven main Bay Area faults were
+subdivided into 18 individual fault segments. These fault segments were considered
+the basic building block for each fault; i.e., the shortest section considered
+capable of repeatedly rupturing to produce large earthquakes. Each fault was divided
+into as many as four, non-overlapping segments by evaluating data from past
+earthquakes as well as the role of structural changes along the faults, such as bends,
+intersections, gaps, and major changes in rock types.  Figure 1 shows the
+characterized faults and segment boundaries.  </P>
+
+<br>
+<IMG SRC="icons/WG_study_region.jpg">
+<br>
+
+<P>The Working Group allowed for the possibility of either single segment or
+ multi-segment earthquakes on the seven fault systems. Each possible
+ combination of segments was called a rupture source and each rupture source
+ represents a possible future ”scenario” earthquake.  WG02 assigned
+ weights to the likelihood of occurrence of all combinations of the possible
+ rupture sources for each fault system.  The resulting rupture sources—34
+ in all—along with their mean magnitude, probability of occurring in the
+ next 30 years, and the associated uncertainities in the probabilities are
+ listed in Table 1. </P>
+
+<P>These scenario ShakeMaps graphically illustrate the strength and regional
+extent of shaking that can be expected from a specific future Bay Area
+earthquakes. It is important to note that the predicted values are median
+estimates: when a large earthquake actually occurs, the ground shaking may
+exceed these estimates in some places and will be lower in others. </P>
+
+<b>Table 1.</b>
+<br>Scenario Earthquakes for the San Francisco Bay region as determined by
+the Working Group on California Earthquake Probabilities (WG02).
+<br>Scenario events sorted by fault.
+<br>
+<br>
+
+<table width=800 border=0 style='width:600.0pt'>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:10.0pt;font-family:Geneva'>Scenario Events</span></b></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:12.0pt'>
+  <p align=center><b><span style='font-size:9.0pt;font-family:Geneva'>Magnitude </span></b></p>
+  </td>
+  <td width=48 valign=bottom style='width:36.0pt;height:12.0pt'>
+  <p align=center><b><span style='font-size:9.0pt;font-family:Geneva'>Mean </span></b></p>
+  </td>
+  <td width=174 valign=bottom style='width:130.5pt;height:12.0pt'>
+  <p align=center><b><span style='font-size:9.0pt;font-family:Geneva'>30-year Probability</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:12.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:12.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>individual rupture sources, given as a segment</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:12.0pt'>
+  <p align=center><b><span style='font-size:9.0pt;font-family:Geneva'></span></b></p>
+  </td>
+  <td width=48 valign=top style='width:36.0pt;height:12.0pt'>
+  <p align=center><b><span style='font-size:9.0pt;font-family:Geneva'>Value </span></b></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:12.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>95% confidence bounds</span></p>
+  </td>
+ </tr>
+ <tr style='height:12.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:12.0pt'>
+  <p><span style='font-size:9.0pt;
+  font-family:Geneva'> or combination of segments (WG02 abbreviation)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:12.0pt'>
+  <p align=center><b><span style='font-size:9.0pt;font-family:Geneva'></span></b></p>
+  </td>
+  <td width=48 valign=top style='width:36.0pt;height:12.0pt'>
+  <p align=center><b><span style='font-size:9.0pt;font-family:Geneva'></span></b></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:12.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 2.5% - 97.5% ]</span></p>
+  </td>
+ </tr>
+</table>
+
+<table width=800 border=1 style='width:600.0pt'>
+
+ <tr style='height:13.0pt'>
+  <td width=400 valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:9.0pt;font-family:Geneva'>San Andreas Fault (SAF)</span></b>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>San Andreas Santa Cruz Mtns. (SAS)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.03</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.026</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.108 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>San Andreas Peninsula: possible repeat of 1838 earthquake (SAP)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.15</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.044</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.172 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>San Andreas North Coast (SAN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.45</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.009</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.037 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>San Andreas Offshore (SAO)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.29</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.009</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.043 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Santa Cruz Mtns. + Peninsula (SAS+SAP) </span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.42</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.035</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.001 – 0.102 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>North Coast + Offshore (SAN+SAO)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.70</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.034</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.001 – 0.106 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Santa Cruz +Peninsula+N. Coast (SAS+SAP+SAN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.76</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.001</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.003 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Peninsula+N. Coast+Offshore (SAP+SAN+SAO)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.83</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.002</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.011 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=440 nowrap valign=bottom style='width:330.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>All 4 segments: possible repeat of 1906 earthquake (SAS+SAP+SAN+SAO) </span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.90</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.047</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.003 – 0.138 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><b><i><span style='font-size:9.0pt;font-family:Geneva'></span></i></b></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:9.0pt;font-family:Geneva'>Hayward-Rodgers Creek Fault (HRC)</span></b></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern Hayward: possible repeat of 1868 earthquake (HS)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.67</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.113</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.022 – 0.319 ]</span></p>
+  </td>
+ </tr>
+
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;
+   height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Northern Hayward (HN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.49</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.123</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.023 – 0.360 ]</span></p>
+  </td>
+ </tr>
+
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern Hayward + Northern Hayward (HS+HN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.91</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.085</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.019 – 0.232 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Rodgers Creek (RC) </span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.98</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.152</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.041 – 0.414 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Northern Hayward+Rodgers Creek (HN+RC) </span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.11</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.018</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.066 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern Hayward+Northern Hayward+Rodgers Creek (HS+HN+RC)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.26</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.010</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.010 – 0.033 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+<tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:9.0pt;font-family:Geneva'>Calaveras Fault (CLV)</span></b></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern Calaveras (CS)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>5.79</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.213</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.538 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Central Calaveras (CC)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.23</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.138</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.039 – 0.297 ]</span></p>
+  </td>
+ </tr>
+
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern Calaveras+Central Calaveras (CS+CC)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.36</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.050</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.203 ]</span></p>
+  </td>
+ </tr>
+
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Northern Calaveras (CN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.78</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.124</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.030 – 0.356 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Central Calaveras+Northern Calaveras (CC+CN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.90</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.003</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.036 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern+Central+Northern Calaveras (CS+CC+CN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.93</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.020</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.079 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:9.0pt;font-family:Geneva'>Concord-Green Valley Fault (CGV)</span></b></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Concord (CON)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.25</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.050</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.003 – 0.182 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern Green Valley (GVS)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.24</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.023</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.001 – 0.087 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Concord+Southern Green Valley (CON+GVS)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.58</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.016</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.001 – 0.067 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Northern Green Valley (GVN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.02</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.061</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.004 – 0.219 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern+Northern Green Valley (GVS+GVN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.48</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.032</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.002 – 0.115 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Concord+Southern+Northern Green Valley (CON+GVS+GVN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.71</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.060</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.007 – 0.222 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:9.0pt;font-family:Geneva'>San Gregorio Fault (SGF)</span></b></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern San Gregorio (SGS)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.0</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.023</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.115 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Northern San Gregorio (SGN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.2</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.039</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.175 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern+Northern San Gregorio (SGS+SGN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>7.4</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.026</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.101 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:9.0pt;font-family:Geneva'>Greenville Fault (GNV)</span></b>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern Greenville (GS)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.6</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.031</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.107 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Northern Greenville (GN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.7</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.029</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.000 – 0.098 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Southern+Northern Greenville (GS+GN)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.9</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.015</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.001 – 0.047 ]</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt;height:13.0pt'>
+  <p><b><span style='font-size:9.0pt;font-family:Geneva'>Mt. Diablo Fault (MTD)</span></b>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt;height:13.0pt'>
+  <p align=center><![if !supportEmptyParas]>&nbsp;<![endif]><span style='font-size:9.0pt;font-family:Geneva'></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.0pt'>
+  <td width=400 nowrap valign=bottom style='width:300.0pt; height:13.0pt'>
+  <p><span style='font-size:9.0pt;font-family:Geneva'>Single-segment fault (MTD)</span></p>
+  </td>
+  <td width=78 valign=bottom style='width:58.5pt;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>6.65</span></p>
+  </td>
+  <td width=48 valign=bottom style='width:.5in;height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>0.075</span></p>
+  </td>
+  <td width=174 nowrap valign=bottom style='width:130.5pt; height:13.0pt'>
+  <p align=center><span style='font-size:9.0pt;font-family:Geneva'>[ 0.005 – 0.241 ]</span></p>
+  </td>
+ </tr>
+</table>
+<br>
+<br>
+<P><I>Elsewhere in Califoria </I></P>
+<P>
+    In California, the California Geological Survey (CGS) and the
+    U.S. Geological Survey (USGS) have evaluated the probabilistic hazard
+    from active faults in the state as part of the 
+    <a href="http://www.consrv.ca.gov/cgs/rghm/psha/index.htm">
+    Probabilistic Seismic Hazard Assessment For The State of California 
+    described</a> by <a href="#peters96">Peterson et al. (1996)</a> and 
+    the <a href="http://earthquake.usgs.gov/hazmaps/">National Seismic Hazard 
+    Mapping Project</a> described by <a href="#frankel96">Frankel et al. 
+    (1996)</a>.  From these maps it is possible to prioritize the best 
+    scenario earthquakes to be used in planning exercises by considering 
+    the most likely candidate earthquake fault first, followed by the 
+    next likely, and so on. Such an analysis is easily accomplished by 
+    <a href="http://eqint.cr.usgs.gov/eq-men/html/deaggint2002.html">hazard 
+    deaggregation</a>, in which the contributions of individual 
+    earthquakes to the total seismic hazard their probability of 
+    occurrence and the severity of the ground motions are ranked in order. U
+    sing the individual components ("deaggregations") of these hazard maps, 
+    a user can properly select the appropriate scenarios given their 
+    location, regional extent, and specific planning requirements. 
+    Currently, the ShakeMap scenario events come directly out of the 
+    <a href="http://www.consrv.ca.gov/cgs/rghm/psha/ofr9608/index.htm">
+    CGS catalog</a> of fault source parameters that make up the 
+    statewide probabilistic seismic hazard assessment. Users interested 
+    in specific scenarios for planning purposes are encouraged to make 
+    such a request by filling out a <a href="comment_form.html">ShakeMap 
+    Comment Form</a>.
+    </P>
+
+    <P><b>Estimating Ground Motions for Scenario Earthquake ShakeMaps</b>. At
+      present, ground motions are estimated using an <i>empirical attenuation
+      relationship</i>, which is a predictive relationship that allows the
+      estimation of the peak ground motions at a given distance and for an
+      assumed magnitude. Thus, ground motions are estimated for a given
+      magnitude earthquake, and at a particular distance from the assumed
+      fault, in a manner consistent with recordings of past earthquakes under
+      similar conditions. For ShakeMap, we use the relationship of <a
+      href="#boore97">Boore et al. (1997)</a> for peak and spectral
+      acceleration, and we use
+      <a href="#jb88">Joyner and Boore's (1988)</a> relationship for peak
+      velocity. We use these predictive relationships to estimate peak ground
+      motions on rock sites, and then correct the amplitude at that location
+      based on the site soil conditions as we do in the general ShakeMap
+      interpolation scheme. Site conditions come directly from the Statewide
+      Site Conditions Map for California
+      <a href="#wills00">(Wills et al., 2000)</a>
+      and we correct for site amplification with the amplitude and
+      frequency-dependent factors determined 
+      by <a href="#borcherdt94">Borcherdt (1994)</a>.
+    </P>
+
+    <P><b>Attributes and Limitations of Current Maps</b>. Our approach is
+      simple and approximate.  We account for fault finiteness by measuring
+      the distance to the surface projection of the fault location (Joyner and
+      Boore's distance definition), but we do not consider the direction of
+      rupture nor do we modify the peak motions by a directivity term. With
+      this approach, the location of the earthquake epicenter does not have
+      any effect on the resulting ground motions; only the location and
+      dimensions of the fault matter. If we were to add directivity to the
+      calculations, than different choices of epicentral location would result
+      in significantly difference motions for the same magnitude earthquake
+      and fault segment.  Rather, our approach here is to show the average
+      effect since it is difficult to show results for every possible
+      epicentral location.
+    </P>
+
+    <P>
+      Our empirical predictive approach also only gives average peak ground
+      motions values so it does not account for all the expected variability
+      in motions, other than the aforementioned site amplification
+      variations. Actual ground motions show significant variability for a
+      given distance, magnitude, and site condition and, hence, the scenario
+      ground motions are more uniform than would be expected for an actual
+      earthquake. The true variations are partially attributable to 2D and 3D
+      wave propagation, path effects (such as basin edge amplification and
+      focusing), differences in motions among earthquakes of the same
+      magnitude, and complex site effects not accounted for by our method.
+    </P>
+
+    <P><b>Uses</b>. Earthquake scenarios are used heavily in emergency
+      response planning. Primary users for response planning include city,
+      county, state and federal government agencies (e.g., the California
+      Office of Emergency Services, FEMA, the Army Corp of Engineers),
+      emergency response planners and managers for utilities, businesses, and
+      other large organizations.  Scenarios are also used for loss-estimation
+      by utilities, governments, and industry.
+    </P>
+
+    <P>
+      Scenarios are of fundamental interest to the community and scientific
+      audiences interested in the nature of the ground shaking likely
+      experienced in past earthquakes as well as the possible effects due to
+      rupture on known faults in the future.
+    </P>
+
+    <P>
+      In addition, more detailed and careful analysis of the ground motion
+      time histories (seismograms) produced by such scenario earthquakes is
+      highly beneficial for earthquake engineering considerations. Engineers
+      require site-specific ground motions for detailed structural response
+      analysis of existing structures and future structures designed around
+      specified performance levels. In the future, with these scenarios we
+      will also provide synthetic time histories of strong ground motions that
+      include rupture directivity effects.
+    </P>
+
+    <P>
+    <b>Future Scientific Advances</b>. While current earthquake modeling
+    techniques are sufficient for providing useful motion time histories and
+    scenario ShakeMaps based on empirical means (e.g., ground motion
+    attenuation relations), substantial improvement will require developing
+    cost-effective numerical tools for proper theoretical inclusion of known
+    complex ground motion effects.  These efforts are underway and must
+    continue in order to obtain site, basin and deeper crustal structure, to
+    characterize and test 3D earth models (including attenuation and
+    nonlinearity), and to improve numerical wave propagation methods to obtain
+    useful, site-specific, ground motion time histories.
+    </P>
+
+    <hr>
+    
+    <hr>
+
+    <h2><a name="references">References</a></h2>
+    <ul>
+
+      <li><a name="boore97"</a>Boore, D. M., W. B. Joyner, and T.E. Fumal (1997). Equations for Estimating Horizontal Response Spectra and
+        Peak Accelerations from Western North American Earthquakes: A Summary of Recent Work,<i>Seism. Res. Lett.</i>, <b>68</b>, 128-153.
+
+      <li><a name="borcherdt94"</a>Borcherdt, R. D. (1994). Estimates of site-dependent response spectra for design 
+        (methodology and justification), <i>Earthquake Spectra</i>, <b>10</b>, 617-654.
+ 
+      <li><a name="frankel96"</a>Frankel, A., Mueller, C., T. Barnhard, D. Perkins, E.V. Leyendecker, N. Dickman, S. Hansen,
+        and M. Hopper (1996). National seismc-hazard maps: documentation, <i>U.S. Geol. Surv. Open-File Rept.</i><b>96-352</b>.
+
+      <li>Goltz, James and David J. Wald, <a href="http://www.trinet.org/shakemap_workshopreport.html"><i>TriNet ShakeMap 
+          Workshop: Report of Proceedings and Recommendations</i></a></li>
+
+      <li><a name="jb88"</a>Joyner, W. B. and Boore, D. M. (1988). Measurement, characterization, and 
+	prediction of strong ground motions, in Proc. Conf. on Earthq. Eng. & Soil Dyn. II, 
+	Geotechnical vision, Am. Soc. Civil Eng., Park City, Utah, 43-102.
+
+      <li><a name="peters96"</a>Petersen, M. D. P., W. A. Bryant, C. H. Cramer, T. Cao, and M. Reichle, A. D. Frankel, J. J. Lienkaemper, 
+        P. A. McCrory, and D. P. Schwartz, (1996). Probabilistic Seismic Hazard Assessment For The State 
+        Of California, <i>California Division of Mines and Geology Open-File Report</i><b> 96-08</b>.
+
+      <li>Wald, David J.,Vincent Quitoriano, Thomas H. Heaton, Hiroo Kanamori, <a href="http://pasadena.wr.usgs.gov/shake/pubs/regress/regress.html">
+          Relationships between Peak Ground Acceleration, Peak Ground Velocity and Modified Mercalli Intensity in California</a>, 
+          <i>Earthquake Spectra</i>, <b>15</b>, 557-564</li>
+
+      <li>Wald, David J., Vincent. Quitoriano, Tom. H. Heaton, Hiroo. Kanamori, Craig. W. Scrivner, and C. Bruce Worden, (1999). 
+          <a href="http://pasadena.wr.usgs.gov/shake/pubs/shake/shake.html">TriNet ``ShakeMaps'': Rapid Generation of Instrumental
+           Ground Motion and Intensity Maps for Earthquakes in Southern California</a>
+          <i>Earthquake Spectra</i>, <b>15</b>, 537-556</li>
+
+      <li><a name="wills00"</a>Wills, C. J., M. D. Petersen, W. A. Bryant, M. S. Reichle, G. J. Saucedo, S. S. Tan, 
+        G. C. Taylor, and J. A. Treiman (2000). A site-conditions map for California based on 
+        geology and shear wave velocity, <i>Bull. Seism. Soc. Am.</i>, <b>90</b>, S187-S208.
+
+    </ul>
+    <hr>
+
+    <p>
+      <font size="-1">
+	Please use the <a href="comment_form.html">comment form</a> for 
+	questions, comments, or suggestions<br>
+	Maintained by ShakeMap Working Group<br>
+	Page last modified 2/4/2005
+      </font>
+    </p>
+  </body>
+</html>

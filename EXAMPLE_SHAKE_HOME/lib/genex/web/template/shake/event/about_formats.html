@@ -1,0 +1,575 @@
+<html>
+  <head>
+    <title><!-- tmpl_var name="region" --> ShakeMap: <!-- tmpl_var name="header-pagelabel" --></title>
+    <link rel="stylesheet" type="text/css" href="../lib/style.css">
+
+    <style type="text/css">
+      #dummy {
+        position: absolute;
+        top:  0px;
+        left: 0px;
+      }
+      
+      #about {
+        position: absolute;
+        left: 10px;
+      }
+      
+      #aboutpars {
+        position: absolute;
+        left: 20px;
+      }
+      
+      TD.product {
+        font-size: small;
+        text-align: left;
+      }
+      
+      TD.rowhead {
+        font-family: sans-serif;
+        font-size: small;
+        width: 120px;
+        text-align: right;
+        background-color: #99cccc;
+      }
+      
+      .sectionhead {
+        font-family: arial,sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        text-align: left;
+      }
+      
+      .subsectionhead {
+        font-family: arial, sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        text-align: left;
+      }
+      
+      .subsectiontext {
+        font-family: arial, sans-serif;
+        font-size: small;
+        font-weight: normal;
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body bgcolor="#FFFFFF">
+    <!-- tmpl_include name="shake/event/products_header.html" -->
+
+    <table cellpadding="3" width="640" border="0">
+      <tr>
+	<td width="640" colspan="5"><span class="sectionhead">Maps:</span></td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" cellpadding="3" bgcolor="#99cccc" valign="top"><a name="jpg">JPEG</a></td>
+	<td width="480" class="product">
+	  JPEG (which stands for Joint Photographic Experts Group, the
+	  standards body that created it) is a 24-bit, platform-independent
+	  image and graphics format.  This format can be viewed in any web 
+	  browser, and can be manipulated by most image-production 
+	  applications.  The compression scheme is "lossy" though, so
+	  multiple generations of editing and saving will degrade the
+	  image.
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="postscript">Postscript</a></td>
+	<td width="480" class="product">
+	  A language to describe graphics independently of the resolution 
+	  of the output device.  Printers with Postscript drivers will 
+	  rasterize these printer files to high-quality map plots.  If 
+	  the Postscript file name ends with '.zip,' the file has been 
+	  compressed with the Zip utility and will need to be unzipped 
+	  before it can be used.
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td width="80"><spacer type="block" width="30"></td>
+	<td width="40" class="rowhead" align="right" bgcolor="#99cccc">8-1/2 x 11</td>
+	<td width="480" class="product">
+	  Postscript file with map sized to print on 8.5" x 11" paper.
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td width="80"><spacer type="block" width="30"></td>
+	<td width="40" class="rowhead" align="right" bgcolor="#99cccc">Poster</td>
+	<td width="480" class="product">
+	  Postscript file with map sized to print on a poster printer 
+	  (approximately 32" x 28"). This file is only available for larger earthquakes.
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="pdf">PDF</a></td>
+	<td width="480" class="product">
+	  Portable Document Format.  Can be viewed and printed with the free 
+	  Adobe Acrobat Reader.  More information about Acrobat and a software 
+	  download site are available <a href="http://www.adobe.com/products/acrobat/readstep.html">http://www.adobe.com/products/acrobat/readstep.html</a>. This file is only available for larger earthquakes.
+	</td>
+      </tr>
+
+      <tr>
+	<td width="640" colspan="5"><span class="sectionhead"><a name="media">Media Maps:</a></span></td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" cellpadding="3" bgcolor="#99cccc" valign="top">General</td>
+	<td width="480" class="product">
+	  The Media Maps are simplified versions of the Instrumental
+	  Intensity maps (PostScript and JPEG format, see above).  While 
+	  the intensity information
+	  they contain is exactly the same as that in the other maps,
+	  they are packaged in a way that makes them more suitable
+	  for broadcast to low-resolution devices, such as TV monitors:
+	  roads and borders are thicker, fonts are larger, and the title
+	  and intensity scale are simplified.
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td width="80"><spacer type="block" width="30"></td>
+	<td width="60" class="rowhead" align="right" bgcolor="#99cccc">Decorated</td>
+	<td width="480" class="product">
+	  Shows state borders, map title, simplified intensity scale, and
+	  the intensity overlay.
+	  Includes some city names, major freeways and a distance scale.
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td width="80"><spacer type="block" width="30"></td>
+	<td width="60" class="rowhead" align="right" bgcolor="#99cccc">Bare</td>
+	<td width="480" class="product">
+	  Shows only state borders, latitude, longitude, and the shaking 
+	  intensity.
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="pdf">Info Sheet</a></td>
+	<td width="480" class="product">
+	  Intended to supplement the Media Maps, the Info Sheet is
+	  a text file that provides basic event information, organizational
+	  credits, contact information, and information about earthquake
+	  intensities and ShakeMap.
+	</td>
+      </tr>
+      <tr>
+
+      <tr>
+	<td width="640" colspan="5"><span class="sectionhead">Files:</span></td>
+      </tr>
+      <tr>
+	<td width="20"><spacer type="block" width="20"></td>
+	<td width="620" colspan="4"><span class="subsectionhead">Raw Grids:</span></td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" valign="top" bgcolor="#99cccc"><a name="xyz">Text X,&nbsp;Y,&nbsp;Z&nbsp;Values</a></td>
+	<td width="480" class="product">
+	  <p>
+	    Values of the peak amplitudes at the ShakeMap map grid nodes.  
+	    File is ASCII text in the following format:
+	  </p>
+	  <p>
+	    <b>First line is a header with:</b><br>
+	    &lt;name/CUSPID of event&gt; &lt;mag&gt; &lt;epicentral lat&gt; &lt;epicentral lon&gt; &lt;MMM DD YYYY&gt; 
+&lt;HH:MM:SS timezone&gt; &lt;W bound&gt; &lt;S bound&gt; &lt;E bound&gt; &lt;N bound&gt; (Process time: &lt;time&gt;) &lt;Location String&gt;<br>
+	    <br>
+	    The first 'time' field is the time of the event.<br>
+	    'Process time' is the time this file was last updated.
+	  </p>
+	  <p>
+	    ex:<br>
+	    Northridge 6.7 34.213 -118.5357 JAN 17 1994 04:30:55 PST -119.1857 33.7775 -117.857 34.6485 (Process Time: Wed Nov  4 17:25:18 1998) Northridge Earthquake<br>
+	  </p>
+	  <p>
+	  For large or historic earthquakes the "Location String" will usually be the name of the earthquake, otherwise it will be something of the form "12.1 mi. SSW of Carpinteria, CA"
+	  </p>
+	  <p>
+	    <b>The remaining lines are of the form:</b><br>
+	    &lt;lon&gt; &lt;lat&gt; &lt;pga&gt; &lt;pgv&gt; &lt;mmi&gt; &lt;psa03&gt; &lt;psa10&gt; &lt;psa30&gt;<br>
+	  <p>
+	    psa03 = spectral acceleration at 0.3 s period, 5% damping.<br>
+	    psa10 = spectral acceleration at 1.0 s period, 5% damping.<br>
+	    psa30 = spectral acceleration at 3.0 s period, 5% damping.<br>
+	    <br>
+	    For pga           value == (percent-g)<br>
+	    For pgv           value == (cm/s)<br>
+	    For mmi           value == Intensity<br>
+	    For psa           value == (percent-g)<br>
+	  </p>
+	  <p>
+	  If the grid file name ends with '.zip,' the file has been 
+	  compressed with the Zip utility and will need to be unzipped 
+	  before it can be used.
+	  </p>
+
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" valign="top" bgcolor="#99cccc"><a name="xml">XML</a></td>
+	<td width="480" class="product">
+	  <p>
+	    Supplies values of the peak amplitudes and other parameters at 
+            the ShakeMap grid nodes.  Schemas are available at 
+	    http://earthquake.usgs.gov/shakemap/xml/schemas.  The following
+	    is a brief summary of the format:
+	  </p>
+	  <p>
+          <pre>
+&lt;shakemap_grid
+        event_id=
+        shakemap_id=(currently the same as the event id)
+        shakemap_version=(integer indicating map revision)
+        code_version=(string indicating the version of the shakemap software)
+        process_timestamp=(yyyy-mm-ddThh:mm:ssZ)
+	shakemap_originator=(network id code)
+	map_status=(RELEASED|REVIEWED|CANCELLED)
+	shakemap_event_type=(ACTUAL|TEST|SCENARIO|HEARTBEAT) &gt;
+
+    &lt;event
+        magnitude=
+        lat=
+        lon=
+        event_timestamp=
+        event_description= &gt;
+
+    &lt;grid_specification
+        lon_min=
+        lat_min=
+        lon_max=
+        lat_max=
+        nominal_lon_spacing=
+        nominal_lat_spacing=
+        nlon=
+        nlat=
+        nominal_pga_std=(The standard deviation of PGA as given by the attenuation relation (i.e., "regression") used.  
+                         The units are natural log of percent-g.) /&gt;
+
+    &lt;grid_field index=n name=m units= /&gt; +
+
+    &lt;grid_data&gt; CDATA &lt;/grid_data&gt;
+
+&lt;/shakemap_grid&gt;
+
+'+' indicates that multiple tags of this type are expected
+          </pre>
+	  </p>
+	  <p>
+          The 'grid_specification' tag defines the grid boundaries, and also
+          provides the approximate interval between grid points (beware
+          roundoff) and the number of grid point in the latitude and longitude
+          directions.
+	  </p>
+	  <p>
+	  In the grid_field, the index gives the column number of the 
+	  associated parameter.  The current names for the parameters are:<br>
+	  LAT = latitude (decimal degrees, north) <br>
+	  LON = longitude (decimal degrees, east) <br>
+	  PGA = peak ground acceleration (percent-g) <br>
+	  PGV = peak ground velocity (cm/s) <br>
+	  MMI = instrumental intensity (Modified Mercalli Intensity units) <br>
+	  PSA03 = spectral acceleration at 0.3 s period, 5% damping (percent-g) <br>
+	  PSA10 = spectral acceleration at 1.0 s period, 5% damping (percent-g) <br>
+	  PSA30 = spectral acceleration at 3.0 s period, 5% damping (percent-g) <br>
+	  STDPGA = the standard deviation of PGA at the point (natural log of percent-g) <br>
+	  URAT = the ratio of the standard deviation of PGA at the point to the standard deviation of the GMPE (see "nominal_pga_std" above) (no units) <br>
+	  SVEL = Shear wave velocity (Vs30) at the site (m/s) <br>
+	  </p>
+          <p>
+          The current units are: <br>
+          dd = decimal degrees <br>
+          pctg = percent 'g' (i.e., percent of the nominal gravitational force at the Earth's surface) <br>
+          cms = centimeters per second <br>
+          ms = meters per second <br>
+          mmi = Modified Mercalli Intensity <br>
+          <p>
+          Following is an example of a (truncated) ShakeMap XML file:
+<pre>
+&lt;?xml version="1.0" encoding="US-ASCII" standalone="yes"?&gt;
+&lt;shakemap_grid event_id="14138080" shakemap_id="14138080" shakemap_version="7"
+ process_timestamp="2005-12-19T16:07:03Z" shakemap_originator="ci" map_status="RELEASED" 
+ shakemap_event_type="ACTUAL"&gt;
+&lt;event magnitude="5.2" depth="10.29" lat="35.027200" lon="-119.178300" event_timestamp=
+ "2005-04-16T19:18:13GMT" event_description="13.4 mi W of Wheeler Ridge, CA "/&gt;
+&lt;grid_specification lon_min="-120.428300" lat_min="34.193866" lon_max="-117.928300" 
+ lat_max="35.860533" nominal_lon_spacing="0.016667" nominal_lat_spacing="0.016667" 
+ nlon="151" nlat="101"/&gt;
+&lt;grid_field index="1" name="LON" units="dd"/&gt;
+&lt;grid_field index="2" name="LAT" units="dd"/&gt;
+&lt;grid_field index="3" name="PGA" units="pctg"/&gt;
+&lt;grid_field index="4" name="PGV" units="cms"/&gt;
+&lt;grid_field index="5" name="MMI" units="mmi"/&gt;
+&lt;grid_field index="6" name="PSA03" units="pctg"/&gt;
+&lt;grid_field index="7" name="PSA10" units="pctg"/&gt;
+&lt;grid_field index="8" name="PSA30" units="pctg"/&gt;
+&lt;grid_field index="9" name="STDPGA" units="pctg"/&gt;
+&lt;grid_field index="10" name="URAT" units=""/&gt;
+&lt;grid_field index="11" name="SVEL" units="ms"/&gt;
+&lt;grid_data&gt;
+-119.7857 35.0463 5.28 5.51 4.54 13.1 6.89 1.28 0.45 1 372
+-119.7774 35.0463 5.32 5.53 4.75 13.17 6.91 1.28 0.45 1 372
+-119.7690 35.0463 5.36 5.55 4.75 13.25 6.93 1.29 0.45 1 372
+...
+&lt;/grid_data&gt;
+&lt;/shakemap_grid&gt;
+</pre>
+<p>
+The structure of the <b>uncertainty.xml</b> file is nearly identical to 
+grid.xml, but the values contained therein are the standard deviations of
+the ground motions for each parameter. These uncertainties (except for 
+intensity) are given in
+natural log units so that, for example, one standard deviation in ground 
+motion is given by (ln(PGM) +/- STDPGM), where PGM is the ground motion and 
+STDPGM is the standard deviation value from the grid. The uncertainty for 
+intensity is in linear units, so one standard devaition is given by
+(MMI +/- STDMMI).
+</p>
+	<p>
+	IMPORTANT NOTE: Not all parameters are guaranteed to be present in 
+	any given
+	file.  For example, the pseudo-spectral acceleration values are only
+	produced for earthquakes of larger magnitude, typically M5.0 and up.
+	Also, the order of elements may vary from region to region or even
+	from map to map.  Automatic processes should always consult the
+	"grid_field" tags to obtain a list of the available parameters 
+	and their order in the grid.  We reserve the right to add parameters
+	at any time without notice, and we will almost certainly exercise 
+	this right.
+        </p>
+	</td>
+      <tr>
+	<td width="20"><spacer type="block" width="20"></td>
+	<td width="620" colspan="4"><span class="subsectionhead">GIS Files:</span></td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="hazus">HAZUS ZIP File</a></td>
+	<td width="480" class="product">
+	  <p>
+	  <p>
+	    Contour polygons of the <b>average</b> ground motion amplitudes 
+	    in ArcGIS 
+	    shape files.  Please note that these are average ground motions,
+	    whereas most ShakeMap amplitudes are given as peak.  Average
+	    ground motions are 15% less than peak.
+	  </p>
+	  <p>
+	    This is an archive of files (three files for each
+	    of the mapped parameters) compressed in zip format.
+	  </p>
+	  <p>
+	    The three files are:<br>
+	    .dbf = A DBase file with layer attributes<br>
+	    .shp = The file with geographic coordinates<br>
+	    .shx = An index file
+	  </p>
+	  <p>
+	    These shape files are designed with intervals that are 
+	    appropriate for use with the HAZUS software, though they
+	    may be imported into any GIS package that can read ArcGIS
+	    shapefiles.  Because HAZUS expects PGV in inches/sec, and 
+	    all amplitudes to be average, not peak, this
+	    file may not be suitable for all applications; see "Shape
+	    Files" below for another set of shapefiles with peak
+	    amplitudes and more generally useful units. 
+	  </p>
+	  <p>
+	    The contour intervals are 0.04g for PGA and the three spectral
+	    acceleration parameters (only two of which are used by HAZUS),
+	    and 4 inches/second for PGV.  The file also includes MMI
+	    contour polygons in intervals of 0.2 intensity units.
+	  </p>
+	  <p>
+	    The HAZUS GIS files are only generated for events that are
+	    larger than (approx.) M5.0.
+	  </p>
+	  <p>
+	    If you are unfamiliar with using shape files to run HAZUS,
+	    see the <a href="../ShakeMap2HAZUS.html">tutorial</a>.
+	  </p>
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="shape">Shape Files</a></td>
+	<td width="480" class="product">
+	  <p>
+	  <p>
+	    High-resolution contour polygons of the peak ground motion 
+	    parameters in ArcGIS 
+	    shape files.  This is an archive of files (three files for each
+	    of the mapped parameters) compressed in zip format.
+	  </p>
+	  <p>
+	    The three files are:<br>
+	    .dbf = A DBase file with layer attributes<br>
+	    .shp = The file with geographic coordinates<br>
+	    .shx = An index file
+	  </p>
+	  <p>
+	    These shape files are intended for use with any GIS
+	    software that can read ArcGIS shape files.  Note, however,
+	    that the PGV contours are in cm/s, and are therefore NOT
+	    suitable for HAZUS input.
+	  </p>
+	  <p>
+	    The contour intervals are 0.04g for PGA and the three spectral
+	    acceleration parameters (only two of which are used by HAZUS),
+	    and 2 cm/sec for PGV.  The file also includes MMI
+	    contour polygons in intervals of 0.2 intensity units.
+	  </p>
+	  <p>
+	    shape.zip is available for all events, but the spectral
+	    acceleration values are typically only included for earthquakes of
+	    magnitude 5.0 and larger.
+	  </p>
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="kml">KML</a></td>
+	<td width="480" class="product">
+	  <p>
+	  <p>
+	    KML is an XML file format used by Google Earth 
+	    (http://earth.google.com).  Once you have downloaded and installed
+	    Google Earth, you can download the event .kml file and import
+	    it to Google Earth.  You will be able to view the intensity
+	    map overlaying topography and aerial photographs, chage the
+	    transparency, turn on or off a layer with clickable station
+	    information, zoom in or out, rotate the map in three dimentions, 
+            etc.
+	  </p>
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="raster">ESRI Raster Files</a></td>
+	<td width="480" class="product">
+	  <p>
+	  <p>
+	    Binary grid files in ESRI raster format (see 
+            <a href="http://webhelp.esri.com/arcgisdesktop/9.2/index.cfm?TopicName=An_overview_of_the_Conversion_toolbox">here</a> 
+            for information on converting to and from raster format in ArcGIS).
+	    This is an archive of files (two files for each
+	    of the mapped parameters, plus two files for each parameter's 
+            uncertainty grid) compressed in zip format.
+	  </p>
+	  <p>
+	    The files extensions are:<br>
+	    .hdr = An ASCII file specifying the geometry of the grid<br>
+	    .fit = A raster file containing the gridded data<br>
+	  </p>
+	  <p>
+	    These files are intended for use with any GIS
+	    software that can import ESRI raster data. The file names are
+            "parameter.extension" and "parameter_std.extension", where
+            "parameter" can be any of "pga", "pgv", "psa03", "psa10", "psa30",
+            or "mi" (for Peak Ground Acceleration, Peak Ground Velocity, 
+            pseudo-spectral acceleration at 0.3, 1.0, and 3.0 seconds, and
+            macroseismic intensity, respectively). The units of acceleration
+            are percent-g, and velocity is cm/s. The _std files contain the
+            uncertainties in natural log units, except for intensity which
+            is linear.
+	  </p>
+	  <p>
+	    raster.zip is available for all events, but the spectral
+	    acceleration values are typically only included for earthquakes of
+	    magnitude 5.0 and larger.
+	  </p>
+	</td>
+      </tr>
+      <tr>
+	<td width="20"><spacer type="block" width="20"></td>
+	<td width="620" colspan="4"><span class="subsectionhead">Station Lists:</span></td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="station_txt">Text</a></td>
+	<td width="480" class="product">
+	  <p>
+	    A table of earthquake and station parameters, formatted to be 
+	    read easily by humans. An XML formatted file is also available, 
+	    and is the best option for parsing the information by computer.
+	  </p>
+	  <p>
+	    The earthquake information includes: CUSP ID, magnitude, date, 
+	    time, epicenter coordinates and depth.
+	  </p>
+	  <p>
+	    The station information includes name and/or code, location 
+	    coordinates, and peak velocity and acceleration values.
+	  </p>
+	  <p>
+	    Stations may be flagged to indicate they were not used in the 
+	    ShakeMap processing.  The types of flags are indicated at the 
+	    bottom of the list.
+	  </p>
+	</td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" bgcolor="#99cccc" valign="top"><a name="station_xml">XML</a></td>
+	<td width="480" class="product">
+	  <p>
+	    A table of earthquake and station parameters, tagged in XML 
+	    format for parsing by computer. The DTD defining the structure 
+	    of the XML flags is incorporated in the file.
+	  </p>
+	  <p>
+	    The earthquake information includes: CUSP ID, magnitude, date, 
+	    time, epicenter coordinates and depth.
+	  </p>
+	  <p>
+	    The station information includes name and/or code, location 
+	    coordinates, and peak velocity and acceleration values.
+	  </p>
+	  <p>
+	    Stations may be flagged to indicate they were not used in the 
+	    ShakeMap processing.  The types of flags are indicated at the 
+	    bottom of the text version of the station list.
+	  </p>
+	  <p>
+	    For more information on XML and XML parsers, see 
+	    the <a href="http://www.w3.org/XML/">XML page</a>
+	    of the <a href="http://www.w3.org">World Wide Web Consortium</a>.
+	</td>
+      </tr>
+	<td width="20"><spacer type="block" width="20"></td>
+	<td width="620" colspan="4"><span class="subsectionhead">Metadata:</span></td>
+      </tr>
+      <tr>
+	<td width="40" colspan="2"><spacer type="block" width="40"></td>
+	<td class="rowhead" width="120" colspan="2" align="right" valign="top" bgcolor="#99cccc"><a name="metadata">FGDC Metadata</a></td>
+	<td width="480" class="product">
+	  <p>
+	    These files are provided to comply with the Federal Geographic 
+	    Data Committee standards for geospatial metadata.  Information
+	    regarding the standards can be found at the 
+	    <a href=http://www.fgdc.gov/metadata/csdgm/>FGDC website</a>.  
+	    See also:
+	  </p>
+	  <p>
+	  Federal Geographic Data Committee. FGDC-STD-001-1998. Content 
+	  standard for digital geospatial metadata (revised June 1998). 
+	  Federal Geographic Data Committee. Washington, D.C.
+	  </p>
+	  <p>
+	    The metadata are provided in text, HTML, and XML formats.
+	  </p>
+	</td>
+      </tr>
+    </table>
+
+  </body>
+</html>

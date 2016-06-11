@@ -1,0 +1,180 @@
+<html>
+  <head>
+  <!-- tmpl_if name="event-is-scenario" -->
+    <title>Station List for Scenario <!-- tmpl_var name="eq-id" --></title>
+  <!-- tmpl_else -->
+    <title>Station List for Event <!-- tmpl_var name="eq-id" --></title>
+  <!-- /tmpl_if -->
+  </head>
+  <body bgcolor="white">
+    <a name="quake" class="description" id="quake">
+    <!-- tmpl_if name="event-is-scenario" -->
+      <H2 class="noncss">Scenario</H2>
+    <!-- tmpl_else -->
+      <H2 class="noncss">Earthquake</H2>
+    <!-- /tmpl_if -->
+    
+    <table width="700">
+      <tr>
+      <!-- tmpl_if name="event-is-scenario" -->
+	<td align="center"><u>Scenario ID</u></td>
+	<td align="center"><u>Magnitude</u></td>
+	<td align="center"><u>Exercise Date</u></td>
+	<td align="center"><u>Exercise Time</u></td>
+      <!-- tmpl_else -->
+	<td align="center"><u>Event ID</u></td>
+	<td align="center"><u>Magnitude</u></td>
+	<td align="center"><u>Date</u></td>
+	<td align="center"><u>Time</u></td>
+      <!-- /tmpl_if -->
+	<td align="center"><u>Lat</u></td>
+	<td align="center"><u>Lon</u></td>
+	<td align="center"><u>Depth</u></td>
+      </tr>
+      <tr>
+	<td align="center"><b><!-- tmpl_var name="eq-id" --></b></td>
+	<td align="center"><b><!-- tmpl_var name="eq-mag" --></b></td>
+	<td align="center">
+	  <b><!-- tmpl_var name="eq-date" --></b>
+	</td>
+	<td align="center">
+	  <b><!-- tmpl_var name="eq-time" --></b>
+	</td>
+	<td align="center"><b><!-- tmpl_var name="eq-lat-ns" --></b></td>
+	<td align="center"><b><!-- tmpl_var name="eq-lon-ew" --></b></td>
+	<td align="center"><b><!-- tmpl_var name="eq-depth" --> km</b></td>
+      </tr>
+      <tr><td><sp></td></tr>
+      <tr><td><sp></td></tr>
+      <tr><td><sp></td></tr>
+      <tr><td><sp></td></tr>
+      <tr>
+	<td align="center">Magnitude Bias:</td>
+	<td align="center"><u>MMI</u></td>
+	<td align="center"><u>PGA</u></td>
+	<td align="center"><u>PGV</u></td>
+        <!-- tmpl_if name="have-spectra" -->
+	  <td align="center"><u>PSA 0.3</u></td>
+	  <td align="center"><u>PSA 1.0</u></td>
+	  <td align="center"><u>PSA 3.0</u></td>
+        <!-- /tmpl_if -->
+      </tr>
+      <tr>
+	<td align="center"><sp></td>
+	<td align="center"><!-- tmpl_var name="eq-bmi" --></td>
+	<td align="center"><!-- tmpl_var name="eq-bpga" --></td>
+	<td align="center"><!-- tmpl_var name="eq-bpgv" --></td>
+        <!-- tmpl_if name="have-spectra" -->
+	  <td align="center"><!-- tmpl_var name="eq-bpsa03" --></td>
+	  <td align="center"><!-- tmpl_var name="eq-bpsa10" --></td>
+	  <td align="center"><!-- tmpl_var name="eq-bpsa30" --></td>
+        <!-- /tmpl_if -->
+      </tr>
+    </table>
+  </a>
+    
+    <br class="noncss">
+    
+    <H2 class="noncss">Seismic Stations</H2>
+    
+    <!-- tmpl_loop name="StationList" -->
+    <a name="s<!-- tmpl_var name="code" -->" class="description" id="s<!-- tmpl_var name="code" -->">
+    <table width="700">
+      <tr>
+        <td align="left" width="80"><b><!-- tmpl_var name="code" --></b>:</td>
+        <td width="275"><!-- tmpl_var name="name" --></td>
+        <td width="275" align="right">Agency: <!-- tmpl_var name="source" --></td>
+      </tr>
+      <tr>
+        <td><spacer type="block" width="80"/></td>
+        <td colspan="5">
+          Lat: <!-- tmpl_var name="lat-ns" -->&nbsp&nbsp&nbsp&nbsp
+          Lon: <!-- tmpl_var name="lon-ew" -->&nbsp&nbsp&nbsp&nbsp
+	  Distance: <!-- tmpl_var name="dist" --> km from source
+        </td>
+      </tr>
+      <tr>
+        <td><spacer type="block" width="80"/></td>
+        <td colspan="5">
+        Intensity:<sp> 
+        <!-- tmpl_if name="intensity-flag" -->
+          <!-- tmpl_var name="intensity" --> - <!-- tmpl_var name="intensity-flag" -->
+        <!-- tmpl_else -->
+          <b><!-- tmpl_var name="intensity" --></b>
+        <!-- /tmpl_if -->
+        <!-- tmpl_if name="loc" -->
+	  Location: <!-- tmpl_var name="loc" -->
+        <!-- /tmpl_if -->
+        </td>
+      </tr>
+    </table>
+    <table width="700">
+      <tr>
+        <td align="center">Station Comp</td>
+	<td align="center">PGV (cm/s)</td>
+	<td align="center">PGA (%g)</td>
+	<td align="center">PSA:&nbsp&nbsp 0.3 sec (%g)</td>
+	<td align="center">1.0 sec (%g)</td>
+	<td align="center">3.0 sec (%g)</td>
+      </tr>
+      <!-- tmpl_loop name="CompList" -->
+	<tr>
+	  <td align="center"><!-- tmpl_var name="name" --></td>
+          <td align="center">
+            <!-- tmpl_if name="is-pgv" -->
+              <b><!-- tmpl_var name="vel-value" --></b>
+            <!-- tmpl_else -->
+                 <!-- tmpl_var name="vel-value" -->
+            <!-- /tmpl_if -->
+            <!-- tmpl_if name="vel-flagged" -->
+              -<!-- tmpl_var name="vel-flag" -->
+            <!-- /tmpl_if -->
+          </td>
+	  <td align="center">
+            <!-- tmpl_if name="is-pga" -->
+              <b><!-- tmpl_var name="acc-value" --></b>
+            <!-- tmpl_else -->
+                 <!-- tmpl_var name="acc-value" -->
+            <!-- /tmpl_if -->
+            <!-- tmpl_if name="acc-flagged" -->
+              -<!-- tmpl_var name="acc-flag" -->
+            <!-- /tmpl_if -->
+          </td>
+	  <td align="center">
+            <!-- tmpl_if name="is-psa03" -->
+              <b><!-- tmpl_var name="psa03-value" --></b>
+            <!-- tmpl_else -->
+                 <!-- tmpl_var name="psa03-value" -->
+            <!-- /tmpl_if -->
+            <!-- tmpl_if name="psa03-flagged" -->
+              -<!-- tmpl_var name="psa03-flag" -->
+            <!-- /tmpl_if -->
+          </td>
+	  <td align="center">
+            <!-- tmpl_if name="is-psa10" -->
+              <b><!-- tmpl_var name="psa10-value" --></b>
+            <!-- tmpl_else -->
+                 <!-- tmpl_var name="psa10-value" -->
+            <!-- /tmpl_if -->
+            <!-- tmpl_if name="psa10-flagged" -->
+              -<!-- tmpl_var name="psa10-flag" -->
+            <!-- /tmpl_if -->
+          </td>
+	  <td align="center">
+            <!-- tmpl_if name="is-psa30" -->
+              <b><!-- tmpl_var name="psa30-value" --></b>
+            <!-- tmpl_else -->
+                 <!-- tmpl_var name="psa30-value" -->
+            <!-- /tmpl_if -->
+            <!-- tmpl_if name="psa30-flagged" -->
+              -<!-- tmpl_var name="psa30-flag" -->
+            <!-- /tmpl_if -->
+          </td>
+        </tr>
+      <!-- /tmpl_loop -->
+      </table>
+      </a>
+      <br class="noncss">
+    <!-- /tmpl_loop -->
+  </body>
+</html>

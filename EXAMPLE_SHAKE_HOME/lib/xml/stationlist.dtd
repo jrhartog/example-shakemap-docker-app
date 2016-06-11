@@ -1,0 +1,50 @@
+<!ELEMENT stationlist (station+)>
+<!ATTLIST stationlist
+  created	CDATA	#REQUIRED
+>
+
+<!ELEMENT station (comp+)>
+<!ATTLIST station
+  code		CDATA 			#REQUIRED
+  name		CDATA 			#REQUIRED
+  insttype	CDATA 			#REQUIRED
+  lat		CDATA 			#REQUIRED
+  lon		CDATA 			#REQUIRED
+  source	(SCSN|CGS|NSMP) 	'SCSN'
+  netid		CDATA			#REQUIRED
+  commtype	(DIG|ANA) 		'DIG'
+  dist          CDATA                   '10.0'
+  loc		CDATA			''
+>
+
+<!ELEMENT comp (acc,vel,psa*)>
+<!ATTLIST comp
+  name          CDATA  #REQUIRED
+  originalname  CDATA  #IMPLIED
+>
+
+<!ELEMENT acc EMPTY>
+<!ELEMENT vel EMPTY>
+<!ELEMENT psa03 EMPTY>
+<!ELEMENT psa10 EMPTY>
+<!ELEMENT psa30 EMPTY>
+<!ATTLIST acc
+  value  CDATA         #REQUIRED
+  flag   CDATA        ''
+>
+<!ATTLIST vel
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa03
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa10
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>
+<!ATTLIST psa30
+  value CDATA          #REQUIRED
+  flag  CDATA         ''
+>

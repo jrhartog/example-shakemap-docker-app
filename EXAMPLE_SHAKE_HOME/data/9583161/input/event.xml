@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<!DOCTYPE earthquake [
+<!ELEMENT  earthquake EMPTY>
+<!ATTLIST earthquake
+  id 		ID	#REQUIRED
+  lat		CDATA	#REQUIRED
+  lon		CDATA	#REQUIRED
+  mag		CDATA	#REQUIRED
+  year          CDATA   #REQUIRED
+  month         CDATA   #REQUIRED
+  day           CDATA   #REQUIRED
+  hour          CDATA   #REQUIRED
+  minute        CDATA   #REQUIRED
+  second        CDATA   #REQUIRED
+  timezone      CDATA   #REQUIRED
+  depth		CDATA	#REQUIRED
+  locstring	CDATA	#REQUIRED
+  pga		CDATA   #REQUIRED
+  pgv		CDATA   #REQUIRED
+  sp03		CDATA   #REQUIRED
+  sp10		CDATA   #REQUIRED
+  sp30		CDATA   #REQUIRED
+  created	CDATA	#REQUIRED
+>
+]>
+<earthquake id="9583161" lat="34.5630" lon="-118.9000" mag="3.9" year="2000" month="10" day="12" hour="16" minute="51" second="19" timezone="GMT" depth="27.47" locstring="11.5 mi N of Fillmore, CA " created="982348863" />
+

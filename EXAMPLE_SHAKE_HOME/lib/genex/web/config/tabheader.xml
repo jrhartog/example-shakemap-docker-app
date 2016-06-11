@@ -1,0 +1,94 @@
+<tabs>
+
+<!-- 
+	Main header tabs
+-->
+<tab id="home"
+     level="top"
+     text="Home"
+     title="ShakeMap Home Page"
+     mouseover="ShakeMap Home Page"/>
+<tab id="archive"
+     level="top"
+     text="Map Archive"
+     title="Archive of Maps for Recent and Historic Earthquakes"
+     mouseover="Archive of Maps for Recent and Historic Earthquakes"/>
+<tab id="links"
+     level="top"
+     text="Related Links"
+     title="Links to ShakeMaps in Other Regions, and Related Links"
+     mouseover="Links to ShakeMaps in Other Regions, and Related Links"/>
+<tab id="about"
+     level="top"
+     text="Scientific Background"
+     title="Background Information on the ShakeMaps"
+     mouseover="Information About ShakeMaps"/>
+<tab id="disclaimer"
+     level="top"
+     text="Disclaimer"
+     title="ShakeMap Disclaimers"
+     mouseover="ShakeMap Disclaimers"/>
+<tab id="comment"
+     level="top"
+     text="Comment"
+     title="Provide Comments on ShakeMap"
+     mouseover="ShakeMap Comment Form"/>
+
+<!-- 
+	Sub-header listing the maps and focal mechanism links for a 
+	specific earthquake. 
+	- These elements have no "title" attribute because the sub-header 
+	  takes the place of the "title bar" shown when the main header 
+	  tabs are clicked
+ -->
+<tab id="intensity"
+     level="sub1"
+     text="Instrumental&lt;br&gt;Intensity"
+     mouseover="Map of Estimated Instrumental Instensity"/>
+<tab id="pga"
+     level="sub1"
+     text="Peak Ground&lt;br&gt;Acceleration"
+     mouseover="Map of Peak Ground Acceleration"/>
+<tab id="pgv"
+     level="sub1"
+     text="Peak Ground&lt;br&gt;Velocity"
+     mouseover="Map of Peak Ground Velocity"/>
+<tab id="spectral"
+     level="sub1"
+     text="Spectral&lt;br&gt;Response"
+     title="Spectral Response Maps"
+     mouseover="Maps of Spectral Response"/>
+<tab id="products"
+     level="sub1"
+     text="Download"
+     title="ShakeMap Products Available for Download"
+     mouseover="Download ShakeMap Products"/>
+
+<!-- 
+	Sub-sub-header listing the spectral response maps 
+-->
+<tab id="psa03"
+     level="sub2"
+     text="0.3 sec Period"
+     mouseover="Map of 0.3 sec Period Response Spectra"/>
+<tab id="psa10"
+     level="sub2"
+     text="1.0 sec Period"
+     mouseover="Map of 1.0 sec Period Response Spectra"/>
+<tab id="psa30"
+     level="sub2"
+     text="3.0 sec Period"
+     mouseover="Map of 3.0 sec Period Response Spectra"/>
+
+<!-- 
+	Sub-sub-header listing for products page and about-products page
+-->
+<tab id="prods"
+     level="sub2"
+     text="Product Listing"
+     mouseover="List of ShakeMap Products Available for Download"/>
+<tab id="aboutprods"
+     level="sub2"
+     text="Format Information"
+     mouseover="About the Formats of the Product File"/>
+</tabs>

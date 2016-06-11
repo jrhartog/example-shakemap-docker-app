@@ -1,0 +1,1018 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content="<!-- tmpl_var name="region" --> ShakeMaps: How to Do a HAZUS Run">
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="ShakeMap2HAZUS_files/filelist.xml">
+<link rel=Edit-Time-Data href="ShakeMap2HAZUS_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>How to Do a HAZUS Run</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Valued Customer</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>David Wald</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:LastPrinted>2001-10-04T04:54:00Z</o:LastPrinted>
+  <o:Created>2002-01-25T23:06:00Z</o:Created>
+  <o:LastSaved>2002-01-25T23:06:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>573</o:Words>
+  <o:Characters>3269</o:Characters>
+  <o:Lines>27</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>4014</o:CharactersWithSpaces>
+  <o:Version>9.2511</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:DownloadComponents>96</o:DownloadComponents>
+  <o:PixelsPerInch>800x600</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Times New Roman";
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:50331648 0 0 0 1 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.75in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l1 level1 lfo1;
+	tab-stops:list .75in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.75in;
+	margin-bottom:.0001pt;
+	text-indent:-.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l1 level1 lfo1;
+	tab-stops:list .75in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:9.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:8.25in;
+	mso-element:frame;
+	mso-element-frame-hspace:9.0pt;
+	mso-element-wrap:around;
+	mso-element-anchor-vertical:paragraph;
+	mso-element-anchor-horizontal:column;
+	mso-element-top:.05pt;
+	mso-height-rule:exactly;
+	font-size:11.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.1in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-footer:url(":ShakeMap2HAZUS_files:header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:25257029;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1978332272 1639433 1639433 1770505 984073 1639433 1770505 984073 1639433 1770505;}
+@list l0:level1
+	{mso-level-start-at:7;
+	mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1215507017;
+	mso-list-type:hybrid;
+	mso-list-template-ids:979815078 1971716116 1639433 1770505 984073 1639433 1770505 984073 1639433 1770505;}
+@list l1:level1
+	{mso-level-number-format:roman-upper;
+	mso-level-style-link:"Heading 2";
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.5in;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1805343255;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1699912282 1549430412 1639433 1770505 984073 1639433 1770505 984073 1639433 1770505;}
+@list l2:level1
+	{mso-level-start-at:6;
+	mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:20.0pt;
+	mso-level-number-position:left;
+	margin-left:20.0pt;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1903565068;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1757413398 1057366158 1639433 1770505 984073 1639433 1770505 984073 1639433 1770505;}
+@list l3:level1
+	{mso-level-start-at:6;
+	mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:20.0pt;
+	mso-level-number-position:left;
+	margin-left:20.0pt;
+	text-indent:-.25in;}
+@list l1:level2 lfo2
+	{mso-level-start-at:4;}
+@list l1:level2 lfo4
+	{mso-level-start-at:2;}
+@list l1:level2 lfo5
+	{mso-level-start-at:2;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoTitle style='tab-stops:8.25in'><span style='font-size:14.0pt'><u>How
+to Run HAZUS with ShakeMap Input <o:p></o:p></u></span></p>
+
+<p class=MsoTitle style='tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=482 style='width:482.2pt;
+ border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='height:17.25pt'>
+  <td width=257 valign=top style='width:257.4pt;padding:0in 5.4pt 0in 5.4pt;
+  height:17.25pt'>
+  <p class=MsoTitle align=left style='text-align:left;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>Authors:</span><span style='font-size:11.0pt;
+  font-weight:normal'><span style="mso-spacerun: yes">&nbsp; </span>Lisa
+  Christiansen, David Wald<o:p></o:p></span></p>
+  </td>
+  <td width=225 valign=top style='width:224.8pt;padding:0in 5.4pt 0in 5.4pt;
+  height:17.25pt'>
+  <p class=MsoTitle align=left style='text-align:left;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>Date:</span><span style='font-size:11.0pt;
+  font-weight:normal'><span style="mso-spacerun: yes">&nbsp; </span></span><span
+  style='font-size:11.0pt'>October 3, 2001</span><span style='font-size:11.0pt;
+  font-weight:normal'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoTitle align=left style='text-align:left;tab-stops:8.25in'><span
+style='font-size:11.0pt;font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoTitle align=left style='text-align:left;tab-stops:8.25in'><span
+style='font-size:11.0pt'>Contacts: <o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=483 style='width:483.4pt;
+ border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=257 valign=top style='width:257.4pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoTitle align=left style='margin-left:45.0pt;text-align:left;
+  tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'><a
+  href="mailto:lisa_Christiansen@oes.ca.gov"><b>lisa_Christiansen@oes.ca.gov</b></a><o:p></o:p></span></p>
+  <p class=MsoTitle align=left style='margin-left:45.0pt;text-align:left;
+  tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'>California
+  Governor&#8217;s Office of Emergency Services &#8211; GIS Unit<o:p></o:p></span></p>
+  <p class=MsoTitle align=left style='margin-left:45.0pt;text-align:left;
+  tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'>Phone:
+  (626) 683-6729<o:p></o:p></span></p>
+  </td>
+  <td width=226 valign=top style='width:226.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoTitle align=left style='margin-left:4.4pt;text-align:left;
+  tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'><a
+  href="mailto:wald@usgs.gov">wald@usgs.gov</a> <o:p></o:p></span></p>
+  <p class=MsoTitle align=left style='margin-left:4.4pt;text-align:left;
+  tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'>United
+  States Geological Survey<o:p></o:p></span></p>
+  <p class=MsoTitle align=left style='margin-left:4.4pt;text-align:left;
+  tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'>Pasadena,
+  California<o:p></o:p></span></p>
+  <p class=MsoTitle align=left style='margin-left:4.4pt;text-align:left;
+  tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'>Phone:
+  (626) 583-7238<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoTitle align=left style='text-align:left;tab-stops:8.25in'><span
+style='font-size:11.0pt;font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoTitle align=left style='text-align:left;tab-stops:8.25in'><span
+style='font-size:11.0pt;font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoTitle align=left style='text-align:left;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoTitle style='margin-left:.75in;text-align:justify;text-indent:-.75in;
+mso-list:l1 level1 lfo1;tab-stops:list .75in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt'>I.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt'>Retrieve a ShakeMap
+HAZUS input file from ShakeMap Web Pages:<o:p></o:p></span></p>
+
+<p class=MsoTitle style='margin-left:1.0in;text-align:justify;text-indent:-.25in;
+mso-list:l1 level2 lfo1;tab-stops:list 1.0in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt;font-weight:normal'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt;font-weight:normal'>From
+the ShakeMap Web page (</span><span style='font-size:11.0pt'><a
+href="http://www.trinet.org/shake">http://www.trinet.org/shake</a></span><span
+style='font-size:11.0pt;font-weight:normal'>), select an earthquake of interest
+either from the Map Archive or choose the most recent event. The Archive pages
+contain HAZUS input files for historic and Scenario Earthquakes as well as recent
+events. From the Web page specific to the earthquake of interest, select
+Download, and select the &#8220;hazus.zip&#8221; file from the GIS Files
+category. Choose a local directory and unzip this file to use the shapefiles
+necessary for HAZUS input.<o:p></o:p></span></p>
+
+
+<div class=MsoTitle style='text-indent:-.75in;tab-stops:8.25in'><span
+style='font-size:11.0pt;font-weight:normal'>
+
+<hr size=2 width="76%" align=center>
+
+</span></div>
+
+
+<p class=MsoTitle style='text-align:justify;text-indent:-.75in;tab-stops:8.25in'><span
+style='font-size:11.0pt;font-weight:normal'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class=MsoTitle style='margin-left:.75in;text-align:justify;text-indent:-.75in;
+mso-list:l1 level1 lfo1;tab-stops:list .75in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt'>II.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt'>Start HAZUS:<span
+style="mso-spacerun: yes">&nbsp; </span>Start &gt; Programs &gt; FEMA Risk
+Assessment System &gt; <o:p></o:p></span></p>
+
+<p class=MsoTitle style='margin-left:.75in;text-align:justify;text-indent:-.75in;
+tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:11.0pt'>HAZUS 99-SR1 for ArcView<o:p></o:p></span></p>
+
+
+<div class=MsoTitle style='tab-stops:8.25in'><span style='font-size:11.0pt;
+font-weight:normal'>
+
+<hr size=2 width="76%" align=center>
+
+</span></div>
+
+
+<p class=MsoTitle style='margin-left:.75in;text-align:justify;text-indent:-.75in;
+tab-stops:8.25in'><span style='font-size:11.0pt;font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoTitle style='margin-left:.75in;text-align:justify;text-indent:-.75in;
+mso-list:l1 level1 lfo1;tab-stops:list .75in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt'>III.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt'>Create a New Study
+Region (To open a Pre-Built Region Skip to III.)<o:p></o:p></span></p>
+
+<p class=MsoTitle style='margin-left:.25in;text-align:justify;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoTitle style='text-align:justify;tab-stops:8.25in'><span
+  style='font-size:11.0pt;font-weight:normal'>a.<span style="mso-spacerun:
+  yes">&nbsp; </span>Select - Region: Create - Type: New region and click OK.<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:5.65pt;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>b.<span style="mso-spacerun: yes">&nbsp;
+  </span>Select the State to include in the region and click Next.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+  style='font-size:11.0pt'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+   coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+   filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_i1027" type="#_x0000_t75" style='width:236pt;
+   height:97pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image001.png" o:title="create region.tif"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=315 height=129
+  src="ShakeMap2HAZUS_files/image002.jpg" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+  style='font-size:11.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+   type="#_x0000_t75" style='width:249pt;height:175pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image003.png" o:title="State in region.tif"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=332 height=233
+  src="ShakeMap2HAZUS_files/image004.jpg" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:8.25in'><span style='font-size:11.0pt'>c.<span
+  style="mso-spacerun: yes">&nbsp;&nbsp; </span>Select the County to include in
+  the region and click Next.<span style="mso-spacerun: yes">&nbsp;
+  </span>(Note:<span style="mso-spacerun: yes">&nbsp; </span>by clicking on Map
+  the user can select the County from a map rather than selecting from the
+  list.)<o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-left:7.1pt;tab-stops:8.25in'>d.<span
+  style="mso-spacerun: yes">&nbsp; </span>Select the Census Tracts to include
+  in the region and click Finish. <span style='font-size:11.0pt'>(Note:<span
+  style="mso-spacerun: yes">&nbsp; </span>by clicking on Map button the user
+  can select the Census Tracts from a map rather than selecting from the list.)</span>
+  (Note 2: the more census tracts that are selected the longer it will take to
+  create the study region)</p>
+  <p class=MsoNormal style='tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:8.25in'><span style='font-size:11.0pt'><b><!--[if gte vml 1]><v:shape
+   id="_x0000_i1035" type="#_x0000_t75" style='width:234pt;height:163pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image005.png" o:title="County in region.tif"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=312 height=218
+  src="ShakeMap2HAZUS_files/image006.jpg" v:shapes="_x0000_i1035"><![endif]></b></span><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:8.25in'><!--[if gte vml 1]><v:shape id="_x0000_i1036"
+   type="#_x0000_t75" style='width:232pt;height:162pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image007.png" o:title="CT in region.tif"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=309 height=216
+  src="ShakeMap2HAZUS_files/image008.jpg" v:shapes="_x0000_i1036"><![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=491 style='width:491.4pt;
+ border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=239 valign=top style='width:239.4pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>e.<span style="mso-spacerun: yes">&nbsp; </span>Give the
+  Study Region Name and click Ok.</p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal style='tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1037" type="#_x0000_t75" style='width:207pt;height:118pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image009.png" o:title="Study Region name.tif"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=276 height=157
+  src="ShakeMap2HAZUS_files/image010.jpg" v:shapes="_x0000_i1037"><![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=252 valign=top style='width:3.5in;padding:0in 5.4pt 0in 5.4pt'>
+  <h2 style='margin-left:2.0pt;text-indent:0in;mso-list:none;tab-stops:.5in'><span
+  style='font-weight:normal'>f.<span style="mso-spacerun: yes">&nbsp;
+  </span>This is giving you the option to create the study region with the
+  supplemental multi-hazard data.<span style="mso-spacerun: yes">&nbsp;
+  </span>You will have the option to do this at a later time if you wish.<span
+  style="mso-spacerun: yes">&nbsp; </span>If you choose to aggregate the data
+  you must have the supple-mental cds that were included in the HAZUS pack.<o:p></o:p></span></h2>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1038" type="#_x0000_t75" style='width:229pt;height:146pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image011.png" o:title="Aggregate Data.tif"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=305 height=194
+  src="ShakeMap2HAZUS_files/image012.jpg" v:shapes="_x0000_i1038"><![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>g.<span style="mso-spacerun: yes">&nbsp; </span>Skip to
+section IV.</p>
+
+
+<div class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><b>
+
+<hr size=2 width="76%" align=center>
+
+</b></span></div>
+
+<span style='font-size:11.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'><b><br clear=ALL style='mso-special-character:line-break;page-break-before:
+always'>
+</b></span>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+style='font-size:11.0pt'><b><o:p></o:p></b></span></p>
+
+<h2 style='text-indent:-.75in'><![if !supportLists]>IV.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Open Pre-built region</h2>
+
+<p class=MsoNormal style='margin-left:.75in;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 align=left style='border-collapse:
+ collapse;mso-table-overlap:never;mso-table-lspace:9.0pt;mso-table-rspace:9.0pt;
+ mso-table-anchor-vertical:paragraph;mso-table-anchor-horizontal:column;
+ mso-table-left:left;mso-table-top:.05pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent3>a.<span style="mso-spacerun: yes">&nbsp;
+  </span>Select - Region: Open and select - Type: Pre-built region &#8211; This
+  will allow the user to open a region that has already been built on your
+  computer or imported to your computer. Click OK.</p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in;
+  mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:around;
+  mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:column;
+  mso-element-top:.05pt;mso-height-rule:exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent style='margin-left:0in;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>b.<span style="mso-spacerun: yes">&nbsp;
+  </span>Select the pre-built region you want to open and Click OK.<span
+  style="mso-spacerun: yes">&nbsp; </span>Note: A newly imported region will
+  appear as the last name in the list of regions.<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in;
+  mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:around;
+  mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:column;
+  mso-element-top:.05pt;mso-height-rule:exactly'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in;
+  mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:around;
+  mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:column;
+  mso-element-top:.05pt;mso-height-rule:exactly'><span style='font-size:11.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1039" type="#_x0000_t75" style='width:267pt;height:107pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image013.jpg" o:title="Study_Region_Prebuilt.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=356 height=143
+  src="ShakeMap2HAZUS_files/image014.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1039"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in;
+  mso-element:frame;mso-element-frame-hspace:9.0pt;mso-element-wrap:around;
+  mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:column;
+  mso-element-top:.05pt;mso-height-rule:exactly'><span style='font-size:11.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1040" type="#_x0000_t75" style='width:190pt;height:173pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image015.jpg" o:title="Pre_built_region.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=253 height=231
+  src="ShakeMap2HAZUS_files/image016.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1040"><![endif]><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><br clear=ALL>
+<b><o:p></o:p></b></span></p>
+
+<div class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><b>
+
+<hr size=2 width="76%" align=center>
+
+</b></span></div>
+
+
+<p class=MsoNormal style='tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2 style='text-indent:-.75in'><![if !supportLists]>V.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>New HAZUS session</h2>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1 align=center style='margin-left:.25in;text-align:center;text-indent:0in;
+mso-list:none;tab-stops:8.25in'><!--[if gte vml 1]><v:shape id="_x0000_i1041"
+ type="#_x0000_t75" style='width:278pt;height:218pt'>
+ <v:imagedata src="ShakeMap2HAZUS_files/image017.jpg" o:title="region view.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=370 height=291
+src="ShakeMap2HAZUS_files/image018.jpg" alt="LEAD Technologies Inc. V1.01"
+v:shapes="_x0000_i1041"><![endif]></h1>
+
+<h1 align=center style='margin-left:.25in;text-align:center;text-indent:0in;
+mso-list:none;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h1>
+
+
+<h1 align=center style='margin-left:.25in;text-align:center;text-indent:0in;
+mso-list:none;tab-stops:8.25in'><span style='font-weight:normal'>
+
+<hr size=2 width="76%" align=center>
+
+</span></h1>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'><br clear=ALL style='mso-special-character:line-break;page-break-before:
+always'>
+</span>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1 style='tab-stops:list .75in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt'>VI.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt'>Add Data Maps </span><span
+style='font-size:11.0pt;font-weight:normal'>(Optional) </span><span
+style='font-size:11.0pt'>&#8211; </span><span style='font-size:11.0pt;
+font-weight:normal'>This is where the user will add the user supplied data maps
+for Liquefaction, Landslide, Water Depth, and Soil.</span><span
+style='font-size:11.0pt'><o:p></o:p></span></h1>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:.25in;
+ border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>a.<span style="mso-spacerun: yes">&nbsp;
+  </span>Hazard &gt; Data Maps<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>b.<span style="mso-spacerun: yes">&nbsp;
+  </span>Specify the location of the data maps (Currently we are using Epedat
+  data for liquefaction and the NEHRP California Site Class for Soil Map and
+  leaving the other two as default).<span style="mso-spacerun: yes">&nbsp;
+  </span>To use the default HAZUS data maps leave as is.<span
+  style="mso-spacerun: yes">&nbsp; </span>Click OK<o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+  style='font-size:11.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1042"
+   type="#_x0000_t75" style='width:147pt;height:124pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image019.jpg" o:title="hazard_data maps.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=196 height=165
+  src="ShakeMap2HAZUS_files/image020.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1042"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+  style='font-size:11.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1043"
+   type="#_x0000_t75" style='width:266pt;height:191pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image021.jpg" o:title="Data Maps.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=354 height=255
+  src="ShakeMap2HAZUS_files/image022.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1043"><![endif]><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='margin-left:.25in;text-align:center;
+tab-stops:8.25in'>
+
+<hr size=2 width="76%" align=center>
+
+</div>
+
+
+<p class=MsoNormal style='tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:.75in;text-align:center;
+tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1 style='tab-stops:list .75in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt'>VII.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt'>Define a Scenario:<span
+style="mso-spacerun: yes">&nbsp; </span>Hazard &gt; Scenario </span><span
+style='font-size:11.0pt;font-weight:normal'>(choose one of the following Hazard
+Types)</span><span style='font-size:11.0pt'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1044" type="#_x0000_t75" style='width:160pt;height:134pt'>
+ <v:imagedata src="ShakeMap2HAZUS_files/image023.jpg" o:title="hazard_scenario.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=214 height=179
+src="ShakeMap2HAZUS_files/image024.jpg" alt="LEAD Technologies Inc. V1.01"
+v:shapes="_x0000_i1044"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='text-align:center;tab-stops:
+8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:1.0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt;color:black'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:1.0in;text-indent:-.25in;
+mso-list:l1 level2 lfo1;tab-stops:list 1.0in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt;color:black'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt;color:black'>Define a Scenario
+using <b>User-supplied hazard (ShakeMap)</b></span><span style='font-size:11.0pt;
+color:black'> Data &#8211; The user can supply the ShakeMap ground shaking
+intensity data for estimating damage and loss.<o:p></o:p></span></p>
+
+<span style='font-size:11.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'><br clear=ALL style='mso-special-character:line-break;page-break-before:
+always'>
+</span>
+
+<p class=MsoBodyTextIndent2 style='margin-left:99.0pt;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+style='font-size:11.0pt'><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>i.<span style="mso-spacerun: yes">&nbsp;
+  </span>Select - User-supplied hazard &gt; Next<o:p></o:p></span></p>
+  <p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+  center;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+  center;tab-stops:8.25in'><span style='font-size:11.0pt'>ii.<span
+  style="mso-spacerun: yes">&nbsp; </span>Specify the location of the ShakeMap
+  hazard data<span style="mso-spacerun: yes">&nbsp; </span>(the shapefiles
+  downloaded in Step Ia). Click OK<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+  center;tab-stops:8.25in'><span style='font-size:11.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1045" type="#_x0000_t75" style='width:212pt;height:170pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image025.jpg" o:title="ground motion user-supplied.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=283 height=227
+  src="ShakeMap2HAZUS_files/image026.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1045"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=236 valign=top style='width:235.8pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+  center;tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+  <p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+  center;tab-stops:8.25in'><span style='font-size:11.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1046" type="#_x0000_t75" style='width:244pt;height:143pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image027.jpg" o:title="user-defined hazards data.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=326 height=191
+  src="ShakeMap2HAZUS_files/image028.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1046"><![endif]><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><span
+style='font-size:11.0pt'>iii.<span style="mso-spacerun: yes">&nbsp;
+</span>Enter a name for the scenario. Click Finish<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:99.0pt;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1047" type="#_x0000_t75" style='width:210pt;height:74pt'>
+ <v:imagedata src="ShakeMap2HAZUS_files/image029.jpg" o:title="scenario_event_name.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=280 height=99
+src="ShakeMap2HAZUS_files/image030.jpg" alt="LEAD Technologies Inc. V1.01"
+v:shapes="_x0000_i1047"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'><span style='font-size:11.0pt'><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></span></p>
+
+
+<div class=MsoBodyTextIndent2 align=center style='margin-left:0in;text-align:
+center;tab-stops:8.25in'>
+
+<hr size=2 width="76%" align=center>
+
+</div>
+
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2 style='text-indent:-.75in;tab-stops:list .75in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt'>VIII.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt'>Start HAZUS Run<o:p></o:p></span></h2>
+
+<h2 style='margin-left:1.0in;text-indent:-.25in;tab-stops:list 1.0in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt;font-weight:normal'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt;font-weight:normal'>From
+the Analysis Menu select- Parameters<o:p></o:p></span></h2>
+
+<p class=MsoNormal style='tab-stops:8.25in'><span style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1048" type="#_x0000_t75"
+ style='width:195pt;height:101pt'>
+ <v:imagedata src="ShakeMap2HAZUS_files/image031.jpg" o:title="analysis_run.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=260 height=134
+src="ShakeMap2HAZUS_files/image032.jpg" alt="LEAD Technologies Inc. V1.01"
+v:shapes="_x0000_i1048"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:1.0in;text-indent:-.25in;
+mso-list:l1 level2 lfo1;tab-stops:list 1.0in left 8.25in'><![if !supportLists]><span
+style='font-size:11.0pt'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:11.0pt'>In the Analysis Options
+Dialog click on Select All button &#8211; This dialog will allow the user to
+run several different damage estimates, but by selecting all the run will be on
+the PESH(Potential Earth Science Hazard), Direct physical damage, Induced
+physical damage, Direct social and economic loss and indirect economic impact.<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:.75in;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1049" type="#_x0000_t75"
+ style='width:242pt;height:260pt'>
+ <v:imagedata src="ShakeMap2HAZUS_files/image033.jpg" o:title="analysis options.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=322 height=347
+src="ShakeMap2HAZUS_files/image034.jpg" alt="LEAD Technologies Inc. V1.01"
+v:shapes="_x0000_i1049"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:.75in;
+ border-collapse:collapse;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=209 valign=top style='width:2.9in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>c. This Dialog will pop up asking if the user wants
+  to generate a Contour Map, Click Yes.<o:p></o:p></span></p>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=209 valign=top style='width:2.9in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><span
+  style='font-size:11.0pt'>d.<span style="mso-spacerun: yes">&nbsp;
+  </span>Begin the Run, Click Yes.<o:p></o:p></span></p>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><span
+  style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=209 valign=top style='width:2.9in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><span
+  style='font-size:11.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1050"
+   type="#_x0000_t75" style='width:201pt;height:126pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image035.jpg" o:title="contour map.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=268 height=168
+  src="ShakeMap2HAZUS_files/image036.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1050"><![endif]><o:p></o:p></span></p>
+  </td>
+  <td width=209 valign=top style='width:2.9in;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0in;tab-stops:8.25in'><span
+  style='font-size:11.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1051"
+   type="#_x0000_t75" style='width:183pt;height:82pt'>
+   <v:imagedata src="ShakeMap2HAZUS_files/image037.jpg" o:title="Hazus run yesno.jpg"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=244 height=109
+  src="ShakeMap2HAZUS_files/image038.jpg" alt="LEAD Technologies Inc. V1.01"
+  v:shapes="_x0000_i1051"><![endif]><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyTextIndent2 style='margin-left:.75in;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'>
+
+<hr size=2 width="76%" noshade color=black align=center>
+
+</div>
+
+
+<p class=MsoBodyTextIndent2 style='margin-left:.75in;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:8.25in'><span
+style='font-size:11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent2 style='margin-left:0in'><span style='font-size:
+11.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

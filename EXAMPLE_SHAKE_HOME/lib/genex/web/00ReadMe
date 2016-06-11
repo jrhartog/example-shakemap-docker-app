@@ -1,0 +1,36 @@
+2000/01/04 - C. Scrivner
+2001/07/31 - B. Worden
+
+The website is contained the five sets of directories that play different 
+roles.
+
+permanent_src: 
+	   These files do not change with each event, and are not propagated
+           to the website each time 'genex' is run.  If changes are made to
+           these files or web.conf (in the ShakeMap config directory (not the
+	   config directory here)), the changed files will need to be remade 
+	   (using 'make web' from the home directory) which will fill the 
+	   templates and move the html to 'permanent'.
+
+permanent: These files are the filled templates from permanent_src. They must
+	   be transfered to the website manually (using transfer -permweb, 
+	   or something similar).
+
+mech_defaults:
+	   These are the default focal mechanism files (which basically
+	   say that the mechanism isn't available yet).  These files do not 
+	   change with each event, but *are* propagated to the website each 
+	   time 'genex' is run.  Some or all of these files may be 
+	   overwritten on the web site and in the event data directory 
+	   by event-specific files 
+
+template:  These files are templates for pages that change with each event.
+           When 'genex' is run, the templates are filled with event-specific 
+	   data, and the resulting files are deposited in the event's data
+	   directory and from there they are propagated to the website.
+	
+config :   These are XML files which determine the look and behavior
+	   of the web site navigation bars/menus/tabs and also the
+	   archive pages.  These may be edited to customize the site.
+	   The effects will be seen the next time 'genex' is run and
+	   the results transferred to the web site.

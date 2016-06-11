@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <TITLE><!-- tmpl_var name="region" --> ShakeMap: Comment/Questions Form </TITLE>
+    <link rel="stylesheet" type="text/css" href="lib/style.css">
+    <!-- tmpl_var name="php-comment-form" -->
+  </head>
+  <body bgcolor="white">
+    <!-- Begin Tab Header -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="7">
+      <tr>
+	<td bgcolor="ffff99" align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr> 
+	      <td width="1%" background="icons/header/tab-begin-lav.gif">&nbsp;</td>
+	      <td width="99%"> 
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr> 
+		    <td width="30%" align="left">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="index.html" class="navbar" onMouseOver="window.status='ShakeMap Home Page';return true">Home</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="archive" class="navbar" onMouseOver="window.status='Archive of Maps for Recent and Historic Earthquakes';return true">Map Archive</a></div>
+			  </td>
+			  <td background="icons/header/tab-end-lav.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		    <td width="70%" align="right">
+		      <table  border="0" cellspacing="0" cellpadding="3">
+			<tr>
+			  <td background="icons/header/tab-begin-lav.gif" align="right">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="links.html" class="navbar" onMouseOver="window.status='Links to ShakeMaps in other regions and other related links';return true">Related Links</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="about.html" class="navbar" onMouseOver="window.status='Information About ShakeMaps';return true">Scientific Background</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tabs-lav.gif">&nbsp;</td>
+			  <td bgcolor="#9999cc"> 
+			    <div align="center"><a href="disclaimer.html" class="navbar" onMouseOver="window.status='ShakeMap Disclaimers';return true">Disclaimer</a></div>
+			  </td>
+			  <td bgcolor="#9999cc" background="icons/header/tab-left-lav-bgray.gif">&nbsp;</td>
+			  <td bgcolor="#99cccc"> 
+			    <div align="center" class="selected">Comment</div>
+			  </td>
+			  <td background="icons/header/tab-end-bgray.gif">&nbsp;</td>
+			</tr>
+		      </table>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr> 
+	      <td width="1%"  bgcolor="#99cccc">&nbsp;</td>
+	      <td width="99%" bgcolor="#99cccc"> 
+		<table border="0" cellspacing="0" cellpadding="3" width="100%">
+		  <tr> 
+		    <td> 
+		      <p class="locationbar">Provide Comments on ShakeMap</p>
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td width="1%"  bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	      <td width="99%" bgcolor="#9999cc"><spacer type="block" width="100%" height="1"></td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <!-- End Tab Header -->
+    
+    <p>
+      We need your input to improve our service and 
+      better meet your needs. Please use this form to report any problems, 
+      ask questions, or provide feedback.  Please provide at least your e-mail
+      address so that we may respond to your comments or questions.
+    </P>
+
+    <FORM METHOD="POST" ACTION="<!-- tmpl_var name="comment-cgi" -->">
+      <input type=hidden name="application" value="shakemap">
+      <table border="0">
+	<tr>
+	  <td width="140">
+	    Email Address:
+	  </td>
+	  <td width="500">
+	    <INPUT NAME="email" SIZE=40>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    Your Name:
+	  </td>
+	  <td>
+	    <INPUT NAME="name" SIZE=40> 
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    Institution:
+	  </td>
+	  <td>
+	    <INPUT NAME="inst" SIZE=40>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    Phone #:
+	  </td>
+	  <td>
+	    <INPUT NAME="phone">
+	  </td>
+	</tr>
+      </table>
+
+      
+  <p> Please enter your comments or questions in the box below: <br>
+	<TEXTAREA NAME="text" ROWS=15 COLS=60></TEXTAREA>
+      </p>
+
+      <table border="0">
+	<tr>
+	  <td width="140">
+	    When you are done: 
+	  </td>
+	  <td width="500">
+	    <INPUT TYPE="submit" VALUE="Send Comments">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    To clear all input:
+	  </td>
+	  <td>
+	    <INPUT TYPE="reset" VALUE="Clear All Input">
+      </td>
+	</tr>
+      </table>
+    </FORM>
+    <HR>
+
+    <p>
+      <font size="-1">
+      Maintained by the ShakeMap Working Group<br>
+      Page last modified 7/16/01
+     </font>
+    </p>
+
+  </body>
+</html>
