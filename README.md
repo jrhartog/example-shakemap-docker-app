@@ -100,4 +100,7 @@ this README and you will need to refer to the official ShakeMap documentation.
 * ```cp -r EXAMPLE_SHAKE_HOME/* $SHAKE_HOME```
 * Customize config, lib, pw in $SHAKE_HOME (refer to ShakeMap documentation).
 * Unzip the zip-file http://ehppdl1.cr.usgs.gov/ProductClient.zip in ${PDL_HOME} to create directory ${PDL_HOME}/ProductClient
-* You may have to play with firewall rules to get it to work on a production machine.
+* Be careful with firewall rules to get it to work on a production machine that is accessible from the wide world out there, see for example:  
+ * [https://docs.docker.com/engine/userguide/networking/default_network/binding/](https://docs.docker.com/engine/userguide/networking/default_network/binding/)
+ * [https://fralef.me/docker-and-iptables.html](https://fralef.me/docker-and-iptables.html).
+ * [https://github.com/irsl/dfwfw](https://github.com/irsl/dfwfw)
