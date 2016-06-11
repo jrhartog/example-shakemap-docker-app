@@ -26,9 +26,10 @@ of a mariadb (non-Oracle version of mysql).
 
 Try out the application:
 
-1. Change the MYSQL_ROOT_PASSWORD in the shakemap.env file and source it 
-   (IMPORTANT: if you have a mysql server running on your host also change the MYSQL_PORT!)  
-   ```source shakemap.env```
+1. Change the MYSQL_ROOT_PASSWORD in the shakemap.env file and source it. 
+   (IMPORTANT: if you have a mysql server running on port 3310 of your host you may have to change the MYSQL_PORT!)  
+   ```source shakemap.env```  
+   Also edit mysql.env, no need to source this file (it's used by docker-compose).
 
 2. Start the app:  
    ```sudo docker-compose up -d```
@@ -53,6 +54,8 @@ MariaDB [(none)]> grant select,insert,update,delete,create,drop,alter on
     -> shakemap.* to shake@'%' identified by 'shake_password'; 
 Query OK, 0 rows affected (0.01 sec)
 ```
+   **If you changed shake_password, also edit the last line in file EXAMPLE_SHAKE_HOME/config/mydb.conf**
+
    Note: for production use you may want to copy the data from your old mysql shakemap database 
    into the container database. Also, for production make sure to change the example passwords.
 
