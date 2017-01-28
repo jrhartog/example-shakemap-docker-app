@@ -17,6 +17,7 @@ services:
    mysql:
        image: mariadb:10
        container_name: shakemap-db
+       privileged: true
        env_file: mysql.env
        ports: 
            - "${MYSQL_PORT}:3306"
